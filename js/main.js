@@ -163,6 +163,14 @@ function update(time, delta) {
         bool=1;
     }
 
+    if (cursors.up.isDown && player.body.onFloor())
+    {
+        //infoText.setText('compt: ' + player.body.velocity.y);
+        player.body.setVelocityY(-500);
+        //infoText.setText('compt: ' + player.body.velocity.y);
+    }
+
+/*
     if (bool==1 && player.body.onFloor())
     {
         bool=2;
@@ -173,8 +181,6 @@ function update(time, delta) {
         bool=3;
         player.body.setVelocityY(0);
     }
-
-/*
     // controller
     if (cursors.left.isDown)
     {
