@@ -203,7 +203,7 @@ function create() {
     infoText.setScrollFactor(0);
 
     // modal
-    this.time.events.repeat(wordDelay, 3, nextWord, this);
+    this.time.repeat(wordDelay, 3, nextWord, this);
     this.createSpeechBubble(20, 100, 320, 160, "The sky above the port was the color of television, tuned to a dead channel.");
 
     // gr
