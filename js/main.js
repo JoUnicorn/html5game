@@ -149,14 +149,14 @@ function create() {
     // player walk animation
     this.anims.create({
         key: 'walk_r',
-        frames: this.anims.generateFrameNames('robot', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
+        frames: this.anims.generateFrameNames('robot', {prefix: 'character_robot_walk', end: 7, zeroPad: 1}),
         frameRate: 10,
         repeat: -1
     });
     // idle with only one frame, so repeat is not neaded
     this.anims.create({
         key: 'idle_r',
-        frames: [{key: 'robot', frame: 'character_femalePerson_idle'}],
+        frames: [{key: 'robot', frame: 'character_robot_idle'}],
         frameRate: 10,
     });
     robot.body.setSize(robot.width, robot.height-40);
