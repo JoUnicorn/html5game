@@ -127,7 +127,7 @@ function create() {
     // fix the text to the camera
     text.setScrollFactor(0);
 
-    distanceText = this.add.text(10, 10, 'Click to set target', { fill: '#00ff00' });
+    distanceText = this.add.text(20, 500, 'Click to set target', { fill: '#00ff00' });
 }
 
 // this function will be called when the player touches a coin
