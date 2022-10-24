@@ -149,7 +149,7 @@ function update(time, delta) {
         //  before it is considered as being there. The faster it moves, the more tolerance is required.
         if (distance < 4)
         {
-            source.body.reset(player.x+100, player.y);
+            player.body.reset(player.x+100, player.y);
         }
     }
 
