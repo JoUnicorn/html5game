@@ -203,7 +203,7 @@ function create() {
     infoText.setScrollFactor(0);
 
     // modal
-    this.createSpeechBubble(20, 100, 320, 160, "he sky above the port was the color of television, tuned to a dead channel.");
+    this.createSpeechBubble(20, 100, 320, 160, "The sky above the port was the color of television, tuned to a dead channel.");
 
     // gr
     timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
@@ -321,6 +321,9 @@ function createSpeechBubble (x, y, width, height, quote)
     var b = content.getBounds();
 
     content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
+
+    console.log(quote)
+    console.log(quote.length)
 
     if (lineIndex === quote.length)
     {
