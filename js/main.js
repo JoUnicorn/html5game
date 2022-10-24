@@ -152,15 +152,9 @@ function collectCoin(sprite, tile) {
     return false;
 }
 
-function jump()
-{
-    player.body.setVelocityY(-500);
-}
-
 function update(time, delta) {
     // anim
     var bool=0;
-    var compt=0;
     if (player.x>600 && player.body.onFloor() && bool==0)
     {
         player.body.setVelocityX(0);
@@ -172,9 +166,12 @@ function update(time, delta) {
     if (bool==1 && player.body.onFloor())
     {
         bool=2;
-        compt++;
-        infoText.setText('compt: ' + compt);
-        jump();
+        player.body.setVelocityY(-500);
+    }
+    if (bool==2 && player.body.onFloor())
+    {
+        bool=3;
+        player.body.setVelocityY(0);
     }
 
 /*
