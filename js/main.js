@@ -129,7 +129,7 @@ function create() {
     // fix the text to the camera
     text.setScrollFactor(0);
 
-    distanceText = this.add.text(100, 510, 'Click to set target', { fill: '#00ff00' });
+    distanceText = this.add.text(600, 510, 'Click to set target', { fill: '#00ff00' });
     infoText = this.add.text(600, 50, 'info: ', { fill: '#00ff00' });
     timedEvent = this.time.delayedCall(3000, startWalking, [], this);
 }
