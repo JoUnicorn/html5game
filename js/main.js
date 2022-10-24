@@ -155,7 +155,8 @@ function update(time, delta) {
         player.body.setVelocityX(0);
         player.anims.play('idle', true);
         distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
-    }
+        player.body.setVelocityY(-500);
+    } 
 
 
     // controller
