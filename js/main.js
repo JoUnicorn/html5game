@@ -33,7 +33,10 @@ var config = {
         key: 'main',
         preload: preload,
         create: create,
-        update: update
+        update: update,
+        extend: {
+            createSpeechBubble: createSpeechBubble
+        }        
     }
 };
 
