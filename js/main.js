@@ -92,8 +92,8 @@ function create() {
     player.setCollideWorldBounds(true); // don't go out of the map
 
     // small fix to our player images, we resize the physics body object slightly
-    player.body.setSize(player.width, player.height-50);
-    player.body.setOffset(0, 50);
+    player.body.setSize(player.width, player.height-40);
+    player.body.setOffset(0, 40);
 
     // player will collide with the level tiles
     this.physics.add.collider(groundLayer, player);
@@ -119,7 +119,7 @@ function create() {
 
     //////////
     //gitl
-    girl = this.physics.add.sprite(200, 200, 'girl');
+    girl = this.physics.add.sprite(400, 200, 'girl');
     girl.setBounce(0.2); // our player will bounce from items
     girl.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, girl);
@@ -136,6 +136,8 @@ function create() {
         frames: [{key: 'girl', frame: 'character_femalePerson_idle'}],
         frameRate: 10,
     });
+    girl.body.setSize(girl.width, girl.height-40);
+    girl.body.setOffset(0, 40);
     //////
 
 
@@ -162,8 +164,8 @@ function create() {
     distanceText.setScrollFactor(0);
     infoText.setScrollFactor(0);
     timedEvent = this.time.delayedCall(3000, startWalking, [], this);
-    timedEvent = this.time.delayedCall(5000, stopWalking, [], this);
-    timedEvent = this.time.delayedCall(5500, startJumping, [], this);
+    timedEvent = this.time.delayedCall(5500, stopWalking, [], this);
+    timedEvent = this.time.delayedCall(6000, startJumping, [], this);
 }
 
 function startWalking()
