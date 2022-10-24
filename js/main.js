@@ -45,8 +45,6 @@ var cursors;
 var groundLayer, coinLayer;
 var text;
 var score = 0;
-var anim;
-var loopText;
 
 function preload() {
     // map made with Tiled in JSON format
@@ -127,42 +125,6 @@ function create() {
     });
     // fix the text to the camera
     text.setScrollFactor(0);
-
-    anim = player.animations.add('walk');
-
-    anim.onStart.add(animationStarted, this);
-    anim.onLoop.add(animationLooped, this);
-    anim.onComplete.add(animationStopped, this);
-
-    anim.play(10, true);
-}
-
-
-// anim
-function animationStarted(sprite, animation) {
-
-    game.add.text(20, 510, 'Animation started', { fill: 'white' });
-
-}
-
-function animationLooped(sprite, animation) {
-
-    if (animation.loopCount === 1)
-    {
-        loopText = game.add.text(20, 530, 'Animation looped', { fill: 'white' });
-    }
-    else
-    {
-        loopText.text = 'Animation looped x2';
-        animation.loop = false;
-    }
-
-}
-
-function animationStopped(sprite, animation) {
-
-    game.add.text(20, 530+32, 'Animation stopped', { fill: 'white' });
-
 }
 
 // this function will be called when the player touches a coin
@@ -174,12 +136,6 @@ function collectCoin(sprite, tile) {
 }
 
 function update(time, delta) {
-    //anim
-    if (anim.isPlaying)
-    {
-        back.x -= 1;
-    }
-
     if (cursors.left.isDown)
     {
         player.body.setVelocityX(-200);
