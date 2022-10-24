@@ -197,7 +197,13 @@ function create() {
     timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(7800, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(8300, startJumping_jo, [], this);
-    this.add.tween(player.scale).to( { x: 1, y: 1 }, 2000, Phaser.Easing.Linear.None, true);
+    //this.add.tween(player.scale).to( { x: 1, y: 1 }, 2000, Phaser.Easing.Linear.None, true);
+    this.scene.tweens.add({
+      targets     : player ,
+      scale       : 1,
+      ease        : 'Linear',
+      duration    : 500,
+    });
     timedEvent = this.time.delayedCall(9500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(11500, stopWalking_jo, [], this);
 }
