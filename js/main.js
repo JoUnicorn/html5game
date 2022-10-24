@@ -95,6 +95,7 @@ function create() {
     // small fix to our player images, we resize the physics body object slightly
     player.body.setSize(player.width, player.height-40);
     player.body.setOffset(0, 40);
+    player.scale.setTo(.5, .5);
 
     // player will collide with the level tiles
     this.physics.add.collider(groundLayer, player);
