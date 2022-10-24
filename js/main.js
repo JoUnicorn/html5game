@@ -101,7 +101,7 @@ function create() {
     // player walk animation
     this.anims.create({
         key: 'walk',
-        frames: this.anims.generateFrameNames('player', {prefix: 'character_femalePerson_walk', start: 1, end: 11, zeroPad: 2}),
+        frames: this.anims.generateFrameNames('player', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
         frameRate: 10,
         repeat: -1
     });
