@@ -203,9 +203,6 @@ function create() {
     infoText.setScrollFactor(0);
 
     // modal
-    console.log(this.time)
-
-    this.time.events.repeat(wordDelay, 3, nextWord, this);
     this.createSpeechBubble(20, 100, 320, 160, "The sky above the port was the color of television, tuned to a dead channel.");
 
     // gr
@@ -335,7 +332,15 @@ function createSpeechBubble (x, y, width, height, quote)
     wordIndex = 0;
 
     //  Call the 'nextWord' function once for each word in the line (line.length)
-    this.time.events.repeat(wordDelay, line.length, nextWord, this);
+    console.log(this.time)
+    this.time.addEvent({
+        delay: wordDelay,                // ms
+        callback: nextWord,
+        //args: [],
+        callbackScope: this,
+        repeat: line.length
+    });
+    //this.time.events.repeat(wordDelay, line.length, nextWord, this);
 
 }
 
