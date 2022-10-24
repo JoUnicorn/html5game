@@ -191,8 +191,8 @@ function create() {
 
     //jo
     timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(8300, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(8800, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(8400, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(8900, startJumping_jo, [], this);
 }
 
 function startWalking_gr()
