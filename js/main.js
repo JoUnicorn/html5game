@@ -168,9 +168,7 @@ function update(time, delta) {
         compteur=compteur+1;
         infoText.setText('compteur: '+compteur);
         player.body.setVelocityY(-500);
-    } else {
-        player.body.setVelocityY(0);
-    }
+    } 
 
 
     // controller
