@@ -92,7 +92,7 @@ function create() {
     player.setCollideWorldBounds(true); // don't go out of the map
 
     // small fix to our player images, we resize the physics body object slightly
-    player.body.setSize(player.width, player.height-10,0,100);
+    player.body.setSize(10, 10,0,100);
 
     // player will collide with the level tiles
     this.physics.add.collider(groundLayer, player);
