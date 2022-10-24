@@ -1,6 +1,5 @@
 var config = {
     type: Phaser.AUTO,
-    debug: true,
     scale: {
         mode: Phaser.Scale.FIT,
         parent: 'game',
@@ -218,4 +217,12 @@ function update(time, delta) {
         //infoText.setText('compt: ' + player.body.velocity.y);
     }
 */
+}
+
+function render() {
+
+    game.debug.bodyInfo(player, 32, 32);
+
+    game.debug.body(player);
+
 }
