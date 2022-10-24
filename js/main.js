@@ -132,7 +132,7 @@ function create() {
 
     this.input.on('pointerdown', function (pointer) {
 
-        target.x = player.x+100;
+        target.x = player.x+2000;
         target.y = player.y;
 
         // Move at 200 px/s:
@@ -151,7 +151,7 @@ function collectCoin(sprite, tile) {
 
 function update(time, delta) {
     /* anim */
-    var distance = Phaser.Math.Distance.Between(player.x, player.y, player.x+100, player.y);
+    var distance = Phaser.Math.Distance.Between(player.x, player.y, player.x+2000, player.y);
     if (player.body.speed > 0)
     {
         distanceText.setText('Distance: ' + distance);
@@ -160,7 +160,7 @@ function update(time, delta) {
         //  before it is considered as being there. The faster it moves, the more tolerance is required.
         if (distance < 4)
         {
-            player.body.reset(player.x+100, player.y);
+            player.body.reset(player.x+2000, player.y);
         }
     }
 
