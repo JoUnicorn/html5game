@@ -142,7 +142,6 @@ function startWalking()
     player.anims.play('walk', true);
     player.flipX = false; // use the original sprite looking to the right
     distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
-    timedEvent = this.time.delayedCall(1000, startJumping, [], this);
 }
 
 function startJumping()
@@ -167,26 +166,11 @@ function update(time, delta) {
         player.anims.play('idle', true);
         distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
         bool=1;
+        timedEvent = this.time.delayedCall(1000, startJumping, [], this);
     }
 
-    if (cursors.up.isDown && player.body.onFloor())
-    {
-        //infoText.setText('compt: ' + player.body.velocity.y);
-        player.body.setVelocityY(-500);
-        //infoText.setText('compt: ' + player.body.velocity.y);
-    }
 
 /*
-    if (bool==1 && player.body.onFloor())
-    {
-        bool=2;
-        player.body.setVelocityY(-500);
-    }
-    if (bool==2 && player.body.onFloor())
-    {
-        bool=3;
-        player.body.setVelocityY(0);
-    }
     // controller
     if (cursors.left.isDown)
     {
