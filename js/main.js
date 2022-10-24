@@ -1,7 +1,19 @@
 var config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    scale: {
+        mode: Phaser.Scale.RESIZE,
+        parent: 'phaser-example',
+        width: 640,
+        height: 960,
+        min: {
+            width: 320,
+            height: 480
+        },
+        max: {
+            width: 1920,
+            height: 1400
+        }
+    },
     physics: {
         default: 'arcade',
         arcade: {
@@ -29,7 +41,7 @@ var score = 0;
 function preload() {
     // map made with Tiled in JSON format
     this.load.tilemapTiledJSON('map', 'assets/map.json');
-    // tiles in spritesheet 
+    // tiles in spritesheet
     this.load.spritesheet('tiles', 'assets/tiles.png', {frameWidth: 70, frameHeight: 70});
     // simple coin image
     this.load.image('coin', 'assets/coinGold.png');
@@ -38,7 +50,7 @@ function preload() {
 }
 
 function create() {
-    // load the map 
+    // load the map
     map = this.make.tilemap({key: 'map'});
 
     // tiles for the ground layer
@@ -57,20 +69,20 @@ function create() {
     this.physics.world.bounds.width = groundLayer.width;
     this.physics.world.bounds.height = groundLayer.height;
 
-    // create the player sprite    
+    // create the player sprite
     player = this.physics.add.sprite(200, 200, 'player');
     player.setBounce(0.2); // our player will bounce from items
-    player.setCollideWorldBounds(true); // don't go out of the map    
-    
+    player.setCollideWorldBounds(true); // don't go out of the map
+
     // small fix to our player images, we resize the physics body object slightly
     player.body.setSize(player.width, player.height-8);
-    
-    // player will collide with the level tiles 
+
+    // player will collide with the level tiles
     this.physics.add.collider(groundLayer, player);
 
     coinLayer.setTileIndexCallback(17, collectCoin, this);
-    // when the player overlaps with a tile with index 17, collectCoin 
-    // will be called    
+    // when the player overlaps with a tile with index 17, collectCoin
+    // will be called
     this.physics.add.overlap(player, coinLayer);
 
     // player walk animation
@@ -95,7 +107,7 @@ function create() {
     // make the camera follow the player
     this.cameras.main.startFollow(player);
 
-    // set background color, so the sky is not black    
+    // set background color, so the sky is not black
     this.cameras.main.setBackgroundColor('#ccccff');
 
     // this text will show the score
@@ -131,9 +143,9 @@ function update(time, delta) {
         player.body.setVelocityX(0);
         player.anims.play('idle', true);
     }
-    // jump 
+    // jump
     if (cursors.up.isDown && player.body.onFloor())
     {
-        player.body.setVelocityY(-500);        
+        player.body.setVelocityY(-500);
     }
 }
