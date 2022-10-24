@@ -41,6 +41,7 @@ var game = new Phaser.Game(config);
 
 var map;
 var player;
+var girl;
 var cursors;
 var groundLayer, coinLayer;
 var text;
@@ -57,7 +58,8 @@ function preload() {
     // simple coin image
     this.load.image('coin', 'assets/coinGold.png');
     // player animations
-    this.load.atlas('player', 'assets/player.png', 'assets/player.json');
+    //this.load.atlas('player', 'assets/player.png', 'assets/player.json');
+    this.load.atlas('player', 'assets/girl.png', 'assets/girl.json');
 }
 
 function create() {
@@ -134,8 +136,8 @@ function create() {
     distanceText.setScrollFactor(0);
     infoText.setScrollFactor(0);
     timedEvent = this.time.delayedCall(3000, startWalking, [], this);
-    timedEvent = this.time.delayedCall(4000, stopWalking, [], this);
-    timedEvent = this.time.delayedCall(4500, startJumping, [], this);
+    timedEvent = this.time.delayedCall(6000, stopWalking, [], this);
+    timedEvent = this.time.delayedCall(6500, startJumping, [], this);
 }
 
 function startWalking()
