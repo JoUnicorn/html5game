@@ -101,16 +101,36 @@ function create() {
     // player walk animation
     this.anims.create({
         key: 'walk',
-        frames: this.anims.generateFrameNames('player', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
+        frames: this.anims.generateFrameNames('player', {prefix: 'character_maleAdventurer_walk', end: 7, zeroPad: 1}),
         frameRate: 10,
         repeat: -1
     });
     // idle with only one frame, so repeat is not neaded
     this.anims.create({
         key: 'idle',
-        frames: [{key: 'player', frame: 'character_femalePerson_idle'}],
+        frames: [{key: 'player', frame: 'character_maleAdventurer_idle'}],
         frameRate: 10,
     });
+
+    //gitl
+    girl = this.physics.add.sprite(200, 200, 'girl');
+    girl.setBounce(0.2); // our player will bounce from items
+    girl.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, girl);
+    // player walk animation
+    this.anims.create({
+        key: 'walk',
+        frames: this.anims.generateFrameNames('girl', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
+        frameRate: 10,
+        repeat: -1
+    });
+    // idle with only one frame, so repeat is not neaded
+    this.anims.create({
+        key: 'idle',
+        frames: [{key: 'girl', frame: 'character_femalePerson_idle'}],
+        frameRate: 10,
+    });
+    //////
 
 
     cursors = this.input.keyboard.createCursorKeys();
