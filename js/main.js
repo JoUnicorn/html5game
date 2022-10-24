@@ -193,7 +193,7 @@ function create() {
     infoText.setScrollFactor(0);
 
     // modal
-    this.createSpeechBubble(20, 20, 320, 160, "jmbfdsjbfvjd")
+    createSpeechBubble(20, 20, 320, 160, "jmbfdsjbfvjd");
 
     // gr
     timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
