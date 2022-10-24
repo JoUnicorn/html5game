@@ -333,7 +333,7 @@ function createSpeechBubble (x, y, width, height, quote)
     wordIndex = 0;
 
     //  Call the 'nextWord' function once for each word in the line (line.length)
-    this.time.events.repeat(wordDelay, line.length, nextWord, this);
+    this.time.repeat(wordDelay, line.length, nextWord, this);
 
 }
 
