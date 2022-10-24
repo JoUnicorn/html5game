@@ -142,6 +142,8 @@ function create() {
     });
     girl.body.setSize(girl.width, girl.height-40);
     girl.body.setOffset(0, 40);
+    player.scaleX=.9;
+    player.scaleY=.9;
     //////
     //////////
     //robot
