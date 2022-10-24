@@ -133,7 +133,7 @@ function create() {
     infoText = this.add.text(20, 500, 'info: ', { fill: '#00ff00' });
     distanceText.setScrollFactor(0);
     infoText.setScrollFactor(0);
-    timedEvent = this.time.delayedCall(3000, startWalking, [], this);
+    //timedEvent = this.time.delayedCall(3000, startWalking, [], this);
 }
 
 function startWalking ()
@@ -169,7 +169,7 @@ function update(time, delta) {
         player.body.setVelocityY(-500);
     }
 
-/*
+    /*
     // controller
     if (cursors.left.isDown)
     {
@@ -186,10 +186,10 @@ function update(time, delta) {
         player.body.setVelocityX(0);
         player.anims.play('idle', true);
     }
+    */
     // jump
     if (cursors.up.isDown && player.body.onFloor())
     {
         player.body.setVelocityY(-500);
     }
-*/
 }
