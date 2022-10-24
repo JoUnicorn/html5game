@@ -131,7 +131,7 @@ function create() {
 
     distanceText = this.add.text(600, 510, 'Click to set target', { fill: '#00ff00' });
     infoText = this.add.text(600, 550, 'info: ', { fill: '#00ff00' });
-    timedEvent = this.time.delayedCall(3000, startWalking, [], this);
+    //timedEvent = this.time.delayedCall(3000, startWalking, [], this);
 }
 
 function startWalking ()
@@ -152,7 +152,7 @@ function collectCoin(sprite, tile) {
 
 function update(time, delta) {
     // anim
-    var bool=0
+/*    var bool=0
     var compteur=0
     if (player.x>600 && player.body.onFloor())
     {
@@ -168,11 +168,12 @@ function update(time, delta) {
         compteur=compteur+1;
         infoText.setText('compteur: '+compteur);
         player.body.setVelocityY(-500);
-    } 
+    }
+    */
 
 
     // controller
-/*    if (cursors.left.isDown)
+    if (cursors.left.isDown)
     {
         player.body.setVelocityX(-200);
         player.anims.play('walk', true); // walk left
@@ -192,5 +193,4 @@ function update(time, delta) {
     {
         player.body.setVelocityY(-500);
     }
-*/
 }
