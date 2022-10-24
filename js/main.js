@@ -129,8 +129,10 @@ function create() {
     // fix the text to the camera
     text.setScrollFactor(0);
 
-    distanceText = this.add.text(600, 510, 'Click to set target', { fill: '#00ff00' });
-    infoText = this.add.text(600, 550, 'info: ', { fill: '#00ff00' });
+    distanceText = this.add.text(20, 510, 'Click to set target', { fill: '#00ff00' });
+    infoText = this.add.text(20, 550, 'info: ', { fill: '#00ff00' });
+    distanceText.setScrollFactor(0);
+    infoText.setScrollFactor(0);
     //timedEvent = this.time.delayedCall(3000, startWalking, [], this);
 }
 
@@ -152,9 +154,9 @@ function collectCoin(sprite, tile) {
 
 function update(time, delta) {
     // anim
-/*    var bool=0
+    var bool=0
     var compteur=0
-    if (player.x>600 && player.body.onFloor())
+    if (player.x>600 && player.body.onFloor() && bool==0)
     {
         player.body.setVelocityX(0);
         player.anims.play('idle', true);
@@ -164,14 +166,13 @@ function update(time, delta) {
 
     if (bool==1 && player.body.onFloor())
     {
-        bool=0;
+        bool=2;
         compteur=compteur+1;
         infoText.setText('compteur: '+compteur);
         player.body.setVelocityY(-500);
     }
-    */
 
-
+/*
     // controller
     if (cursors.left.isDown)
     {
@@ -193,4 +194,5 @@ function update(time, delta) {
     {
         player.body.setVelocityY(-500);
     }
+*/
 }
