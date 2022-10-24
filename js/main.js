@@ -65,7 +65,6 @@ function preload() {
     this.load.atlas('ennemy2', 'assets/ennemy2.png', 'assets/ennemy2.json');
     this.load.atlas('robot', 'assets/ennemy3.png', 'assets/ennemy3.json');
     this.load.atlas('ennemy4', 'assets/ennemy4.png', 'assets/ennemy4.json');
-    this.load.plugin('DialogModalPlugin', 'dialog_plugin.js');
 }
 
 function create() {
@@ -194,10 +193,6 @@ function create() {
     infoText.setScrollFactor(0);
 
     // modal
-    this.sys.install('DialogModalPlugin');
-    console.log(this.sys.dialogModal);
-    this.sys.dialogModal.init();
-    this.sys.dialogModal.setText('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', true);
 
 
     // gr
