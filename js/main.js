@@ -349,9 +349,6 @@ function nextWord() {
     {
         //  Add a carriage return
         content.text = content.text.concat("\n");
-
-        //  Get the next line after the lineDelay amount of ms has elapsed
-        this.time.events.add(lineDelay, nextLine, this);
     }
 
 }
