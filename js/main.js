@@ -136,7 +136,7 @@ function create() {
     //timedEvent = this.time.delayedCall(3000, startWalking, [], this);
 }
 
-function startWalking ()
+function startWalking()
 {
     player.body.setVelocityX(200);
     player.anims.play('walk', true);
@@ -152,10 +152,15 @@ function collectCoin(sprite, tile) {
     return false;
 }
 
+function jump()
+{
+    player.body.setVelocityY(-500);
+}
+
 function update(time, delta) {
     // anim
-    /*
-    var bool=0
+    var bool=0;
+    compt=0;
     if (player.x>600 && player.body.onFloor() && bool==0)
     {
         player.body.setVelocityX(0);
@@ -167,11 +172,12 @@ function update(time, delta) {
     if (bool==1 && player.body.onFloor())
     {
         bool=2;
+        compt++;
         infoText.setText('compt: ' + compt);
-        player.body.setVelocityY(-500);
+        jump();
     }
-*/
 
+/*
     // controller
     if (cursors.left.isDown)
     {
@@ -191,8 +197,9 @@ function update(time, delta) {
     // jump
     if (cursors.up.isDown && player.body.onFloor())
     {
-        infoText.setText('compt: ' + player.body.velocity.y);
+        //infoText.setText('compt: ' + player.body.velocity.y);
         player.body.setVelocityY(-500);
-        infoText.setText('compt: ' + player.body.velocity.y);
+        //infoText.setText('compt: ' + player.body.velocity.y);
     }
+*/
 }
