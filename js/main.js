@@ -54,6 +54,13 @@ var distanceText;
 var infoText;
 var timedEvent;
 
+// modal
+var line = [];
+var wordIndex = 0;
+var lineIndex = 0;
+var wordDelay = 120;
+var lineDelay = 400;
+
 function preload() {
     // map made with Tiled in JSON format
     this.load.tilemapTiledJSON('map', 'assets/map2.json');
@@ -268,7 +275,7 @@ function collectCoin(sprite, tile) {
     return false;
 }
 
-function createSpeechBubble (x, y, width, height, quote)
+function createSpeechBubble (x, y, width, height, content)
 {
     var bubbleWidth = width;
     var bubbleHeight = height;
@@ -309,11 +316,49 @@ function createSpeechBubble (x, y, width, height, quote)
     bubble.lineBetween(point2X, point2Y, point3X, point3Y);
     bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
+    if (lineIndex === content.length)
+    {
+        //  We're finished
+        return;
+    }
+
+    //  Split the current line on spaces, so one word per array element
+    line = content[lineIndex].split(' ');
+
+    //  Reset the word index to zero (the first word in the line)
+    wordIndex = 0;
+
+    //  Call the 'nextWord' function once for each word in the line (line.length)
+    this.time.events.repeat(wordDelay, line.length, nextWord, this);
+
+    //  Advance to the next line
+    lineIndex++;
+
     var content = this.add.text(0, 0, quote, { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
 
     var b = content.getBounds();
 
     content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
+}
+
+function nextWord() {
+
+    //  Add the next word onto the text string, followed by a space
+    text.text = text.text.concat(line[wordIndex] + " ");
+
+    //  Advance the word index to the next word in the line
+    wordIndex++;
+
+    //  Last word?
+    if (wordIndex === line.length)
+    {
+        //  Add a carriage return
+        text.text = text.text.concat("\n");
+
+        //  Get the next line after the lineDelay amount of ms has elapsed
+        this.time.events.add(lineDelay, nextLine, this);
+    }
+
 }
 
 
