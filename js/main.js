@@ -101,13 +101,15 @@ function create() {
     // player walk animation
     this.anims.create({
         key: 'walk',
-        frames: this.anims.generateFrameNames('player', {prefix: 'character_femalePerson_walk', start: 1,end: 7, zeroPad: 1}),
+        frames: this.anims.generateFrameNames('player', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
+        frameRate: 10,
         repeat: -1
     });
     // idle with only one frame, so repeat is not neaded
     this.anims.create({
         key: 'idle',
         frames: [{key: 'player', frame: 'character_femalePerson_idle'}],
+        frameRate: 10,
     });
 
 
