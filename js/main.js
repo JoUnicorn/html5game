@@ -147,14 +147,14 @@ function create() {
     this.physics.add.collider(groundLayer, robot);
     // player walk animation
     this.anims.create({
-        key: 'walk',
+        key: 'walk_g',
         frames: this.anims.generateFrameNames('robot', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
         frameRate: 10,
         repeat: -1
     });
     // idle with only one frame, so repeat is not neaded
     this.anims.create({
-        key: 'idle',
+        key: 'idle_g',
         frames: [{key: 'robot', frame: 'character_femalePerson_idle'}],
         frameRate: 10,
     });
@@ -198,13 +198,13 @@ function create() {
 function startWalking_gr()
 {
     girl.body.setVelocityX(200);
-    girl.anims.play('walk', true);
+    girl.anims.play('walk_g', true);
     girl.flipX = false; // use the original sprite looking to the right
 }
 function stopWalking_gr()
 {
     girl.body.setVelocityX(0);
-    girl.anims.play('idle', true);
+    girl.anims.play('idle_g', true);
 }
 
 
