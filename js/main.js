@@ -323,25 +323,16 @@ function createSpeechBubble (x, y, width, height, quote)
     content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
 
     console.log(quote)
-    console.log(quote.length)
-
-    if (lineIndex === quote.length)
-    {
-        //  We're finished
-        return;
-    }
 
     //  Split the current line on spaces, so one word per array element
-    line = quote[lineIndex].split(' ');
+    line = quote.split(' ');
+    console.log(line)
 
     //  Reset the word index to zero (the first word in the line)
     wordIndex = 0;
 
     //  Call the 'nextWord' function once for each word in the line (line.length)
     this.time.events.repeat(wordDelay, line.length, nextWord, this);
-
-    //  Advance to the next line
-    lineIndex++;
 
 }
 
