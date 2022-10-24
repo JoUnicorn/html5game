@@ -1,5 +1,6 @@
 var config = {
     type: Phaser.AUTO,
+    debug: true,
     scale: {
         mode: Phaser.Scale.FIT,
         parent: 'game',
@@ -112,6 +113,7 @@ function create() {
         frameRate: 10,
     });
 
+    //////////
     //gitl
     girl = this.physics.add.sprite(200, 200, 'girl');
     girl.setBounce(0.2); // our player will bounce from items
