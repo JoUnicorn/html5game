@@ -45,6 +45,7 @@ var cursors;
 var groundLayer, coinLayer;
 var text;
 var score = 0;
+var distanceText;
 
 function preload() {
     // map made with Tiled in JSON format
@@ -125,6 +126,8 @@ function create() {
     });
     // fix the text to the camera
     text.setScrollFactor(0);
+
+    distanceText = this.add.text(10, 10, 'Click to set target', { fill: '#00ff00' });
 }
 
 // this function will be called when the player touches a coin
@@ -136,6 +139,21 @@ function collectCoin(sprite, tile) {
 }
 
 function update(time, delta) {
+    /* anim */
+    var distance = Phaser.Math.Distance.Between(player.x, player.y, player.x+100, player.y);
+    if (player.body.speed > 0)
+    {
+        distanceText.setText('Distance: ' + distance);
+
+        //  4 is our distance tolerance, i.e. how close the source can get to the target
+        //  before it is considered as being there. The faster it moves, the more tolerance is required.
+        if (distance < 4)
+        {
+            source.body.reset(player.x+100, player.y);
+        }
+    }
+
+    /* control */
     if (cursors.left.isDown)
     {
         player.body.setVelocityX(-200);
