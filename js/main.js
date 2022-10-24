@@ -42,6 +42,7 @@ var game = new Phaser.Game(config);
 var map;
 var player;
 var girl;
+var robot;
 var cursors;
 var groundLayer, coinLayer;
 var text;
@@ -200,11 +201,16 @@ function startWalking_gr()
     girl.body.setVelocityX(200);
     girl.anims.play('walk_g', true);
     girl.flipX = false; // use the original sprite looking to the right
+    robot.body.setVelocityX(200);
+    robot.anims.play('walk_r', true);
+    robot.flipX = false; // use the original sprite looking to the right
 }
 function stopWalking_gr()
 {
     girl.body.setVelocityX(0);
     girl.anims.play('idle_g', true);
+    robot.body.setVelocityX(0);
+    robot.anims.play('idle_r', true);
 }
 
 
