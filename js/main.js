@@ -95,7 +95,7 @@ function create() {
     // small fix to our player images, we resize the physics body object slightly
     player.body.setSize(player.width, player.height-40);
     player.body.setOffset(0, 40);
-    player.setScale(.5);
+    player.setScale(.6);
 
     // player will collide with the level tiles
     this.physics.add.collider(groundLayer, player);
@@ -193,10 +193,10 @@ function create() {
 
     //jo
     timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(8000, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(8500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(9000, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(11000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(7800, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(8300, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(9500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(11500, stopWalking_jo, [], this);
 }
 
 function startWalking_gr()
