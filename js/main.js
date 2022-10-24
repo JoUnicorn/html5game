@@ -185,26 +185,44 @@ function create() {
     infoText = this.add.text(20, 500, 'info: ', { fill: '#00ff00' });
     distanceText.setScrollFactor(0);
     infoText.setScrollFactor(0);
-    timedEvent = this.time.delayedCall(3000, startWalking, [], this);
-    timedEvent = this.time.delayedCall(5300, stopWalking, [], this);
-    timedEvent = this.time.delayedCall(5800, startJumping, [], this);
+    // gr
+    timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
+    timedEvent = this.time.delayedCall(5300, stopWalking_gr, [], this);
+
+    //jo
+    timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(8300, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(8800, startJumping_jo, [], this);
 }
 
-function startWalking()
+function startWalking_gr()
+{
+    girl.body.setVelocityX(200);
+    girl.anims.play('walk', true);
+    girl.flipX = false; // use the original sprite looking to the right
+}
+function stopWalking_gr()
+{
+    girl.body.setVelocityX(0);
+    girl.anims.play('idle', true);
+}
+
+
+function startWalking_jo()
 {
     player.body.setVelocityX(200);
     player.anims.play('walk', true);
     player.flipX = false; // use the original sprite looking to the right
     distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
 }
-function stopWalking()
+function stopWalking_jo()
 {
     player.body.setVelocityX(0);
     player.anims.play('idle', true);
     distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
 }
 
-function startJumping()
+function startJumping_jo()
 {
     player.body.setVelocityY(-500);
 }
