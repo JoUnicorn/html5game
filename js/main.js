@@ -35,7 +35,8 @@ var config = {
         create: create,
         update: update,
         extend: {
-            createSpeechBubble: createSpeechBubble
+            createSpeechBubble: createSpeechBubble,
+            nextWord: nextWord
         }
     }
 };
