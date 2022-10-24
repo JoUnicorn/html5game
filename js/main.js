@@ -154,6 +154,7 @@ function collectCoin(sprite, tile) {
 
 function update(time, delta) {
     // anim
+    /*
     var bool=0
     if (player.x>600 && player.body.onFloor() && bool==0)
     {
@@ -169,6 +170,7 @@ function update(time, delta) {
         infoText.setText('compt: ' + compt);
         player.body.setVelocityY(-500);
     }
+*/
 
     // controller
     if (cursors.left.isDown)
