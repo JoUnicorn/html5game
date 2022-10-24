@@ -125,14 +125,14 @@ function create() {
     this.physics.add.collider(groundLayer, girl);
     // player walk animation
     this.anims.create({
-        key: 'walk',
+        key: 'walk_g',
         frames: this.anims.generateFrameNames('girl', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
         frameRate: 10,
         repeat: -1
     });
     // idle with only one frame, so repeat is not neaded
     this.anims.create({
-        key: 'idle',
+        key: 'idle_g',
         frames: [{key: 'girl', frame: 'character_femalePerson_idle'}],
         frameRate: 10,
     });
@@ -147,14 +147,14 @@ function create() {
     this.physics.add.collider(groundLayer, robot);
     // player walk animation
     this.anims.create({
-        key: 'walk_g',
+        key: 'walk_r',
         frames: this.anims.generateFrameNames('robot', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
         frameRate: 10,
         repeat: -1
     });
     // idle with only one frame, so repeat is not neaded
     this.anims.create({
-        key: 'idle_g',
+        key: 'idle_r',
         frames: [{key: 'robot', frame: 'character_femalePerson_idle'}],
         frameRate: 10,
     });
