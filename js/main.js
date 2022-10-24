@@ -153,7 +153,7 @@ function update(time, delta) {
 
 
     // controller
-    if (cursors.left.isDown)
+/*    if (cursors.left.isDown)
     {
         player.body.setVelocityX(-200);
         player.anims.play('walk', true); // walk left
@@ -173,4 +173,5 @@ function update(time, delta) {
     {
         player.body.setVelocityY(-500);
     }
+*/
 }
