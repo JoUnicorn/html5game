@@ -197,14 +197,7 @@ function create() {
     timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(7800, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(8300, startJumping_jo, [], this);
-    //this.add.tween(player.scale).to( { x: 1, y: 1 }, 2000, Phaser.Easing.Linear.None, true);
-    this.tweens.add({
-        targets: player,
-        scale: 1,
-        yoyo: false,
-        duration: 2000,
-        ease: 'Sine.easeInOut'
-    });
+    timedEvent = this.time.delayedCall(9000, rescale_jo, [], this);
     timedEvent = this.time.delayedCall(9500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(11500, stopWalking_jo, [], this);
 }
@@ -244,6 +237,18 @@ function stopWalking_jo()
 function startJumping_jo()
 {
     player.body.setVelocityY(-500);
+}
+
+function rescale_jo()
+{
+    this.tweens.add({
+        targets: player,
+        scale: 1,
+        yoyo: false,
+        duration: 2000,
+        ease: 'Sine.easeInOut'
+    });
+
 }
 
 // this function will be called when the player touches a coin
