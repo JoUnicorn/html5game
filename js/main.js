@@ -45,6 +45,7 @@ var cursors;
 var groundLayer, coinLayer;
 var text;
 var score = 0;
+var distanceText;
 
 function preload() {
     // map made with Tiled in JSON format
@@ -125,6 +126,8 @@ function create() {
     });
     // fix the text to the camera
     text.setScrollFactor(0);
+
+    distanceText = this.add.text(20, 510, 'Click to set target', { fill: '#00ff00' });
 }
 
 // this function will be called when the player touches a coin
@@ -147,6 +150,7 @@ function update(time, delta) {
         player.body.setVelocityX(200);
         player.anims.play('walk', true);
         player.flipX = false; // use the original sprite looking to the right
+        distanceText.setText('Distance x: ' + player.x +"Distance x: " + player.y);
     } else {
         player.body.setVelocityX(0);
         player.anims.play('idle', true);
