@@ -50,7 +50,7 @@ var timedEvent;
 
 function preload() {
     // map made with Tiled in JSON format
-    this.load.tilemapTiledJSON('map', 'assets/map.json');
+    this.load.tilemapTiledJSON('map', 'assets/map2.json');
     // tiles in spritesheet
     this.load.spritesheet('tiles', 'assets/tiles.png', {frameWidth: 70, frameHeight: 70});
     // simple coin image
@@ -156,7 +156,7 @@ function update(time, delta) {
         player.anims.play('idle', true);
         distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
         player.body.setVelocityY(-500);
-    } 
+    }
 
 
     // controller
