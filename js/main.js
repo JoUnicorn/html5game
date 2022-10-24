@@ -68,6 +68,8 @@ function preload() {
 }
 
 function create() {
+    this.load.plugin('DialogModalPlugin', './dialog_plugin.js');
+
     // load the map
     map = this.make.tilemap({key: 'map'});
 
@@ -191,6 +193,12 @@ function create() {
     infoText = this.add.text(20, 500, 'info: ', { fill: '#00ff00' });
     distanceText.setScrollFactor(0);
     infoText.setScrollFactor(0);
+
+    // modal
+    this.sys.install('DialogModalPlugin');
+    this.sys.dialogModal.init();
+
+
     // gr
     timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
     timedEvent = this.time.delayedCall(5300, stopWalking_gr, [], this);
