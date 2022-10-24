@@ -316,6 +316,12 @@ function createSpeechBubble (x, y, width, height, content)
     bubble.lineBetween(point2X, point2Y, point3X, point3Y);
     bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
+    var content = this.add.text(0, 0, content, { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+
+    var b = content.getBounds();
+
+    content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
+
     if (lineIndex === content.length)
     {
         //  We're finished
@@ -334,17 +340,12 @@ function createSpeechBubble (x, y, width, height, content)
     //  Advance to the next line
     lineIndex++;
 
-    var content = this.add.text(0, 0, quote, { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
-
-    var b = content.getBounds();
-
-    content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
 }
 
 function nextWord() {
 
     //  Add the next word onto the text string, followed by a space
-    text.text = text.text.concat(line[wordIndex] + " ");
+    content.text = content.text.concat(line[wordIndex] + " ");
 
     //  Advance the word index to the next word in the line
     wordIndex++;
@@ -353,7 +354,7 @@ function nextWord() {
     if (wordIndex === line.length)
     {
         //  Add a carriage return
-        text.text = text.text.concat("\n");
+        content.text = content.text.concat("\n");
 
         //  Get the next line after the lineDelay amount of ms has elapsed
         this.time.events.add(lineDelay, nextLine, this);
