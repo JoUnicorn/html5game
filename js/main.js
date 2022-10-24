@@ -140,7 +140,7 @@ function collectCoin(sprite, tile) {
 
 function update(time, delta) {
     // anim
-    if (player.x>600)
+    if (player.x<600)
     {
       player.body.setVelocityX(200);
       player.anims.play('walk', true);
