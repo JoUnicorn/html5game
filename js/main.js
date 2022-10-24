@@ -156,11 +156,12 @@ function update(time, delta) {
         player.body.setVelocityX(0);
         player.anims.play('idle', true);
         distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
+        bool=1;
     }
 
-    if (bool==0 && player.body.onFloor())
+    if (bool==1 && player.body.onFloor())
     {
-        bool=1;
+        bool=0;
         player.body.setVelocityY(-500);
     }
 
