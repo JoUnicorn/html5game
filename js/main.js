@@ -193,5 +193,6 @@ function update(time, delta) {
     {
         infoText.setText('compt: ' + player.body.velocity.y);
         player.body.setVelocityY(-500);
+        infoText.setText('compt: ' + player.body.velocity.y);
     }
 }
