@@ -46,6 +46,7 @@ var groundLayer, coinLayer;
 var text;
 var score = 0;
 var distanceText;
+var target = new Phaser.Math.Vector2();
 
 function preload() {
     // map made with Tiled in JSON format
