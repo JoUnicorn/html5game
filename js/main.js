@@ -134,6 +134,8 @@ function create() {
     distanceText.setScrollFactor(0);
     infoText.setScrollFactor(0);
     timedEvent = this.time.delayedCall(3000, startWalking, [], this);
+    timedEvent = this.time.delayedCall(4000, stopWalking, [], this);
+    timedEvent = this.time.delayedCall(4500, startJumping, [], this);
 }
 
 function startWalking()
@@ -141,6 +143,12 @@ function startWalking()
     player.body.setVelocityX(200);
     player.anims.play('walk', true);
     player.flipX = false; // use the original sprite looking to the right
+    distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
+}
+function stopWalking()
+{
+    player.body.setVelocityX(0);
+    player.anims.play('idle', true);
     distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
 }
 
@@ -159,15 +167,6 @@ function collectCoin(sprite, tile) {
 
 function update(time, delta) {
     // anim
-    var bool=0;
-    if (player.x>600 && player.body.onFloor() && bool==0)
-    {
-        player.body.setVelocityX(0);
-        player.anims.play('idle', true);
-        distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
-        bool=1;
-        timedEvent = this.time.delayedCall(1000, startJumping, [], this);
-    }
 
 
 /*
