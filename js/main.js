@@ -139,6 +139,17 @@ function collectCoin(sprite, tile) {
 }
 
 function update(time, delta) {
+    // anim
+    if (player.x<600)
+    {
+      player.body.setVelocityX(200);
+      player.anims.play('walk', true);
+      player.flipX = false; // use the original sprite looking to the right
+      distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
+    }
+
+
+    // controller
     if (cursors.left.isDown)
     {
         player.body.setVelocityX(-200);
@@ -150,7 +161,6 @@ function update(time, delta) {
         player.body.setVelocityX(200);
         player.anims.play('walk', true);
         player.flipX = false; // use the original sprite looking to the right
-        distanceText.setText('Distance x: ' + player.x +"Distance x: " + player.y);
     } else {
         player.body.setVelocityX(0);
         player.anims.play('idle', true);
