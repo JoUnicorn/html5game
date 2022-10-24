@@ -170,7 +170,6 @@ function update(time, delta) {
         player.body.setVelocityY(-500);
     }
 
-    /*
     // controller
     if (cursors.left.isDown)
     {
@@ -187,7 +186,6 @@ function update(time, delta) {
         player.body.setVelocityX(0);
         player.anims.play('idle', true);
     }
-    */
     // jump
     if (cursors.up.isDown && player.body.onFloor())
     {
