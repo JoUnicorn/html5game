@@ -335,7 +335,7 @@ function createSpeechBubble (x, y, width, height, quote)
     wordIndex = 0;
 
     //  Call the 'nextWord' function once for each word in the line (line.length)
-    game.time.events.repeat(wordDelay, line.length, nextWord, this);
+    this.time.events.repeat(wordDelay, line.length, nextWord, this);
 
     //  Advance to the next line
     lineIndex++;
