@@ -150,7 +150,7 @@ function collectCoin(sprite, tile) {
 
 function update(time, delta) {
     // anim
-    if (player.x>600)
+    if (player.x>600 && player.body.onFloor())
     {
         player.body.setVelocityX(0);
         player.anims.play('idle', true);
