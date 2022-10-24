@@ -128,6 +128,16 @@ function create() {
     text.setScrollFactor(0);
 
     distanceText = this.add.text(20, 500, 'Click to set target', { fill: '#00ff00' });
+
+    this.input.on('pointerdown', function (pointer) {
+
+        target.x = player.x+100;
+        target.y = player.y;
+
+        // Move at 200 px/s:
+        this.physics.moveToObject(player, target, 200);
+
+    }, this);
 }
 
 // this function will be called when the player touches a coin
