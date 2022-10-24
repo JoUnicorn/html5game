@@ -46,6 +46,7 @@ var groundLayer, coinLayer;
 var text;
 var score = 0;
 var distanceText;
+var infoText;
 var timedEvent;
 
 function preload() {
@@ -128,7 +129,8 @@ function create() {
     // fix the text to the camera
     text.setScrollFactor(0);
 
-    distanceText = this.add.text(20, 510, 'Click to set target', { fill: '#00ff00' });
+    distanceText = this.add.text(100, 510, 'Click to set target', { fill: '#00ff00' });
+    infoText = this.add.text(100, 50, 'info: ', { fill: '#00ff00' });
     timedEvent = this.time.delayedCall(3000, startWalking, [], this);
 }
 
@@ -151,6 +153,7 @@ function collectCoin(sprite, tile) {
 function update(time, delta) {
     // anim
     var bool=0
+    var compteur=0
     if (player.x>600 && player.body.onFloor())
     {
         player.body.setVelocityX(0);
@@ -162,6 +165,8 @@ function update(time, delta) {
     if (bool==1 && player.body.onFloor())
     {
         bool=0;
+        compteur=compteur+1;
+        distanceText.setText('compteur: '+compteur);
         player.body.setVelocityY(-500);
     }
 
