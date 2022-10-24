@@ -45,8 +45,6 @@ var cursors;
 var groundLayer, coinLayer;
 var text;
 var score = 0;
-var distanceText;
-var target = new Phaser.Math.Vector2();
 
 function preload() {
     // map made with Tiled in JSON format
@@ -127,18 +125,6 @@ function create() {
     });
     // fix the text to the camera
     text.setScrollFactor(0);
-
-    distanceText = this.add.text(20, 500, 'Click to set target', { fill: '#00ff00' });
-
-    this.input.on('pointerdown', function (pointer) {
-
-        target.x = player.x+2000;
-        target.y = player.y;
-
-        // Move at 200 px/s:
-        this.physics.moveToObject(player, target, 200);
-
-    }, this);
 }
 
 // this function will be called when the player touches a coin
@@ -150,21 +136,6 @@ function collectCoin(sprite, tile) {
 }
 
 function update(time, delta) {
-    /* anim */
-    var distance = Phaser.Math.Distance.Between(player.x, player.y, player.x+2000, player.y);
-    if (player.body.speed > 0)
-    {
-        distanceText.setText('Distance: ' + distance);
-
-        //  4 is our distance tolerance, i.e. how close the source can get to the target
-        //  before it is considered as being there. The faster it moves, the more tolerance is required.
-        if (distance < 4)
-        {
-            player.body.reset(player.x+2000, player.y);
-        }
-    }
-
-    /* control */
     if (cursors.left.isDown)
     {
         player.body.setVelocityX(-200);
