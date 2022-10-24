@@ -10,8 +10,8 @@ var config = {
             height: 300
         },
         max: {
-            width: 1600,
-            height: 1200
+            width: 800,
+            height: 600
         }
     },
     physics: {
