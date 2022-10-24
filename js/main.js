@@ -166,6 +166,7 @@ function update(time, delta) {
     if (bool==1 && player.body.onFloor())
     {
         bool=2;
+        infoText.setText('compt: ' + compt);
         player.body.setVelocityY(-500);
     }
 
@@ -190,6 +191,7 @@ function update(time, delta) {
     // jump
     if (cursors.up.isDown && player.body.onFloor())
     {
+        infoText.setText('compt: ' + player.body.velocity);
         player.body.setVelocityY(-500);
     }
 }
