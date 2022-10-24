@@ -36,7 +36,7 @@ var config = {
         update: update,
         extend: {
             createSpeechBubble: createSpeechBubble
-        }        
+        }
     }
 };
 
@@ -196,7 +196,7 @@ function create() {
     infoText.setScrollFactor(0);
 
     // modal
-    this.createSpeechBubble(20, 20, 320, 160, "jmbfdsjbfvjd");
+    this.createSpeechBubble(20, 100, 320, 160, "jmbfdsjbfvjd");
 
     // gr
     timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
