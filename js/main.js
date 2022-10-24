@@ -62,7 +62,7 @@ function preload() {
     this.load.atlas('girl', 'assets/girl.png', 'assets/girl.json');
     this.load.atlas('ennemy1', 'assets/ennemy1.png', 'assets/ennemy1.json');
     this.load.atlas('ennemy2', 'assets/ennemy2.png', 'assets/ennemy2.json');
-    this.load.atlas('ennemy3', 'assets/ennemy3.png', 'assets/ennemy3.json');
+    this.load.atlas('robot', 'assets/ennemy3.png', 'assets/ennemy3.json');
     this.load.atlas('ennemy4', 'assets/ennemy4.png', 'assets/ennemy4.json');
 }
 
@@ -87,7 +87,7 @@ function create() {
     this.physics.world.bounds.height = groundLayer.height;
 
     // create the player sprite
-    player = this.physics.add.sprite(200, 200, 'player');
+    player = this.physics.add.sprite(100, 200, 'player');
     player.setBounce(0.2); // our player will bounce from items
     player.setCollideWorldBounds(true); // don't go out of the map
 
@@ -119,7 +119,7 @@ function create() {
 
     //////////
     //gitl
-    girl = this.physics.add.sprite(400, 200, 'girl');
+    girl = this.physics.add.sprite(700, 200, 'girl');
     girl.setBounce(0.2); // our player will bounce from items
     girl.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, girl);
@@ -138,6 +138,28 @@ function create() {
     });
     girl.body.setSize(girl.width, girl.height-40);
     girl.body.setOffset(0, 40);
+    //////
+    //////////
+    //robot
+    robot = this.physics.add.sprite(600, 200, 'robot');
+    robot.setBounce(0.2); // our player will bounce from items
+    robot.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, robot);
+    // player walk animation
+    this.anims.create({
+        key: 'walk',
+        frames: this.anims.generateFrameNames('robot', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
+        frameRate: 10,
+        repeat: -1
+    });
+    // idle with only one frame, so repeat is not neaded
+    this.anims.create({
+        key: 'idle',
+        frames: [{key: 'robot', frame: 'character_femalePerson_idle'}],
+        frameRate: 10,
+    });
+    robot.body.setSize(robot.width, robot.height-40);
+    robot.body.setOffset(0, 40);
     //////
 
 
@@ -164,8 +186,8 @@ function create() {
     distanceText.setScrollFactor(0);
     infoText.setScrollFactor(0);
     timedEvent = this.time.delayedCall(3000, startWalking, [], this);
-    timedEvent = this.time.delayedCall(5500, stopWalking, [], this);
-    timedEvent = this.time.delayedCall(6000, startJumping, [], this);
+    timedEvent = this.time.delayedCall(5300, stopWalking, [], this);
+    timedEvent = this.time.delayedCall(5800, startJumping, [], this);
 }
 
 function startWalking()
