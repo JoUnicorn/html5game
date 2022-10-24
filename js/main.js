@@ -150,11 +150,17 @@ function collectCoin(sprite, tile) {
 
 function update(time, delta) {
     // anim
+    var bool=0
     if (player.x>600 && player.body.onFloor())
     {
         player.body.setVelocityX(0);
         player.anims.play('idle', true);
         distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
+    }
+
+    if (bool==0 && player.body.onFloor())
+    {
+        bool=1;
         player.body.setVelocityY(-500);
     }
 
