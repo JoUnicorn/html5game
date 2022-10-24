@@ -142,6 +142,12 @@ function startWalking()
     player.anims.play('walk', true);
     player.flipX = false; // use the original sprite looking to the right
     distanceText.setText('Distance x: ' + player.x +" distance y: " + player.y);
+    timedEvent = this.time.delayedCall(1000, startJumping, [], this);
+}
+
+function startJumping()
+{
+    player.body.setVelocityY(-500);
 }
 
 // this function will be called when the player touches a coin
