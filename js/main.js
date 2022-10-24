@@ -58,8 +58,8 @@ function preload() {
     // simple coin image
     this.load.image('coin', 'assets/coinGold.png');
     // player animations
-    //this.load.atlas('player', 'assets/player.png', 'assets/player.json');
-    this.load.atlas('player', 'assets/girl.png', 'assets/girl.json');
+    this.load.atlas('player', 'assets/jo.png', 'assets/jo.json');
+    this.load.atlas('girl', 'assets/girl.png', 'assets/girl.json');
 }
 
 function create() {
@@ -88,7 +88,7 @@ function create() {
     player.setCollideWorldBounds(true); // don't go out of the map
 
     // small fix to our player images, we resize the physics body object slightly
-    player.body.setSize(player.width, player.height);
+    //player.body.setSize(player.width, player.height);
 
     // player will collide with the level tiles
     this.physics.add.collider(groundLayer, player);
@@ -136,8 +136,8 @@ function create() {
     distanceText.setScrollFactor(0);
     infoText.setScrollFactor(0);
     timedEvent = this.time.delayedCall(3000, startWalking, [], this);
-    timedEvent = this.time.delayedCall(6000, stopWalking, [], this);
-    timedEvent = this.time.delayedCall(6500, startJumping, [], this);
+    timedEvent = this.time.delayedCall(5000, stopWalking, [], this);
+    timedEvent = this.time.delayedCall(5500, startJumping, [], this);
 }
 
 function startWalking()
