@@ -2,10 +2,17 @@ var config = {
     type: Phaser.AUTO,
     scale: {
         mode: Phaser.Scale.RESIZE,
-        parent: 'phaser-example',
-        autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: 400,
-        height: 300
+        parent: 'game',
+        width: 800,
+        height: 600,
+        min: {
+            width: 400,
+            height: 300
+        },
+        max: {
+            width: 1600,
+            height: 1200
+        }
     },
     physics: {
         default: 'arcade',
