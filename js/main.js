@@ -160,7 +160,7 @@ function jump()
 function update(time, delta) {
     // anim
     var bool=0;
-    compt=0;
+    var compt=0;
     if (player.x>600 && player.body.onFloor() && bool==0)
     {
         player.body.setVelocityX(0);
