@@ -331,8 +331,8 @@ function create() {
     timedEvent = this.time.delayedCall(40500, burn, [], this);
     timedEvent = this.time.delayedCall(42500, boom_disa, [], this);
     timedEvent = this.time.delayedCall(44500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(50500, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(47500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(56500, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(50500, startJumping_jo, [], this);
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
@@ -345,12 +345,14 @@ function fight()
     zombie.flipX = true; // use the original sprite looking to the right
     player.anims.play('shoveBack', true);
     player.body.setVelocityX(-200);
+    text.text=150;
 }
 
 function generate(x, y)
 {
     //console.log(zombie.x)
     //console.log(zombie.y)
+    zombie.anims.play('idle_z', true);
     fireball.setPosition(player.x, player.y).setScale(0.5).setAlpha(1);
 
     curve = new Phaser.Curves.Line(new Phaser.Math.Vector2(player.x, player.y), new Phaser.Math.Vector2(zombie.x, zombie.y));
