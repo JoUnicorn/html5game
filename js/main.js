@@ -144,44 +144,6 @@ function create() {
     wafflePink.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, wafflePink);
     //////
-    // create the player sprite
-    player = this.physics.add.sprite(100, 200, 'player');
-    player.setBounce(0.2); // our player will bounce from items
-    player.setCollideWorldBounds(true); // don't go out of the map
-
-    // small fix to our player images, we resize the physics body object slightly
-    player.body.setSize(player.width, player.height-40);
-    player.body.setOffset(0, 40);
-    //player.setScale(.6);
-    player.scaleX=.6;
-    player.scaleY=.6;
-
-    // player will collide with the level tiles
-    this.physics.add.collider(groundLayer, player);
-
-    //coinLayer.setTileIndexCallback(17, collectCoin, this);
-    // when the player overlaps with a tile with index 17, collectCoin
-    // will be called
-    //this.physics.add.overlap(player, coinLayer);
-
-    // player walk animation
-    this.anims.create({
-        key: 'walk',
-        frames: this.anims.generateFrameNames('player', {prefix: 'character_maleAdventurer_walk', end: 7, zeroPad: 1}),
-        frameRate: 10,
-        repeat: -1
-    });
-    // idle with only one frame, so repeat is not neaded
-    this.anims.create({
-        key: 'idle',
-        frames: [{key: 'player', frame: 'character_maleAdventurer_idle'}],
-        frameRate: 10,
-    });
-    this.anims.create({
-        key: 'shoveBack',
-        frames: [{key: 'player', frame: 'character_maleAdventurer_shoveBack'}],
-        frameRate: 10,
-    });
 
     //////////
     //gitl
@@ -336,6 +298,44 @@ function create() {
     boom.scaleY=2;
     boom.alpha = 0;
     //////
+    // create the player sprite
+    player = this.physics.add.sprite(100, 200, 'player');
+    player.setBounce(0.2); // our player will bounce from items
+    player.setCollideWorldBounds(true); // don't go out of the map
+
+    // small fix to our player images, we resize the physics body object slightly
+    player.body.setSize(player.width, player.height-40);
+    player.body.setOffset(0, 40);
+    //player.setScale(.6);
+    player.scaleX=.6;
+    player.scaleY=.6;
+
+    // player will collide with the level tiles
+    this.physics.add.collider(groundLayer, player);
+
+    //coinLayer.setTileIndexCallback(17, collectCoin, this);
+    // when the player overlaps with a tile with index 17, collectCoin
+    // will be called
+    //this.physics.add.overlap(player, coinLayer);
+
+    // player walk animation
+    this.anims.create({
+        key: 'walk',
+        frames: this.anims.generateFrameNames('player', {prefix: 'character_maleAdventurer_walk', end: 7, zeroPad: 1}),
+        frameRate: 10,
+        repeat: -1
+    });
+    // idle with only one frame, so repeat is not neaded
+    this.anims.create({
+        key: 'idle',
+        frames: [{key: 'player', frame: 'character_maleAdventurer_idle'}],
+        frameRate: 10,
+    });
+    this.anims.create({
+        key: 'shoveBack',
+        frames: [{key: 'player', frame: 'character_maleAdventurer_shoveBack'}],
+        frameRate: 10,
+    });
 
     //camera
     cursors = this.input.keyboard.createCursorKeys();
