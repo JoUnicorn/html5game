@@ -309,6 +309,7 @@ function create() {
     console.log(zombie.x)
     console.log(zombie.y)
     timedEvent = this.time.delayedCall(33500, generate, [zombie.x,zombie.y], this);
+    console.log(this.camera)
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
