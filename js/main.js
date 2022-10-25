@@ -361,7 +361,7 @@ function create() {
 
     arrow = this.add.image(130, 577, 'arrow');
     arrow.setScrollFactor(0);
-    //arrow.visible=false;
+    arrow.visible=false;
 
     // modal
     var bubbleWidth = 320;
