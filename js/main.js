@@ -192,21 +192,21 @@ function create() {
     zombie.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, robot);
     this.anims.create({
-        key: 'walk_r',
+        key: 'walk_z',
         frames: this.anims.generateFrameNames('zombie', {prefix: 'character_zombie_walk', end: 7, zeroPad: 1}),
         frameRate: 10,
         repeat: -1
     });
     this.anims.create({
-        key: 'idle_r',
+        key: 'idle_z',
         frames: [{key: 'zombie', frame: 'character_zombie_idle'}],
         frameRate: 10,
     });
     zombie.body.setSize(robot.width, robot.height-40);
     zombie.body.setOffset(0, 40);
-    zombie.scaleX=3;
-    zombie.scaleY=3;
-    zombie.anims.play('idle_r', true);
+    //zombie.scaleX=3;
+    //zombie.scaleY=3;
+    zombie.anims.play('idle_z', true);
     //////
 
 
