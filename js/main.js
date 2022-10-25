@@ -192,11 +192,6 @@ function create() {
     // fix the text to the camera
     text.setScrollFactor(0);
 
-    distanceText = this.add.text(20, 480, 'Click to set target', { fill: '#00ff00' });
-    infoText = this.add.text(20, 500, 'info: ', { fill: '#00ff00' });
-    distanceText.setScrollFactor(0);
-    infoText.setScrollFactor(0);
-
     // modal
     var bubbleWidth = 320;
     var bubbleHeight = 160;
