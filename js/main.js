@@ -354,7 +354,7 @@ function generate(x, y)
 
 function move_camera()
 {
-    //this.cameras.main.x += 100;
+    //this.cameras.main.setFollowOffset(-200, 0);
 }
 
 function draw()
