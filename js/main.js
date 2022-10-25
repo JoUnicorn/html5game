@@ -175,6 +175,14 @@ function create() {
     robot.body.setSize(robot.width, robot.height-40);
     robot.body.setOffset(0, 40);
     //////
+    //mushroom
+    mushroom = this.physics.add.sprite(600, 200, 'mushroom');
+    mushroom.setBounce(0.2); // our player will bounce from items
+    mushroom.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, mushroom);
+    mushroom.body.setSize(robot.width, robot.height-40);
+    mushroom.body.setOffset(0, 40);
+    //////
 
 
     cursors = this.input.keyboard.createCursorKeys();
