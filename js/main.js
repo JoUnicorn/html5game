@@ -199,7 +199,7 @@ function create() {
     var quote="The sky above the port was the color of television, tuned to a dead channel."
     var bubble = this.add.graphics({ x: 20, y: 100 });
     bubble.setScrollFactor(0);
-    var bubble2 = this.add.graphics({ x: 220, y: 100 });
+    var bubble2 = this.add.graphics({ x: 460, y: 100 });
     bubble2.setScrollFactor(0);
     timedEvent = this.time.delayedCall(5000, createSpeechBubble, [bubble, bubbleWidth, bubbleHeight, bubblePadding], this);
     timedEvent = this.time.delayedCall(5000, createSpeechBubble2, [bubble2, bubbleWidth, bubbleHeight, bubblePadding], this);
