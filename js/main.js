@@ -307,9 +307,9 @@ function create() {
     timedEvent = this.time.delayedCall(19500, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(23500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(28000, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(28100, move_camera, [], this);
+    //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
     timedEvent = this.time.delayedCall(33500, generate, [zombie.x,zombie.y], this);
-    console.log(this.cameras)
+    timedEvent = this.time.delayedCall(35500, boom_disa, [], this);
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
@@ -342,6 +342,11 @@ function generate(x, y)
         duration: 2000,
         ease: 'Sine.easeInOut'
     });
+
+}
+
+function boom_disa()
+{
     this.tweens.add({
         targets: boom,
         alpha: 0,
@@ -349,12 +354,6 @@ function generate(x, y)
         duration: 2000,
         ease: 'Sine.easeInOut'
     });
-
-}
-
-function move_camera()
-{
-    //this.cameras.main.setFollowOffset(-200, 0);
 }
 
 function draw()
