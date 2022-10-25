@@ -354,7 +354,7 @@ function create() {
     //background = this.add.tileSprite(0, 0, 800, 600, 'bg');
 
     // And a label to illustrate which menu item was chosen. (This is not necessary)
-    this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, 'Start game', textStyle)
+    this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, 'Start game',{ fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center'})
         .setOrigin(0.5)
         .setPadding(10)
         .setStyle({ backgroundColor: '#111' })
