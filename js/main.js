@@ -194,6 +194,26 @@ function create() {
     robot.body.setOffset(0, 40);
     robot.anims.play('idle_r', true);
     //////
+    //girl2
+    girl2 = this.physics.add.sprite(4900, 200, 'girl2');
+    girl2.setBounce(0.2); // our player will bounce from items
+    girl2.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, girl2);
+    this.anims.create({
+        key: 'walk_r',
+        frames: this.anims.generateFrameNames('girl2', {prefix: 'character_femaleAdventurer_walk', end: 7, zeroPad: 1}),
+        frameRate: 10,
+        repeat: -1
+    });
+    this.anims.create({
+        key: 'idle_r',
+        frames: [{key: 'girl2', frame: 'character_femaleAdventurer_idle'}],
+        frameRate: 10,
+    });
+    girl2.body.setSize(girl2.width, girl2.height-40);
+    girl2.body.setOffset(0, 40);
+    girl2.anims.play('idle_r', true);
+    //////
     //decors
     cherry = this.physics.add.sprite(4600, 200, 'cherry');
     cherry.setBounce(0.2); // our player will bounce from items
