@@ -233,7 +233,7 @@ function create() {
     fireFX.setCallback('onUpdate', draw, [], this);
     /////
     //boom
-    boom = this.physics.add.sprite(zombie.x, zombie.y, 'boom');
+    boom = this.physics.add.sprite(100, 200, 'boom');
     boom.scaleX=2;
     boom.scaleY=2;
     boom.alpha = 0;
