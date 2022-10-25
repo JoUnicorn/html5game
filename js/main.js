@@ -277,6 +277,8 @@ function createSpeechBubble (x, y, width, height, quote)
     var bubblePadding = 10;
     var arrowHeight = bubbleHeight / 4;
 
+    console.log(this)
+
     var bubble = this.add.graphics({ x: x, y: y });
 
     //  Bubble shadow
