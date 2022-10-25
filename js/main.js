@@ -395,12 +395,12 @@ function createSpeechBubble2 (bubble, width, height,padding)
 
 }
 
-function createSpeechInBubble (quotep)
+function createSpeechInBubble (quote)
 {
 
   //console.log(quote)
 
-  line = quotep.split(' ');
+  line = quote.split(' ');
   //console.log(line)
   wordIndex = 0;
 
