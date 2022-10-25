@@ -357,7 +357,7 @@ function create() {
     this.scene.pause();
     this.input.on('pointerdown', () => console.log('click'));
     setTimeout(() => {
-      this.scene.restart();
+      this.scene.resume();
     }, 3000);
 
 }
