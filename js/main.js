@@ -233,7 +233,7 @@ function create() {
     fireFX.setCallback('onUpdate', draw, [], this);
     /////
     //boom
-    boom = this.physics.add.sprite(100, 200, 'boom');
+    boom = this.physics.add.sprite(zombie.x, zombie.y, 'boom');
     boom.setBounce(0.2); // our player will bounce from items
     boom.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, boom);
@@ -308,7 +308,7 @@ function create() {
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
     console.log(zombie.x)
     console.log(zombie.y)
-    timedEvent = this.time.delayedCall(33500, generate, [3000,1700], this);
+    timedEvent = this.time.delayedCall(33500, generate, [zombie.x,zombie.y], this);
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
