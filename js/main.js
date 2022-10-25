@@ -396,48 +396,48 @@ function create() {
     timedEvent = this.time.delayedCall(14000, createSpeechBubbleVisible, [bubble2, 0], this);
 
     // gr
-    timedEvent = this.time.delayedCall(5000, startWalking_gr, [], this);
-    timedEvent = this.time.delayedCall(12300, stopWalking_gr, [], this);
+    timedEvent = this.time.delayedCall(15000, startWalking_gr, [], this);
+    timedEvent = this.time.delayedCall(22300, stopWalking_gr, [], this);
 
     //jo
-    timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(7800, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(8300, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(8350, mushroom_ease, [], this);
-    timedEvent = this.time.delayedCall(8500, startWalking_mus, [], this);
-    timedEvent = this.time.delayedCall(12500, stopWalking_mus, [], this);
-    timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(12500, eat_mus, [], this);
-    timedEvent = this.time.delayedCall(15500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(19500, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(23500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(29000, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(29500, fight, [], this);
-    timedEvent = this.time.delayedCall(31500, idlezom, [], this);
-    timedEvent = this.time.delayedCall(32000, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(32500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(34000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(16000, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(17800, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(18300, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(18350, mushroom_ease, [], this);
+    timedEvent = this.time.delayedCall(18500, startWalking_mus, [], this);
+    timedEvent = this.time.delayedCall(22500, stopWalking_mus, [], this);
+    timedEvent = this.time.delayedCall(20500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(22500, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(22500, eat_mus, [], this);
+    timedEvent = this.time.delayedCall(25500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(29500, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(33500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(39000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(39500, fight, [], this);
+    timedEvent = this.time.delayedCall(41500, idlezom, [], this);
+    timedEvent = this.time.delayedCall(42000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(42500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(44000, stopWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
-    timedEvent = this.time.delayedCall(37500, generate, [zombie.x,zombie.y], this);
-    timedEvent = this.time.delayedCall(40500, burn, [], this);
-    timedEvent = this.time.delayedCall(42500, boom_disa, [], this);
+    timedEvent = this.time.delayedCall(47500, generate, [zombie.x,zombie.y], this);
+    timedEvent = this.time.delayedCall(50500, burn, [], this);
+    timedEvent = this.time.delayedCall(52500, boom_disa, [], this);
 
-    timedEvent = this.time.delayedCall(44500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(50500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(53500, reverseWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(54000, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(56500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(57000, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(59500, reverseWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(54500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(60500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(62500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(63500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(67000, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(69000, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(74000, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(75500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(80000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(63500, reverseWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(64000, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(66500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(67000, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(69500, reverseWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(70500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(72500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(73500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(77000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(79000, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(84000, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(85500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(90000, stopWalking_jo, [], this);
 
 
 
