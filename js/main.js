@@ -192,7 +192,7 @@ function create() {
     mushroom.alpha = 0;
     //////
     //zombie
-    zombie = this.physics.add.sprite(3000, 200, 'zombie');
+    zombie = this.physics.add.sprite(3000, 1600, 'zombie');
     zombie.setBounce(0.2); // our player will bounce from items
     zombie.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, zombie);
