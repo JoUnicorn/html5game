@@ -212,14 +212,10 @@ function create() {
 
     console.log(quote)
 
-    //  Split the current line on spaces, so one word per array element
     line = quote.split(' ');
     console.log(line)
-
-    //  Reset the word index to zero (the first word in the line)
     wordIndex = 0;
 
-    //  Call the 'nextWord' function once for each word in the line (line.length)
     console.log(line.length)
     console.log(this.time)
     this.time.addEvent({
