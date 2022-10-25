@@ -168,7 +168,7 @@ function create() {
         frames: [{key: 'girlv', frame: 'character_femalePerson_idle'}],
         frameRate: 10,
     });
-    girlv.body.setSize(girl.width, girl.height-40);
+    girlv.body.setSize(girlv.width, girlv.height-40);
     girlv.body.setOffset(0, 40);
     girlv.scaleX=.9;
     girlv.scaleY=.9;
