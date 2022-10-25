@@ -444,7 +444,7 @@ function createSpeechInBubble2 (quote)
   //console.log(line)
   wordIndex2 = 0;
 
-  console.log(line.length)
+  console.log(line2.length)
   //console.log(this.time)
   this.time.addEvent({
       delay: wordDelay,                // ms
