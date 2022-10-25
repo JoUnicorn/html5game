@@ -320,7 +320,7 @@ function createSpeechBubble (bubble, width, height,padding)
 
 }
 
-function createSpeechBubble (bubble, width, height,padding)
+function createSpeechBubble2 (bubble, width, height,padding)
 {
     var bubbleWidth = width;
     var bubbleHeight = height;
