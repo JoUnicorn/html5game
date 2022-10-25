@@ -359,7 +359,7 @@ function create() {
     // fix the text to the camera
     text.setScrollFactor(0);
 
-    arrow = game.add.image(100, 100, 'arrow');
+    arrow = this.add.image(100, 100, 'arrow');
 
     // modal
     var bubbleWidth = 320;
