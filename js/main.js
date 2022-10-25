@@ -269,7 +269,7 @@ function stopWalking_gr()
 
 function startWalking_mus()
 {
-    mushroom.body.setVelocityX(200);
+    mushroom.body.setVelocityX(100);
     mushroom.flipX = false; // use the original sprite looking to the right
 }
 function stopWalking_mus()
