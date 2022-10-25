@@ -643,20 +643,20 @@ function update(time, delta) {
 
     if (cursors.up.isDown)
     {
-        this.camera.y -= 4;
+        this.cameras.main.y -= 4;
     }
     else if (cursors.down.isDown)
     {
-        this.camera.y += 4;
+        this.cameras.main.y += 4;
     }
 
     if (cursors.left.isDown)
     {
-        this.camera.x -= 4;
+        this.cameras.main.x -= 4;
     }
     else if (cursors.right.isDown)
     {
-        this.camera.x += 4;
+        this.cameras.main.x += 4;
     }
 
 /*
