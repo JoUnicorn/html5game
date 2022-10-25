@@ -359,8 +359,14 @@ function create() {
         .on('pointerover', () => startButton.setStyle({ fill: '#f39c12' }))
         .on('pointerout', () => startButton.setStyle({ fill: '#FFF' }))
     this.scene.pause();
+
+    this.input.onDown.add(unpause, self);
 }
 
+function unpause()
+{
+    console.log("kkk");
+}
 
 function reverseWalking_jo()
 {
