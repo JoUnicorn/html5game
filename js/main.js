@@ -245,6 +245,7 @@ function create() {
     timedEvent = this.time.delayedCall(12500, stopWalking_mus, [], this);
     timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(12500, eat_mus, [], this);
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
@@ -318,11 +319,22 @@ function rescale_jo()
 }
 
 // this function will be called when the player touches a coin
-function collectCoin(sprite, tile) {
-    coinLayer.removeTileAt(tile.x, tile.y); // remove the tile/coin
-    score++; // add 10 points to the score
-    text.setText(score); // set the text to show the current score
-    return false;
+function eat_mus() {
+  this.tweens.add({
+      targets: player,
+      scale: 0,
+      yoyo: false,
+      duration: 2000,
+      ease: 'Sine.easeInOut'
+  });
+  this.tweens.add({
+      targets: player,
+      scale: 1,
+      yoyo: false,
+      duration: 2000,
+      ease: 'Sine.easeInOut'
+  });
+
 }
 
 function createSpeechBubble (bubble, width, height,padding)
