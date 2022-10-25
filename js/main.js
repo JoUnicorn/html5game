@@ -323,6 +323,7 @@ function createSpeechBubble (x, y, width, height, quote)
 
     content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
 
+    console.log(content)
     console.log(quote)
 
     //  Split the current line on spaces, so one word per array element
