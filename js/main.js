@@ -63,7 +63,6 @@ var wordDelay = 120;
 var lineDelay = 400;
 var content;
 var content2;
-var w = 800, h = 600;
 
 function preload() {
     // map made with Tiled in JSON format
@@ -75,6 +74,7 @@ function preload() {
     this.load.image('mushroom', 'assets/mushroom.png');
     this.load.image('fire', 'assets/muzzleflash3.png');
     this.load.image('boom', 'assets/muzzleflash2.png');
+    this.load.image('bg', 'assets/starfield.png');
     // player animations
     this.load.atlas('player', 'assets/jo.png', 'assets/jo.json');
     this.load.atlas('girl', 'assets/girl.png', 'assets/girl.json');
@@ -86,10 +86,10 @@ function preload() {
 
 function create() {
     this.paused = true;
+    background = this.add.tileSprite(0, 0, 800, 600, 'bg');
 
     // And a label to illustrate which menu item was chosen. (This is not necessary)
     choiseLabel = this.add.text(w/2, h-150, 'Click outside menu to continue', { font: '30px Arial', fill: '#fff' });
-    choiseLabel.anchor.setTo(0.5, 0.5);
 
     // load the map
     map = this.make.tilemap({key: 'map'});
