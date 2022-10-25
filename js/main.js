@@ -214,7 +214,6 @@ function create() {
 
     console.log(line.length)
     console.log(this.time)
-    /*
     this.time.addEvent({
         delay: wordDelay,                // ms
         callback: nextWord,
@@ -222,8 +221,7 @@ function create() {
         callbackScope: this,
         repeat: line.length
     });
-    */
-    this.time.events.repeat(wordDelay, line.length, nextWord, this);
+    //this.time.events.repeat(wordDelay, line.length, nextWord, this);
 
     // gr
     timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
