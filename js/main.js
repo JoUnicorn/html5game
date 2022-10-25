@@ -359,8 +359,9 @@ function create() {
     // fix the text to the camera
     text.setScrollFactor(0);
 
-    arrow = this.add.image(120, 580, 'arrow');
+    arrow = this.add.image(130, 577, 'arrow');
     arrow.setScrollFactor(0);
+    //arrow.visible=false;
 
     // modal
     var bubbleWidth = 320;
