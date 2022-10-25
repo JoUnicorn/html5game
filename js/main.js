@@ -354,10 +354,6 @@ function create() {
         .setOrigin(0.5)
         .setPadding(10)
         .setStyle({ backgroundColor: '#111' })
-        .setInteractive({ useHandCursor: true })
-        .on('pointerdown', this.scene.resume())
-        .on('pointerover', () => startButton.setStyle({ fill: '#f39c12' }))
-        .on('pointerout', () => startButton.setStyle({ fill: '#FFF' }))
     this.scene.pause();
 
     this.input.onDown.add(unpause, self);
@@ -365,7 +361,7 @@ function create() {
     {
         console.log("kkk");
     }
-    
+
 }
 
 
