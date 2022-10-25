@@ -242,12 +242,14 @@ function create() {
     boom.alpha = 0;
     //////
 
+    //camera
     cursors = this.input.keyboard.createCursorKeys();
 
     // set bounds so the camera won't go outside the game world
     this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
     // make the camera follow the player
     this.cameras.main.startFollow(player);
+    this.cameras.main.setFollowOffset(100, 0);
 
     // set background color, so the sky is not black
     this.cameras.main.setBackgroundColor('#ccccff');
