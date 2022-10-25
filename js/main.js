@@ -389,11 +389,14 @@ function create() {
 
     var quote="If you let my Vivi go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you. "
     timedEvent = this.time.delayedCall(9000, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(20000, createSpeechInBubbleDestroy2, [], this);
-    timedEvent = this.time.delayedCall(20000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(18000, createSpeechInBubbleDestroy2, [], this);
+    var quote2="Good luck!"
+    timedEvent = this.time.delayedCall(18500, createSpeechInBubble2, [quote2], this);
+    timedEvent = this.time.delayedCall(21000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(22000, createSpeechInBubbleDestroy2, [], this);
 
-    timedEvent = this.time.delayedCall(20000, createSpeechBubbleVisible, [bubble, 0], this);
-    timedEvent = this.time.delayedCall(20000, createSpeechBubbleVisible, [bubble2, 0], this);
+    timedEvent = this.time.delayedCall(23000, createSpeechBubbleVisible, [bubble, 0], this);
+    timedEvent = this.time.delayedCall(23000, createSpeechBubbleVisible, [bubble2, 0], this);
 
     // gr
     timedEvent = this.time.delayedCall(25000, startWalking_gr, [], this);
