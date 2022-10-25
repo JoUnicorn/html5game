@@ -385,7 +385,7 @@ function create() {
 
     var quote="What???? You will never be able to escape!"
     timedEvent = this.time.delayedCall(6500, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(8500, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(8500, createSpeechInBubbleDestroy, [], this);
 
     var quote="If you let my Vivi go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you. "
     timedEvent = this.time.delayedCall(9000, createSpeechInBubble, [quote], this);
