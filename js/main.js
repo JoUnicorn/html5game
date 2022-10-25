@@ -354,7 +354,7 @@ function create() {
     //background = this.add.tileSprite(0, 0, 800, 600, 'bg');
 
     // And a label to illustrate which menu item was chosen. (This is not necessary)
-    this.add.text(x, y, label)
+    this.add.text(380, 280, label)
         .setOrigin(0.5)
         .setPadding(10)
         .setStyle({ backgroundColor: '#111' })
