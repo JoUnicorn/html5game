@@ -242,7 +242,7 @@ function create() {
     timedEvent = this.time.delayedCall(8300, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(8350, mushroom_ease, [], this);
     timedEvent = this.time.delayedCall(8500, startWalking_mus, [], this);
-    timedEvent = this.time.delayedCall(11500, stopWalking_mus, [], this);
+    timedEvent = this.time.delayedCall(12500, stopWalking_mus, [], this);
     timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
