@@ -388,7 +388,7 @@ function rescale_jo()
 
 // this function will be called when the player touches a coin
 function eat_mus() {
-  fireball.visible=false;
+  fireball.visible=true;
   this.tweens.add({
       targets: mushroom,
       alpha: 0,
