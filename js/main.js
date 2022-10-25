@@ -642,20 +642,20 @@ function update(time, delta) {
 
     if (cursors.up.isDown)
     {
-        game.camera.y -= 4;
+        this.camera.y -= 4;
     }
     else if (cursors.down.isDown)
     {
-        game.camera.y += 4;
+        this.camera.y += 4;
     }
 
     if (cursors.left.isDown)
     {
-        game.camera.x -= 4;
+        this.camera.x -= 4;
     }
     else if (cursors.right.isDown)
     {
-        game.camera.x += 4;
+        this.camera.x += 4;
     }
 
 /*
