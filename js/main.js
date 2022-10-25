@@ -333,7 +333,6 @@ function create() {
     timedEvent = this.time.delayedCall(42500, boom_disa, [], this);
     timedEvent = this.time.delayedCall(44500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(50500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(52500, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(52500, reverseWalking_jo, [], this);
     timedEvent = this.time.delayedCall(54500, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(57500, startWalking_jo, [], this);
@@ -351,7 +350,7 @@ function create() {
 
 function reverseWalking_jo()
 {
-    player.body.setVelocityX(200);
+    player.body.setVelocityX(-200);
     player.anims.play('walk', true);
     player.flipX = true; // use the original sprite looking to the right
 }
