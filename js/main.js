@@ -183,6 +183,7 @@ function create() {
     this.physics.add.collider(groundLayer, mushroom);
     mushroom.scaleX=2;
     mushroom.scaleY=2;
+    mushroom.alpha = 0;
     //////
 
 
@@ -277,6 +278,7 @@ function stopWalking_jo()
 function startJumping_jo()
 {
     player.body.setVelocityY(-500);
+    this.add.tween(mushroom).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true, 0, 1000, true);
 }
 
 function rescale_jo()
