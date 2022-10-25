@@ -198,30 +198,11 @@ function create() {
     var bubblePadding = 10;
     var quote="The sky above the port was the color of television, tuned to a dead channel."
     var bubble = this.add.graphics({ x: 20, y: 100 });
-    timedEvent = this.time.delayedCall(5000, createSpeechBubble, [bubble, bubbleWidth, bubbleHeight, bubblePadding, quote], this);
+    timedEvent = this.time.delayedCall(5000, createSpeechBubble, [bubble, bubbleWidth, bubbleHeight, bubblePadding], this);
 
     var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+    timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [bubble, bubbleWidth, bubbleHeight, content, quote], this);
 
-    var b = content.getBounds();
-
-    content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
-
-    console.log(quote)
-
-    line = quote.split(' ');
-    console.log(line)
-    wordIndex = 0;
-
-    console.log(line.length)
-    console.log(this.time)
-    this.time.addEvent({
-        delay: wordDelay,                // ms
-        callback: nextWord,
-        args: [content],
-        callbackScope: this,
-        repeat: line.length
-    });
-    //this.time.events.repeat(wordDelay, line.length, nextWord, this);
 
     // gr
     timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
@@ -293,7 +274,7 @@ function collectCoin(sprite, tile) {
     return false;
 }
 
-function createSpeechBubble (bubble, width, height,padding, quote)
+function createSpeechBubble (bubble, width, height,padding)
 {
     var bubbleWidth = width;
     var bubbleHeight = height;
@@ -333,6 +314,33 @@ function createSpeechBubble (bubble, width, height,padding, quote)
     bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
 }
+
+function createSpeechInBubble (bubble, bubbleWidth, bubbleHeight, content, quote)
+{
+
+  var b = content.getBounds();
+
+  content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
+
+  //console.log(quote)
+
+  line = quote.split(' ');
+  //console.log(line)
+  wordIndex = 0;
+
+  //console.log(line.length)
+  //console.log(this.time)
+  this.time.addEvent({
+      delay: wordDelay,                // ms
+      callback: nextWord,
+      args: [content],
+      callbackScope: this,
+      repeat: line.length
+  });
+  //this.time.events.repeat(wordDelay, line.length, nextWord, this);
+
+}
+
 
 function nextWord(content) {
 
