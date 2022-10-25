@@ -84,6 +84,12 @@ function preload() {
 }
 
 function create() {
+    game.paused = true;
+
+    // And a label to illustrate which menu item was chosen. (This is not necessary)
+    choiseLabel = game.add.text(w/2, h-150, 'Click outside menu to continue', { font: '30px Arial', fill: '#fff' });
+    choiseLabel.anchor.setTo(0.5, 0.5);
+
     // load the map
     map = this.make.tilemap({key: 'map'});
 
@@ -331,7 +337,7 @@ function create() {
     timedEvent = this.time.delayedCall(37500, generate, [zombie.x,zombie.y], this);
     timedEvent = this.time.delayedCall(40500, burn, [], this);
     timedEvent = this.time.delayedCall(42500, boom_disa, [], this);
-    
+
     timedEvent = this.time.delayedCall(44500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(50500, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(54500, reverseWalking_jo, [], this);
