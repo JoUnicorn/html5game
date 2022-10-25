@@ -332,6 +332,16 @@ function createSpeechBubbleVisible(bubble,yn)
     }
 }
 
+function createSpeechInBubbleVisible(content,yn)
+{
+    if (yn==0)
+    {
+        content.visible=false;
+    }else{
+        content.visible=true;
+    }
+}
+
 function createSpeechBubble2 (bubble, width, height,padding)
 {
     var bubbleWidth = width;
