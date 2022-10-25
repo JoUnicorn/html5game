@@ -216,6 +216,7 @@ function create() {
     rt = this.make.renderTexture({ x: 0, y: 0, width: 800, height: 600 });
 
     fireball = this.add.follower(null, 50, 350, 'fire');
+    fireball.visible=false;
 
     fireFX = this.tweens.add({
         targets: fireball,
@@ -294,7 +295,7 @@ function create() {
     timedEvent = this.time.delayedCall(19500, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(23500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(33500, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(34500, generate, [3500,1600], this);
+    timedEvent = this.time.delayedCall(30500, generate, [3500,1700], this);
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
