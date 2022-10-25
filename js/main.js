@@ -284,7 +284,14 @@ function startJumping_jo()
 function startJumping_jo2()
 {
     player.body.setVelocityY(-500);
-    this.add.tween(mushroom).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true, 0, 1000, true);
+    //this.add.tween(mushroom).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true, 0, 1000, true);
+    this.tweens.add({
+        targets: mushroom,
+        alpha: 1,
+        yoyo: false,
+        duration: 2000,
+        ease: 'Sine.easeInOut'
+    });
 }
 
 function rescale_jo()
