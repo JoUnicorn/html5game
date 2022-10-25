@@ -74,7 +74,7 @@ function preload() {
     this.load.image('mushroom', 'assets/mushroom.png');
     this.load.image('fire', 'assets/muzzleflash3.png');
     this.load.image('boom', 'assets/muzzleflash2.png');
-    this.load.image('bg', 'assets/bg2.png');
+    this.load.image('bg', 'assets/starfield.png');
     // player animations
     this.load.atlas('player', 'assets/jo.png', 'assets/jo.json');
     this.load.atlas('girl', 'assets/girl.png', 'assets/girl.json');
@@ -364,7 +364,7 @@ function create() {
 
     //// demo scene
     this.scene.pause();
-    background = this.add.tileSprite(0, 0, 1600, 1200, 'bg');
+    background = this.add.tileSprite(0, 0, 800, 600, 'bg');
 
     // And a label to illustrate which menu item was chosen. (This is not necessary)
     choiseLabel = this.add.text(20, 20, 'Click outside menu to continue', { font: '30px Arial', fill: '#fff' });
