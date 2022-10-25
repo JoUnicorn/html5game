@@ -98,6 +98,7 @@ class Button {
 }
 
 function create() {
+    console.log(this);
     this.paused = true;
     background = this.add.tileSprite(0, 0, 800, 600, 'bg');
 
