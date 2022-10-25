@@ -85,7 +85,7 @@ function preload() {
     this.load.atlas('player', 'assets/jo.png', 'assets/jo.json');
     this.load.atlas('girl', 'assets/girl.png', 'assets/girl.json');
     this.load.atlas('ennemy1', 'assets/ennemy1.png', 'assets/ennemy1.json');
-    this.load.atlas('ennemy2', 'assets/ennemy2.png', 'assets/ennemy2.json');
+    this.load.atlas('girl2', 'assets/ennemy2.png', 'assets/ennemy2.json');
     this.load.atlas('robot', 'assets/ennemy3.png', 'assets/ennemy3.json');
     this.load.atlas('zombie', 'assets/ennemy4.png', 'assets/ennemy4.json');
 }
