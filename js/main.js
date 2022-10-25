@@ -472,6 +472,15 @@ function create() {
 
 }
 
+function lifebar_vis()
+{
+    arrow.visible=true;
+}
+
+function lifebar_nvis()
+{
+    arrow.visible=false;
+}
 
 function reverseWalking_jo()
 {
