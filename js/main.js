@@ -239,7 +239,10 @@ function create() {
     //jo
     timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(7800, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(8300, startJumping_jo2, [], this);
+    timedEvent = this.time.delayedCall(8300, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(8350, mushroom_ease, [], this);
+    timedEvent = this.time.delayedCall(8500, startWalking_mus, [], this);
+    timedEvent = this.time.delayedCall(9500, stopWalking_mus, [], this);
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
@@ -287,13 +290,10 @@ function stopWalking_jo()
 function startJumping_jo()
 {
     player.body.setVelocityY(-500);
-    this.add.tween(mushroom).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true, 0, 1000, true);
 }
 
-function startJumping_jo2()
+function mushroom_ease()
 {
-    player.body.setVelocityY(-500);
-    //this.add.tween(mushroom).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true, 0, 1000, true);
     this.tweens.add({
         targets: mushroom,
         alpha: 1,
