@@ -332,7 +332,7 @@ function create() {
     timedEvent = this.time.delayedCall(42500, boom_disa, [], this);
     timedEvent = this.time.delayedCall(44500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(50500, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(59500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(47500, startJumping_jo, [], this);
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
@@ -342,7 +342,7 @@ function create() {
 function fight()
 {
     zombie.anims.play('kick_z', true);
-    player.flipX = true; // use the original sprite looking to the right
+    zombie.flipX = true; // use the original sprite looking to the right
     player.anims.play('shoveBack', true);
     player.body.setVelocityX(-200);
 }
@@ -360,7 +360,7 @@ function generate(x, y)
 
     fireFX.restart();
     zombie.anims.play('hit_z', true);
-    player.flipX = false; // use the original sprite looking to the right
+    zombie.flipX = false; // use the original sprite looking to the right
     this.tweens.add({
         targets: boom,
         alpha: 1,
