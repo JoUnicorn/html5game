@@ -323,6 +323,7 @@ function create() {
     timedEvent = this.time.delayedCall(23500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(29000, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(29500, fight, [], this);
+    timedEvent = this.time.delayedCall(31500, idlezom, [], this);
     timedEvent = this.time.delayedCall(32000, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(32500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(34000, stopWalking_jo, [], this);
@@ -339,6 +340,11 @@ function create() {
     //timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
 }
 
+function idlezom()
+{
+    zombie.anims.play('idle_z', true);
+}
+
 function fight()
 {
     zombie.anims.play('kick_z', true);
@@ -352,7 +358,6 @@ function generate(x, y)
 {
     //console.log(zombie.x)
     //console.log(zombie.y)
-    zombie.anims.play('idle_z', true);
     fireball.setPosition(player.x, player.y).setScale(0.5).setAlpha(1);
 
     curve = new Phaser.Curves.Line(new Phaser.Math.Vector2(player.x, player.y), new Phaser.Math.Vector2(zombie.x, zombie.y));
