@@ -359,7 +359,7 @@ function create() {
     // fix the text to the camera
     text.setScrollFactor(0);
 
-    arrow = this.add.image(100, 570, 'arrow');
+    arrow = this.add.image(120, 580, 'arrow');
     arrow.setScrollFactor(0);
 
     // modal
