@@ -187,7 +187,7 @@ function create() {
     robot.anims.play('idle_r', true);
     //////
     //zombie
-    zombie = this.physics.add.sprite(600, 200, 'zombie');
+    zombie = this.physics.add.sprite(4000, 200, 'zombie');
     zombie.setBounce(0.2); // our player will bounce from items
     zombie.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, zombie);
