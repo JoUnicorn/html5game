@@ -195,14 +195,26 @@ function create() {
     robot.anims.play('idle_r', true);
     //////
     //decors
-    cherry = this.physics.add.sprite(458, 200, 'cherry');
+    cherry = this.physics.add.sprite(4500, 200, 'cherry');
     cherry.setBounce(0.2); // our player will bounce from items
     cherry.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, cherry);
-    cherry = this.physics.add.sprite(458, 200, 'cherry');
-    cherry.setBounce(0.2); // our player will bounce from items
-    cherry.setCollideWorldBounds(true); // don't go out of the map
-    this.physics.add.collider(groundLayer, cherry);
+    candyRed = this.physics.add.sprite(4510, 200, 'candyRed');
+    candyRed.setBounce(0.2); // our player will bounce from items
+    candyRed.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, candyRed);
+    gummyWormGreenHead = this.physics.add.sprite(4520, 200, 'gummyWormGreenHead');
+    gummyWormGreenHead.setBounce(0.2); // our player will bounce from items
+    gummyWormGreenHead.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, gummyWormGreenHead);
+    creamPink = this.physics.add.sprite(4530, 200, 'creamPink');
+    creamPink.setBounce(0.2); // our player will bounce from items
+    creamPink.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, creamPink);
+    heart = this.physics.add.sprite(4540, 200, 'heart');
+    heart.setBounce(0.2); // our player will bounce from items
+    heart.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, heart);
     //////
     //mushroom
     mushroom = this.physics.add.sprite(458, 200, 'mushroom');
