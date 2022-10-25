@@ -306,8 +306,6 @@ function create() {
     timedEvent = this.time.delayedCall(23500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(28000, stopWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
-    console.log(zombie.x)
-    console.log(zombie.y)
     timedEvent = this.time.delayedCall(33500, generate, [zombie.x,zombie.y], this);
     console.log(this.cameras)
 
@@ -318,6 +316,8 @@ function create() {
 
 function generate(x, y)
 {
+    console.log(zombie.x)
+    console.log(zombie.y)
     fireball.setPosition(player.x, player.y).setScale(0.5).setAlpha(1);
 
     curve = new Phaser.Curves.Line(new Phaser.Math.Vector2(player.x, player.y), new Phaser.Math.Vector2(x, y));
