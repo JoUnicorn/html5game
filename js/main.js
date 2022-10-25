@@ -73,6 +73,7 @@ function preload() {
     //this.load.image('coin', 'assets/coinGold.png');
     this.load.image('mushroom', 'assets/mushroom.png');
     this.load.image('fire', 'assets/muzzleflash3.png');
+    this.load.image('boom', 'assets/muzzleflash3.png');
     // player animations
     this.load.atlas('player', 'assets/jo.png', 'assets/jo.json');
     this.load.atlas('girl', 'assets/girl.png', 'assets/girl.json');
@@ -294,7 +295,7 @@ function create() {
     timedEvent = this.time.delayedCall(15500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(19500, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(23500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(27500, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(28000, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(33500, generate, [3500,1700], this);
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
