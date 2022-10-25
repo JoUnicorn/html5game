@@ -321,8 +321,8 @@ function rescale_jo()
 // this function will be called when the player touches a coin
 function eat_mus() {
   this.tweens.add({
-      targets: player,
-      scale: 0,
+      targets: mushroom,
+      alpha: 0,
       yoyo: false,
       duration: 2000,
       ease: 'Sine.easeInOut'
