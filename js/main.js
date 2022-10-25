@@ -151,29 +151,6 @@ function create() {
 
     //////////
     //gitl
-    girlv = this.physics.add.sprite(6500, 200, 'girl');
-    girlv.setBounce(0.2); // our player will bounce from items
-    girlv.setCollideWorldBounds(true); // don't go out of the map
-    this.physics.add.collider(groundLayer, girlv);
-    // player walk animation
-    this.anims.create({
-        key: 'walk_gv',
-        frames: this.anims.generateFrameNames('girlv', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
-        frameRate: 10,
-        repeat: -1
-    });
-    // idle with only one frame, so repeat is not neaded
-    this.anims.create({
-        key: 'idle_gv',
-        frames: [{key: 'girlv', frame: 'character_femalePerson_idle'}],
-        frameRate: 10,
-    });
-    girlv.body.setSize(girlv.width, girlv.height-40);
-    girlv.body.setOffset(0, 40);
-    girlv.scaleX=.9;
-    girlv.scaleY=.9;
-    //////
-    //gitl
     girl = this.physics.add.sprite(700, 200, 'girl');
     girl.setBounce(0.2); // our player will bounce from items
     girl.setCollideWorldBounds(true); // don't go out of the map
@@ -196,27 +173,17 @@ function create() {
     girl.scaleX=.9;
     girl.scaleY=.9;
     //////
-    //////////
-    //robot2
-    robot2 = this.physics.add.sprite(6200, 200, 'robot');
-    robot2.setBounce(0.2); // our player will bounce from items
-    robot2.setCollideWorldBounds(true); // don't go out of the map
-    this.physics.add.collider(groundLayer, robot2);
-    this.anims.create({
-        key: 'walk_r2',
-        frames: this.anims.generateFrameNames('robot', {prefix: 'character_robot_walk', end: 7, zeroPad: 1}),
-        frameRate: 10,
-        repeat: -1
-    });
-    this.anims.create({
-        key: 'idle_r2',
-        frames: [{key: 'robot', frame: 'character_robot_idle'}],
-        frameRate: 10,
-    });
-    robot2.body.setSize(robot2.width, robot2.height-40);
-    robot2.body.setOffset(0, 40);
-    robot2.anims.play('idle_r2', true);
+    //gitl
+    girlv = this.physics.add.sprite(6500, 200, 'girl');
+    girlv.setBounce(0.2); // our player will bounce from items
+    girlv.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, girlv);
+    girlv.body.setSize(girlv.width, girlv.height-40);
+    girlv.body.setOffset(0, 40);
+    girlv.scaleX=.9;
+    girlv.scaleY=.9;
     //////
+    //////////
     //robot
     robot = this.physics.add.sprite(600, 200, 'robot');
     robot.setBounce(0.2); // our player will bounce from items
@@ -236,6 +203,15 @@ function create() {
     robot.body.setSize(robot.width, robot.height-40);
     robot.body.setOffset(0, 40);
     robot.anims.play('idle_r', true);
+    //////
+    //robot2
+    robot2 = this.physics.add.sprite(6200, 200, 'robot');
+    robot2.setBounce(0.2); // our player will bounce from items
+    robot2.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, robot2);
+    robot2.body.setSize(robot2.width, robot2.height-40);
+    robot2.body.setOffset(0, 40);
+    robot2.anims.play('idle_r', true);
     //////
     //girl2
     girl2 = this.physics.add.sprite(5100, 200, 'girl2');
