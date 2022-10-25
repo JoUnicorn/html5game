@@ -136,6 +136,11 @@ function create() {
         frames: [{key: 'player', frame: 'character_maleAdventurer_idle'}],
         frameRate: 10,
     });
+    this.anims.create({
+        key: 'shoveBack',
+        frames: [{key: 'player', frame: 'character_maleAdventurer_shoveBack'}],
+        frameRate: 10,
+    });
 
     //////////
     //gitl
@@ -318,13 +323,16 @@ function create() {
     timedEvent = this.time.delayedCall(23500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(29000, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(29500, fight, [], this);
+    timedEvent = this.time.delayedCall(32000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(32500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(36000, stopWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
-    timedEvent = this.time.delayedCall(33500, generate, [zombie.x,zombie.y], this);
-    timedEvent = this.time.delayedCall(36500, burn, [], this);
-    timedEvent = this.time.delayedCall(38500, boom_disa, [], this);
-    timedEvent = this.time.delayedCall(40500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(46500, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(45500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(37500, generate, [zombie.x,zombie.y], this);
+    timedEvent = this.time.delayedCall(40500, burn, [], this);
+    timedEvent = this.time.delayedCall(42500, boom_disa, [], this);
+    timedEvent = this.time.delayedCall(44500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(50500, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(59500, startJumping_jo, [], this);
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
@@ -335,6 +343,8 @@ function fight()
 {
     zombie.anims.play('kick_z', true);
     player.flipX = true; // use the original sprite looking to the right
+    player.anims.play('shoveBack', true);
+    player.body.setVelocityX(-200);
 }
 
 function generate(x, y)
@@ -399,6 +409,7 @@ function startWalking_gr()
     robot.anims.play('walk_r', true);
     robot.flipX = false; // use the original sprite looking to the right
 }
+
 function stopWalking_gr()
 {
     girl.body.setVelocityX(0);
