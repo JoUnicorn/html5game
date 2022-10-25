@@ -184,9 +184,10 @@ function create() {
     mushroom.scaleX=2;
     mushroom.scaleY=2;
     mushroom.alpha = 0;
+    robot.anims.play('idle_r', true);
     //////
     //zombie
-    zombie = this.physics.add.sprite(4200, 200, 'zombie');
+    zombie = this.physics.add.sprite(600, 200, 'zombie');
     zombie.setBounce(0.2); // our player will bounce from items
     zombie.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, robot);
@@ -205,6 +206,8 @@ function create() {
     zombie.body.setOffset(0, 40);
     zombie.scaleX=3;
     zombie.scaleY=3;
+    zombie.anims.play('idle_r', true);
+
     //////
 
 
