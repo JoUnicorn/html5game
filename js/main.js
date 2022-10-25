@@ -441,7 +441,7 @@ function create() {
     timedEvent = this.time.delayedCall(43000, createSpeechBubbleVisible, [bubble, 0], this);
 
     timedEvent = this.time.delayedCall(45500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(50000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(50500, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(53500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(59000, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(59500, fight, [], this);
