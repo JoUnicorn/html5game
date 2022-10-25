@@ -63,6 +63,7 @@ var wordDelay = 120;
 var lineDelay = 400;
 var content;
 var content2;
+var w = 800, h = 600;
 
 function preload() {
     // map made with Tiled in JSON format
