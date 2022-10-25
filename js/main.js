@@ -74,13 +74,13 @@ function preload() {
     this.load.image('mushroom', 'assets/mushroom.png');
     this.load.image('fire', 'assets/muzzleflash3.png');
     this.load.image('boom', 'assets/muzzleflash2.png');
-    this.load.image('cherry', 'assets/cherry.png');
-    this.load.image('candyRed', 'assets/candyRed.png');
-    this.load.image('gummyWormGreenHead', 'assets/gummyWormGreenHead.png');
-    this.load.image('creamPink', 'assets/creamPink.png');
-    this.load.image('heart', 'assets/heart.png');
-    this.load.image('lollipopRed', 'assets/lollipopRed.png');
-    this.load.image('wafflePink', 'assets/wafflePink.png');
+    this.load.image('cherry', 'assets/Tiles/cherry.png');
+    this.load.image('candyRed', 'assets/Tiles/candyRed.png');
+    this.load.image('gummyWormGreenHead', 'assets/Tiles/gummyWormGreenHead.png');
+    this.load.image('creamPink', 'assets/Tiles/creamPink.png');
+    this.load.image('heart', 'assets/Tiles/heart.png');
+    this.load.image('lollipopRed', 'assets/Tiles/lollipopRed.png');
+    this.load.image('wafflePink', 'assets/Tiles/wafflePink.png');
     // player animations
     this.load.atlas('player', 'assets/jo.png', 'assets/jo.json');
     this.load.atlas('girl', 'assets/girl.png', 'assets/girl.json');
@@ -195,6 +195,10 @@ function create() {
     robot.anims.play('idle_r', true);
     //////
     //decors
+    cherry = this.physics.add.sprite(458, 200, 'cherry');
+    cherry.setBounce(0.2); // our player will bounce from items
+    cherry.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, cherry);
     cherry = this.physics.add.sprite(458, 200, 'cherry');
     cherry.setBounce(0.2); // our player will bounce from items
     cherry.setCollideWorldBounds(true); // don't go out of the map
