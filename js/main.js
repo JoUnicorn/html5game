@@ -641,6 +641,7 @@ function nextWord2() {
 
 function update(time, delta) {
 
+  /*
     if (cursors.up.isDown)
     {
         this.cameras.main.y -= 4;
@@ -659,7 +660,6 @@ function update(time, delta) {
         this.cameras.main.x += 4;
     }
 
-/*
     // controller
     if (cursors.left.isDown)
     {
