@@ -367,7 +367,7 @@ function create() {
     //background = this.add.tileSprite(0, 0, 800, 600, 'bg');
 
     // And a label to illustrate which menu item was chosen. (This is not necessary)
-    const button = new Button(50, 50, 'Start Game', this, () => console.log('game is started'));
+    const button = new Button(380, 280, 'Start Game', this, () => console.log('game is started'));
 
 }
 
