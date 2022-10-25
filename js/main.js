@@ -177,7 +177,7 @@ function create() {
     robot.body.setOffset(0, 40);
     //////
     //mushroom
-    mushroom = this.physics.add.sprite(426, 200, 'mushroom');
+    mushroom = this.physics.add.sprite(458, 200, 'mushroom');
     mushroom.setBounce(0.2); // our player will bounce from items
     mushroom.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, mushroom);
