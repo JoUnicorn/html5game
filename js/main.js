@@ -346,6 +346,7 @@ function generate(x, y)
 }
 function boom_disa()
 {
+    zombie.anims.play('idle_z', true);
     fireball.visible=false;
     this.tweens.add({
         targets: zombie,
