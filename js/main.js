@@ -332,12 +332,27 @@ function create() {
     timedEvent = this.time.delayedCall(40500, burn, [], this);
     timedEvent = this.time.delayedCall(42500, boom_disa, [], this);
     timedEvent = this.time.delayedCall(44500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(56500, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(50500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(54500, reverseWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(56500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(59500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(61500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(63500, reverseWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(65500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(67500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(69500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(72000, stopWalking_jo, [], this);
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
+}
+
+function reverseWalking_jo()
+{
+    player.body.setVelocityX(200);
+    player.anims.play('walk', true);
+    player.flipX = true; // use the original sprite looking to the right
 }
 
 function idlezom()
