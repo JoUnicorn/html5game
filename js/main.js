@@ -430,7 +430,7 @@ function nextWord() {
     if (wordIndex === line.length)
     {
         //  Add a carriage return
-        content.text = content.text.concat("");
+        content.text = content.text.concat("\n");
     }
 
 }
@@ -470,7 +470,7 @@ function nextWord2() {
     if (wordIndex2 === line2.length)
     {
         //  Add a carriage return
-        content2.text = content2.text.concat("");
+        content2.text = content2.text.concat("\n");
     }
 
 }
