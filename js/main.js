@@ -353,11 +353,11 @@ function createSpeechBubble2 (bubble, width, height,padding)
     bubble.fillRoundedRect(0, 0, bubbleWidth, bubbleHeight, 16);
 
     //  Calculate arrow coordinates
-    var point1X = Math.floor(bubbleWidth / 7)*6;
+    var point1X = Math.floor(bubbleWidth / 7)*5;
     var point1Y = bubbleHeight;
-    var point2X = Math.floor((bubbleWidth / 7) * 2)+Math.floor(bubbleWidth / 7)*6;
+    var point2X = Math.floor((bubbleWidth / 7) * 2)+Math.floor(bubbleWidth / 7)*5;
     var point2Y = bubbleHeight;
-    var point3X = Math.floor((bubbleWidth / 7) * 2)+Math.floor(bubbleWidth / 7)*6;
+    var point3X = Math.floor((bubbleWidth / 7) * 2)+Math.floor(bubbleWidth / 7)*5;
     var point3Y = Math.floor(bubbleHeight + arrowHeight);
 
     //  Bubble arrow shadow
