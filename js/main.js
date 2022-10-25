@@ -354,16 +354,21 @@ function create() {
     //background = this.add.tileSprite(0, 0, 800, 600, 'bg');
 
     // And a label to illustrate which menu item was chosen. (This is not necessary)
-    this.add.text(380, 280, label)
+    this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, 'Start game', textStyle)
         .setOrigin(0.5)
         .setPadding(10)
         .setStyle({ backgroundColor: '#111' })
         .setInteractive({ useHandCursor: true })
-        .on('pointerdown', () => callback())
-        .on('pointerover', () => button.setStyle({ fill: '#f39c12' }))
-        .on('pointerout', () => button.setStyle({ fill: '#FFF' }));
-
+        .on('pointerdown', startGame)
+        .on('pointerover', () => startButton.setStyle({ fill: '#f39c12' }))
+        .on('pointerout', () => startButton.setStyle({ fill: '#FFF' }))
 }
+
+function startGame()
+{
+    this.scene.resume();
+}
+
 
 function reverseWalking_jo()
 {
