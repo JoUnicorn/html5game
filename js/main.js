@@ -421,7 +421,10 @@ function nextWord() {
 
     //  Add the next word onto the text string, followed by a space
     //console.log(content)
-    content.text = content.text.concat(line[wordIndex] + " ");
+    if (typeof line[wordIndex] !== 'undefined')
+    {
+        content.text = content.text.concat(line[wordIndex] + " ");
+    }
 
     //  Advance the word index to the next word in the line
     wordIndex++;
@@ -430,7 +433,7 @@ function nextWord() {
     if (wordIndex === line.length)
     {
         //  Add a carriage return
-        content.text = content.text.concat("\n");
+        content.text = content.text.concat("");
     }
 
 }
@@ -444,7 +447,7 @@ function createSpeechInBubble2 (quote)
   //console.log(line)
   wordIndex2 = 0;
 
-  console.log(line2.length)
+  //console.log(line2.length)
   //console.log(this.time)
   this.time.addEvent({
       delay: wordDelay,                // ms
@@ -461,8 +464,11 @@ function nextWord2() {
 
     //  Add the next word onto the text string, followed by a space
     //console.log(content)
-    console.log(line2[wordIndex2])
-    content2.text = content2.text.concat(line2[wordIndex2] + " ");
+    //console.log(line2[wordIndex2])
+    if (typeof line2[wordIndex2] !== 'undefined')
+    {
+        content2.text = content2.text.concat(line2[wordIndex2] + " ");
+    }
 
     //  Advance the word index to the next word in the line
     wordIndex2++;
@@ -471,7 +477,7 @@ function nextWord2() {
     if (wordIndex2 === line2.length)
     {
         //  Add a carriage return
-        content2.text = content2.text.concat("\n");
+        content2.text = content2.text.concat("");
     }
 
 }
