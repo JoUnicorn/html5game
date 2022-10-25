@@ -181,6 +181,8 @@ function create() {
     mushroom.setBounce(0.2); // our player will bounce from items
     mushroom.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, mushroom);
+    mushroom.scaleX=2;
+    mushroom.scaleY=2;
     //////
 
 
@@ -237,7 +239,7 @@ function create() {
     timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(7800, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(8300, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
+    //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
 }
