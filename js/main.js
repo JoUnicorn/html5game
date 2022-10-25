@@ -213,7 +213,8 @@ function create() {
     timedEvent = this.time.delayedCall(5000, createSpeechBubble, [bubble, bubbleWidth, bubbleHeight, bubblePadding], this);
     timedEvent = this.time.delayedCall(5000, createSpeechBubble2, [bubble2, bubbleWidth, bubbleHeight, bubblePadding], this);
     timedEvent = this.time.delayedCall(7000, createSpeechBubbleVisible, [bubble, 0], this);
-    timedEvent = this.time.delayedCall(13000, createSpeechBubbleVisible, [bubble, 1], this);
+    timedEvent = this.time.delayedCall(7000, createSpeechBubbleVisible, [bubble2, 0], this);
+    //timedEvent = this.time.delayedCall(13000, createSpeechBubbleVisible, [bubble, 1], this);
 
     var quote="The sky above the port was the color of television, tuned to a dead channel."
     content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
@@ -237,8 +238,8 @@ function create() {
     timedEvent = this.time.delayedCall(7800, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(8300, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
-    timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
+    //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
+    //timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
 }
 
 function startWalking_gr()
