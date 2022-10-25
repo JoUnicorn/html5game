@@ -340,6 +340,13 @@ function generate(x, y)
         duration: 2000,
         ease: 'Sine.easeInOut'
     });
+    this.tweens.add({
+        targets: boom,
+        alpha: 0,
+        yoyo: false,
+        duration: 2000,
+        ease: 'Sine.easeInOut'
+    });
 
 }
 
