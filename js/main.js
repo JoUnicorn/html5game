@@ -207,7 +207,6 @@ function create() {
     zombie.scaleX=3;
     zombie.scaleY=3;
     zombie.anims.play('idle_r', true);
-
     //////
 
 
