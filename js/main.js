@@ -84,10 +84,10 @@ function preload() {
 }
 
 function create() {
-    game.paused = true;
+    this.paused = true;
 
     // And a label to illustrate which menu item was chosen. (This is not necessary)
-    choiseLabel = game.add.text(w/2, h-150, 'Click outside menu to continue', { font: '30px Arial', fill: '#fff' });
+    choiseLabel = this.add.text(w/2, h-150, 'Click outside menu to continue', { font: '30px Arial', fill: '#fff' });
     choiseLabel.anchor.setTo(0.5, 0.5);
 
     // load the map
