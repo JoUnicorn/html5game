@@ -207,6 +207,11 @@ function create() {
         frames: [{key: 'zombie', frame: 'character_zombie_idle'}],
         frameRate: 10,
     });
+    this.anims.create({
+        key: 'hit_z',
+        frames: [{key: 'zombie', frame: 'character_zombie_hit'}],
+        frameRate: 10,
+    });
     zombie.body.setSize(zombie.width, zombie.height-40);
     zombie.body.setOffset(0, 40);
     zombie.scaleX=3;
@@ -329,6 +334,7 @@ function generate(x, y)
     fireball.startFollow(300);
 
     fireFX.restart();
+    zombie.anims.play('hit_z', true);
     this.tweens.add({
         targets: boom,
         alpha: 1,
