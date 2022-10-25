@@ -43,6 +43,7 @@ var map;
 var player;
 var girl;
 var robot;
+var mushroom;
 var cursors;
 var groundLayer, coinLayer;
 var text;
