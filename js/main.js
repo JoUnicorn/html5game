@@ -270,7 +270,7 @@ function create() {
     this.cameras.main.setBackgroundColor('#ccccff');
 
     // this text will show the score
-    text = this.add.text(20, 570, '0', {
+    text = this.add.text(20, 570, '50', {
         fontSize: '20px',
         fill: '#ffffff'
     });
@@ -485,7 +485,7 @@ function eat_mus() {
       duration: 2000,
       ease: 'Sine.easeInOut'
   });
-
+  text.text=200;
 }
 
 function createSpeechBubble (bubble, width, height,padding)
