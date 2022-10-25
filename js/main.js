@@ -342,6 +342,11 @@ function createSpeechInBubbleVisible(content,yn)
     }
 }
 
+function createSpeechInBubbleDestroy(content,)
+{
+    content.text ="";
+}
+
 function createSpeechBubble2 (bubble, width, height,padding)
 {
     var bubbleWidth = width;
