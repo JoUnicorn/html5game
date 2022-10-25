@@ -219,27 +219,27 @@ function create() {
     cherry.setBounce(0.2); // our player will bounce from items
     cherry.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, cherry);
-    candyRed = this.physics.add.sprite(4650, 200, 'candyRed');
+    candyRed = this.physics.add.sprite(4700, 200, 'candyRed');
     candyRed.setBounce(0.2); // our player will bounce from items
     candyRed.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, candyRed);
-    gummyWormGreenHead = this.physics.add.sprite(4700, 200, 'gummyWormGreenHead');
+    gummyWormGreenHead = this.physics.add.sprite(4800, 200, 'gummyWormGreenHead');
     gummyWormGreenHead.setBounce(0.2); // our player will bounce from items
     gummyWormGreenHead.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, gummyWormGreenHead);
-    creamPink = this.physics.add.sprite(4750, 200, 'creamPink');
+    creamPink = this.physics.add.sprite(4900, 200, 'creamPink');
     creamPink.setBounce(0.2); // our player will bounce from items
     creamPink.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, creamPink);
-    heart = this.physics.add.sprite(4800, 200, 'heart');
+    heart = this.physics.add.sprite(5000, 200, 'heart');
     heart.setBounce(0.2); // our player will bounce from items
     heart.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, heart);
-    lollipopRed = this.physics.add.sprite(4850, 200, 'lollipopRed');
+    lollipopRed = this.physics.add.sprite(5100, 200, 'lollipopRed');
     lollipopRed.setBounce(0.2); // our player will bounce from items
     lollipopRed.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, lollipopRed);
-    wafflePink = this.physics.add.sprite(4900, 200, 'wafflePink');
+    wafflePink = this.physics.add.sprite(5200, 200, 'wafflePink');
     wafflePink.setBounce(0.2); // our player will bounce from items
     wafflePink.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, wafflePink);
