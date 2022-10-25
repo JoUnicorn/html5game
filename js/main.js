@@ -84,19 +84,6 @@ function preload() {
     this.load.atlas('zombie', 'assets/ennemy4.png', 'assets/ennemy4.json');
 }
 
-class Button {
-    constructor(x, y, label, scene, callback) {
-        const button = this.add.text(x, y, label)
-            .setOrigin(0.5)
-            .setPadding(10)
-            .setStyle({ backgroundColor: '#111' })
-            .setInteractive({ useHandCursor: true })
-            .on('pointerdown', () => callback())
-            .on('pointerover', () => button.setStyle({ fill: '#f39c12' }))
-            .on('pointerout', () => button.setStyle({ fill: '#FFF' }));
-    }
-}
-
 function create() {
     // load the map
     map = this.make.tilemap({key: 'map'});
@@ -367,7 +354,14 @@ function create() {
     //background = this.add.tileSprite(0, 0, 800, 600, 'bg');
 
     // And a label to illustrate which menu item was chosen. (This is not necessary)
-    const button = new Button(380, 280, 'Start Game', this, () => console.log('game is started'));
+    this.add.text(x, y, label)
+        .setOrigin(0.5)
+        .setPadding(10)
+        .setStyle({ backgroundColor: '#111' })
+        .setInteractive({ useHandCursor: true })
+        .on('pointerdown', () => callback())
+        .on('pointerover', () => button.setStyle({ fill: '#f39c12' }))
+        .on('pointerout', () => button.setStyle({ fill: '#FFF' }));
 
 }
 
