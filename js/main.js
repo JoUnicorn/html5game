@@ -98,6 +98,15 @@ class Button {
 }
 
 function create() {
+    //// demo scene
+    this.scene.pause();
+    background = this.add.image(0,0,800, 600, 'bg');
+
+    // And a label to illustrate which menu item was chosen. (This is not necessary)
+    choiseLabel = this.add.text(20, 20, 'Click outside menu to continue', { font: '30px Arial', fill: '#fff' });
+    const button = new Button(50, 50, 'Start Game', this, () => console.log('game is started'));
+
+
     // load the map
     map = this.make.tilemap({key: 'map'});
 
@@ -362,13 +371,6 @@ function create() {
 
 
 
-    //// demo scene
-    this.scene.pause();
-    background = this.add.image(0,0,800, 600, 'bg');
-
-    // And a label to illustrate which menu item was chosen. (This is not necessary)
-    choiseLabel = this.add.text(20, 20, 'Click outside menu to continue', { font: '30px Arial', fill: '#fff' });
-    const button = new Button(50, 50, 'Start Game', this, () => console.log('game is started'));
 
 }
 
