@@ -196,7 +196,6 @@ function create() {
     var bubbleWidth = 320;
     var bubbleHeight = 160;
     var bubblePadding = 10;
-    var quote="The sky above the port was the color of television, tuned to a dead channel."
     var bubble = this.add.graphics({ x: 20, y: 100 });
     bubble.setScrollFactor(0);
     var bubble2 = this.add.graphics({ x: 460, y: 100 });
@@ -206,11 +205,16 @@ function create() {
     timedEvent = this.time.delayedCall(7000, createSpeechBubbleVisible, [bubble, 0], this);
     timedEvent = this.time.delayedCall(13000, createSpeechBubbleVisible, [bubble, 1], this);
 
+    var quote="The sky above the port was the color of television, tuned to a dead channel."
     var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
-    var b = content.getBounds();
     content.setPosition(bubble.x + 10, bubble.y + 10);
     content.setScrollFactor(0);
-    timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [bubble, bubbleWidth, bubbleHeight, content, quote], this);
+    var quote2="Get the source and assets for every Phaser example from"
+    var content2 = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+    content2.setPosition(bubble2.x + 10, bubble2.y + 10);
+    content2.setScrollFactor(0);
+    timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [content, quote], this);
+    timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [content2, quote2], this);
 
 
     // gr
@@ -342,7 +346,7 @@ function createSpeechInBubbleVisible(content,yn)
     }
 }
 
-function createSpeechInBubbleDestroy(content,)
+function createSpeechInBubbleDestroy(content)
 {
     content.text ="";
 }
@@ -388,7 +392,7 @@ function createSpeechBubble2 (bubble, width, height,padding)
 
 }
 
-function createSpeechInBubble (bubble, bubbleWidth, bubbleHeight, content, quote)
+function createSpeechInBubble (content, quote)
 {
 
   //console.log(quote)
