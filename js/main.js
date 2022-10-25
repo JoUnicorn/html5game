@@ -74,6 +74,7 @@ function preload() {
     this.load.image('mushroom', 'assets/mushroom.png');
     this.load.image('fire', 'assets/muzzleflash3.png');
     this.load.image('boom', 'assets/muzzleflash2.png');
+    this.load.image('arrow', 'assets/arrow.png');
     this.load.image('cherry', 'assets/Tiles/cherry.png');
     this.load.image('candyRed', 'assets/Tiles/candyRed.png');
     this.load.image('gummyWormGreenHead', 'assets/Tiles/gummyWormGreenHead.png');
@@ -415,8 +416,8 @@ function create() {
     var quote="It's my first meal of the day, I'm feeling much better now, and I have much more energy, I am going to save you Vivi!"
     timedEvent = this.time.delayedCall(33000, createSpeechBubbleVisible, [bubble, 1], this);
     timedEvent = this.time.delayedCall(35000, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(40000, createSpeechInBubbleDestroy, [], this);
-    timedEvent = this.time.delayedCall(40000, createSpeechBubbleVisible, [bubble, 0], this);
+    timedEvent = this.time.delayedCall(43000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(43000, createSpeechBubbleVisible, [bubble, 0], this);
 
     timedEvent = this.time.delayedCall(45500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(49500, stopWalking_jo, [], this);
