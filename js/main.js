@@ -212,6 +212,11 @@ function create() {
         frames: [{key: 'zombie', frame: 'character_zombie_hit'}],
         frameRate: 10,
     });
+    this.anims.create({
+        key: 'kick_z',
+        frames: [{key: 'zombie', frame: 'character_zombie_kick'}],
+        frameRate: 10,
+    });
     zombie.body.setSize(zombie.width, zombie.height-40);
     zombie.body.setOffset(0, 40);
     zombie.scaleX=3;
@@ -311,7 +316,8 @@ function create() {
     timedEvent = this.time.delayedCall(15500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(19500, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(23500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(28000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(29000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(29500, fight, [], this);
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
     timedEvent = this.time.delayedCall(33500, generate, [zombie.x,zombie.y], this);
     timedEvent = this.time.delayedCall(36500, burn, [], this);
@@ -323,6 +329,12 @@ function create() {
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
+}
+
+function fight()
+{
+    zombie.anims.play('kick_z', true);
+    player.flipX = true; // use the original sprite looking to the right
 }
 
 function generate(x, y)
@@ -338,6 +350,7 @@ function generate(x, y)
 
     fireFX.restart();
     zombie.anims.play('hit_z', true);
+    player.flipX = false; // use the original sprite looking to the right
     this.tweens.add({
         targets: boom,
         alpha: 1,
@@ -347,6 +360,7 @@ function generate(x, y)
     });
 
 }
+
 function burn()
 {
     zombie.anims.play('idle_z', true);
