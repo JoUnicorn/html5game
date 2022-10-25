@@ -180,6 +180,7 @@ function create() {
     });
     robot.body.setSize(robot.width, robot.height-40);
     robot.body.setOffset(0, 40);
+    robot.anims.play('idle_r', true);
     //////
     //mushroom
     mushroom = this.physics.add.sprite(458, 200, 'mushroom');
@@ -189,7 +190,6 @@ function create() {
     mushroom.scaleX=2;
     mushroom.scaleY=2;
     mushroom.alpha = 0;
-    robot.anims.play('idle_r', true);
     //////
     //zombie
     zombie = this.physics.add.sprite(3000, 200, 'zombie');
@@ -232,6 +232,12 @@ function create() {
 
     fireFX.setCallback('onUpdate', draw, [], this);
     /////
+    //boom
+    boom = this.physics.add.sprite(zombie.x, zombie.y, 'boom');
+    boom.scaleX=2;
+    boom.scaleY=2;
+    boom.alpha = 0;
+    //////
 
     cursors = this.input.keyboard.createCursorKeys();
 
@@ -313,6 +319,14 @@ function generate(x, y)
     fireball.startFollow(300);
 
     fireFX.restart();
+    this.tweens.add({
+        targets: boom,
+        alpha: 1,
+        yoyo: false,
+        duration: 2000,
+        ease: 'Sine.easeInOut'
+    });
+
 }
 
 function draw()
