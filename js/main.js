@@ -64,7 +64,8 @@ function preload() {
     // tiles in spritesheet
     this.load.spritesheet('tiles', 'assets/tiles.png', {frameWidth: 70, frameHeight: 70});
     // simple coin image
-    this.load.image('coin', 'assets/coinGold.png');
+    //this.load.image('coin', 'assets/coinGold.png');
+    this.load.image('mushroom', 'assets/mushroom.png');
     // player animations
     this.load.atlas('player', 'assets/jo.png', 'assets/jo.json');
     this.load.atlas('girl', 'assets/girl.png', 'assets/girl.json');
@@ -86,9 +87,9 @@ function create() {
     groundLayer.setCollisionByExclusion([-1]);
 
     // coin image used as tileset
-    var coinTiles = map.addTilesetImage('coin');
+    //var coinTiles = map.addTilesetImage('coin');
     // add coins as tiles
-    coinLayer = map.createDynamicLayer('Coins', coinTiles, 0, 0);
+    //coinLayer = map.createDynamicLayer('Coins', coinTiles, 0, 0);
 
     // set the boundaries of our game world
     this.physics.world.bounds.width = groundLayer.width;
@@ -109,10 +110,10 @@ function create() {
     // player will collide with the level tiles
     this.physics.add.collider(groundLayer, player);
 
-    coinLayer.setTileIndexCallback(17, collectCoin, this);
+    //coinLayer.setTileIndexCallback(17, collectCoin, this);
     // when the player overlaps with a tile with index 17, collectCoin
     // will be called
-    this.physics.add.overlap(player, coinLayer);
+    //this.physics.add.overlap(player, coinLayer);
 
     // player walk animation
     this.anims.create({
