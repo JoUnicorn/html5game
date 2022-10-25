@@ -440,9 +440,9 @@ function createSpeechInBubble2 (quote)
 
   //console.log(quote)
 
-  line = quote.split(' ');
+  line2 = quote.split(' ');
   //console.log(line)
-  wordIndex = 0;
+  wordIndex2 = 0;
 
   //console.log(line.length)
   //console.log(this.time)
@@ -451,7 +451,7 @@ function createSpeechInBubble2 (quote)
       callback: nextWord2,
       //args: [],
       callbackScope: this,
-      repeat: line.length
+      repeat: line2.length
   });
   //this.time.events.repeat(wordDelay, line.length, nextWord, this);
 
@@ -461,13 +461,13 @@ function nextWord2() {
 
     //  Add the next word onto the text string, followed by a space
     //console.log(content)
-    content2.text = content2.text.concat(line[wordIndex] + " ");
+    content2.text = content2.text.concat(line2[wordIndex2] + " ");
 
     //  Advance the word index to the next word in the line
-    wordIndex++;
+    wordIndex2++;
 
     //  Last word?
-    if (wordIndex === line.length)
+    if (wordIndex2 === line2.length)
     {
         //  Add a carriage return
         content2.text = content2.text.concat("");
