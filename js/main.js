@@ -203,6 +203,7 @@ function create() {
     bubble2.setScrollFactor(0);
     timedEvent = this.time.delayedCall(5000, createSpeechBubble, [bubble, bubbleWidth, bubbleHeight, bubblePadding], this);
     timedEvent = this.time.delayedCall(5000, createSpeechBubble2, [bubble2, bubbleWidth, bubbleHeight, bubblePadding], this);
+    timedEvent = this.time.delayedCall(7000, createSpeechBubbleVisible, [bubble, 0], this);
 
     var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
     var b = content.getBounds();
@@ -318,6 +319,16 @@ function createSpeechBubble (bubble, width, height,padding)
     bubble.lineBetween(point2X, point2Y, point3X, point3Y);
     bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
+}
+
+function createSpeechBubbleVisible(bubble,yn)
+{
+    if (yn=0)
+    {
+        bubble.visible=false;
+    }else{
+        bubble.visible=true;
+    }
 }
 
 function createSpeechBubble2 (bubble, width, height,padding)
