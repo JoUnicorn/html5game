@@ -317,7 +317,7 @@ function createSpeechBubble (x, y, width, height, quote)
     bubble.lineBetween(point2X, point2Y, point3X, point3Y);
     bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
-    var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+    var content = this.add.text(0, 0, "ggg", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
 
     var b = content.getBounds();
 
