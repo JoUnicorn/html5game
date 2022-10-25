@@ -204,6 +204,7 @@ function create() {
     var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
     var b = content.getBounds();
     content.setPosition(bubble.x + 10, bubble.y + 10);
+    content.setScrollFactor(0);
     timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [bubble, bubbleWidth, bubbleHeight, content, quote], this);
 
 
