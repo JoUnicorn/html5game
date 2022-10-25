@@ -355,12 +355,7 @@ function create() {
         .setPadding(10)
         .setStyle({ backgroundColor: '#111' })
     this.scene.pause();
-
-    this.input.onDown.add(unpause, self);
-    function unpause()
-    {
-        console.log("kkk");
-    }
+    this.input.on('pointerdown', () => console.log('click'));
 
 }
 
