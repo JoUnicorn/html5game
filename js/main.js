@@ -33,10 +33,7 @@ var config = {
         key: 'main',
         preload: preload,
         create: create,
-        update: update,
-        extend: {
-            createSpeechBubble: createSpeechBubble
-        }
+        update: update
     }
 };
 
@@ -201,7 +198,7 @@ function create() {
     infoText.setScrollFactor(0);
 
     // modal
-    //timedEvent = this.time.delayedCall(5000, this.createSpeechBubble(20, 100, 320, 160, "The sky above the port was the color of television, tuned to a dead channel."), [], this);
+    timedEvent = this.time.delayedCall(5000, createSpeechBubble(20, 100, 320, 160, "The sky above the port was the color of television, tuned to a dead channel."), [], this);
 
     // gr
     timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
