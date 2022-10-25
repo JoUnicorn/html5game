@@ -199,6 +199,7 @@ function create() {
     var quote="The sky above the port was the color of television, tuned to a dead channel."
     var bubble = this.add.graphics({ x: 20, y: 100 });
     timedEvent = this.time.delayedCall(5000, createSpeechBubble, [bubble, bubbleWidth, bubbleHeight, bubblePadding], this);
+    bubble.setScrollFactor(0);
 
     var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
     var b = content.getBounds();
@@ -211,14 +212,12 @@ function create() {
     timedEvent = this.time.delayedCall(5300, stopWalking_gr, [], this);
 
     //jo
-    /*
     timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(7800, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(8300, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
-    */
 }
 
 function startWalking_gr()
