@@ -326,6 +326,13 @@ function generate(x, y)
         duration: 2000,
         ease: 'Sine.easeInOut'
     });
+    this.tweens.add({
+        targets: zombie,
+        scale: .1,
+        yoyo: false,
+        duration: 2000,
+        ease: 'Sine.easeInOut'
+    });
 
 }
 
