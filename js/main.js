@@ -151,6 +151,29 @@ function create() {
 
     //////////
     //gitl
+    girlv = this.physics.add.sprite(5500, 200, 'girl');
+    girlv.setBounce(0.2); // our player will bounce from items
+    girlv.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, girlv);
+    // player walk animation
+    this.anims.create({
+        key: 'walk_gv',
+        frames: this.anims.generateFrameNames('girlv', {prefix: 'character_femalePerson_walk', end: 7, zeroPad: 1}),
+        frameRate: 10,
+        repeat: -1
+    });
+    // idle with only one frame, so repeat is not neaded
+    this.anims.create({
+        key: 'idle_gv',
+        frames: [{key: 'girlv', frame: 'character_femalePerson_idle'}],
+        frameRate: 10,
+    });
+    girlv.body.setSize(girl.width, girl.height-40);
+    girlv.body.setOffset(0, 40);
+    girlv.scaleX=.9;
+    girlv.scaleY=.9;
+    //////
+    //gitl
     girl = this.physics.add.sprite(700, 200, 'girl');
     girl.setBounce(0.2); // our player will bounce from items
     girl.setCollideWorldBounds(true); // don't go out of the map
@@ -174,6 +197,26 @@ function create() {
     girl.scaleY=.9;
     //////
     //////////
+    //robot2
+    robot2 = this.physics.add.sprite(5200, 200, 'robot');
+    robot2.setBounce(0.2); // our player will bounce from items
+    robot2.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, robot2);
+    this.anims.create({
+        key: 'walk_r2',
+        frames: this.anims.generateFrameNames('robot2', {prefix: 'character_robot_walk', end: 7, zeroPad: 1}),
+        frameRate: 10,
+        repeat: -1
+    });
+    this.anims.create({
+        key: 'idle_r2',
+        frames: [{key: 'robot2', frame: 'character_robot_idle'}],
+        frameRate: 10,
+    });
+    robot2.body.setSize(robot2.width, robot2.height-40);
+    robot2.body.setOffset(0, 40);
+    robot2.anims.play('idle_r', true);
+    //////
     //robot
     robot = this.physics.add.sprite(600, 200, 'robot');
     robot.setBounce(0.2); // our player will bounce from items
@@ -514,6 +557,8 @@ function stopWalking_gr()
     girl.anims.play('idle_g', true);
     robot.body.setVelocityX(0);
     robot.anims.play('idle_r', true);
+    girl.visible=false;
+    robot.visible=false;
 }
 
 function startWalking_mus()
