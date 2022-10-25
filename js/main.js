@@ -262,6 +262,15 @@ function stopWalking_gr()
     robot.anims.play('idle_r', true);
 }
 
+function startWalking_mus()
+{
+    mushroom.body.setVelocityX(200);
+    mushroom.flipX = false; // use the original sprite looking to the right
+}
+function stopWalking_mus()
+{
+    mushroom.body.setVelocityX(0);
+}
 
 function startWalking_jo()
 {
