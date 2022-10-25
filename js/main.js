@@ -282,7 +282,7 @@ function create() {
     heart.setBounce(0.2); // our player will bounce from items
     heart.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, heart);
-    lollipopRed = this.physics.add.sprite(5100, 200, 'lollipopRed');
+    lollipopRed = this.physics.add.sprite(5400, 200, 'lollipopRed');
     lollipopRed.setBounce(0.2); // our player will bounce from items
     lollipopRed.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, lollipopRed);
