@@ -347,6 +347,7 @@ function generate(x, y)
 
 function boom_disa()
 {
+    fireball.visible=false;
     this.tweens.add({
         targets: boom,
         alpha: 0,
