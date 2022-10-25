@@ -55,6 +55,8 @@ var wordIndex = 0;
 var lineIndex = 0;
 var wordDelay = 120;
 var lineDelay = 400;
+var content;
+var content2;
 
 function preload() {
     // map made with Tiled in JSON format
@@ -206,15 +208,15 @@ function create() {
     timedEvent = this.time.delayedCall(13000, createSpeechBubbleVisible, [bubble, 1], this);
 
     var quote="The sky above the port was the color of television, tuned to a dead channel."
-    var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+    content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
     content.setPosition(bubble.x + 10, bubble.y + 10);
     content.setScrollFactor(0);
     var quote2="Get the source and assets for every Phaser example from"
-    var content2 = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+    content2 = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
     content2.setPosition(bubble2.x + 10, bubble2.y + 10);
     content2.setScrollFactor(0);
-    timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [content, quote], this);
-    timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [content2, quote2], this);
+    timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(5500, createSpeechInBubble2, [quote2], this);
     //timedEvent = this.time.delayedCall(7000, createSpeechInBubbleDestroy, [content], this);
 
 
@@ -393,7 +395,7 @@ function createSpeechBubble2 (bubble, width, height,padding)
 
 }
 
-function createSpeechInBubble (content, quote)
+function createSpeechInBubble (quote)
 {
 
   //console.log(quote)
@@ -407,7 +409,7 @@ function createSpeechInBubble (content, quote)
   this.time.addEvent({
       delay: wordDelay,                // ms
       callback: nextWord,
-      args: [content],
+      //args: [],
       callbackScope: this,
       repeat: line.length
   });
@@ -416,7 +418,7 @@ function createSpeechInBubble (content, quote)
 }
 
 
-function nextWord(content) {
+function nextWord() {
 
     //  Add the next word onto the text string, followed by a space
     //console.log(content)
