@@ -198,8 +198,38 @@ function create() {
     infoText.setScrollFactor(0);
 
     // modal
+    var bubbleWidth = 320;
+    var bubbleHeight = 160;
+    var bubblePadding = 10;
     var bubble = this.add.graphics({ x: 20, y: 100 });
-    timedEvent = this.time.delayedCall(5000, createSpeechBubble(bubble, 320, 160, "The sky above the port was the color of television, tuned to a dead channel."), [], this);
+    timedEvent = this.time.delayedCall(5000, createSpeechBubble(bubble, bubbleWidth, bubbleHeight, bubblePadding, "The sky above the port was the color of television, tuned to a dead channel."), [], this);
+
+    var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+
+    var b = content.getBounds();
+
+    content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
+
+    console.log(quote)
+
+    //  Split the current line on spaces, so one word per array element
+    line = quote.split(' ');
+    console.log(line)
+
+    //  Reset the word index to zero (the first word in the line)
+    wordIndex = 0;
+
+    //  Call the 'nextWord' function once for each word in the line (line.length)
+    console.log(line.length)
+    console.log(this.time)
+    this.time.addEvent({
+        delay: wordDelay,                // ms
+        callback: nextWord(content),
+        //args: [],
+        callbackScope: this,
+        repeat: line.length
+    });
+    //this.time.events.repeat(wordDelay, line.length, nextWord, this);
 
     // gr
     timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
@@ -271,11 +301,11 @@ function collectCoin(sprite, tile) {
     return false;
 }
 
-function createSpeechBubble (bubble, width, height, quote)
+function createSpeechBubble (bubble, width, height,padding, quote)
 {
     var bubbleWidth = width;
     var bubbleHeight = height;
-    var bubblePadding = 10;
+    var bubblePadding = padding;
     var arrowHeight = bubbleHeight / 4;
 
     //  Bubble shadow
@@ -309,33 +339,6 @@ function createSpeechBubble (bubble, width, height, quote)
     bubble.lineStyle(2, 0x565656, 1);
     bubble.lineBetween(point2X, point2Y, point3X, point3Y);
     bubble.lineBetween(point1X, point1Y, point3X, point3Y);
-
-    var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
-
-    var b = content.getBounds();
-
-    content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
-
-    console.log(quote)
-
-    //  Split the current line on spaces, so one word per array element
-    line = quote.split(' ');
-    console.log(line)
-
-    //  Reset the word index to zero (the first word in the line)
-    wordIndex = 0;
-
-    //  Call the 'nextWord' function once for each word in the line (line.length)
-    console.log(line.length)
-    console.log(this.time)
-    this.time.addEvent({
-        delay: wordDelay,                // ms
-        callback: nextWord(content),
-        //args: [],
-        callbackScope: this,
-        repeat: line.length
-    });
-    //this.time.events.repeat(wordDelay, line.length, nextWord, this);
 
 }
 
