@@ -210,12 +210,14 @@ function create() {
     timedEvent = this.time.delayedCall(5300, stopWalking_gr, [], this);
 
     //jo
+    /*
     timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(7800, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(8300, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
+    */
 }
 
 function startWalking_gr()
@@ -316,7 +318,7 @@ function createSpeechBubble (x, y, width, height, quote)
     bubble.lineBetween(point2X, point2Y, point3X, point3Y);
     bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
-    var content = this.add.text(0, 0, "ggg", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+    var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
 
     var b = content.getBounds();
 
