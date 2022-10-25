@@ -170,7 +170,7 @@ function create() {
     girl.scaleY=.9;
     //////
     //gitl
-    girlv = this.physics.add.sprite(6500, 200, 'girl');
+    girlv = this.physics.add.sprite(7500, 200, 'girl');
     girlv.setBounce(0.2); // our player will bounce from items
     girlv.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, girlv);
@@ -201,7 +201,7 @@ function create() {
     robot.anims.play('idle_r', true);
     //////
     //robot2
-    robot2 = this.physics.add.sprite(6200, 200, 'robot');
+    robot2 = this.physics.add.sprite(7200, 200, 'robot');
     robot2.setBounce(0.2); // our player will bounce from items
     robot2.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, robot2);
@@ -425,7 +425,7 @@ function create() {
     timedEvent = this.time.delayedCall(67000, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(69000, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(74000, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(75000, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(78000, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(80000, stopWalking_jo, [], this);
 
 
