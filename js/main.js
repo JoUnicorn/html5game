@@ -421,6 +421,12 @@ function create() {
     var quote="It's my first meal of the day, I'm feeling much better now, and I have much more energy, I am going to save you Vivi!"
     timedEvent = this.time.delayedCall(33000, createSpeechBubbleVisible, [bubble, 1], this);
     timedEvent = this.time.delayedCall(35000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(35000, lifebar_vis, [], this);
+    timedEvent = this.time.delayedCall(35100, lifebar_nvis, [], this);
+    timedEvent = this.time.delayedCall(35200, lifebar_vis, [], this);
+    timedEvent = this.time.delayedCall(35300, lifebar_nvis, [], this);
+    timedEvent = this.time.delayedCall(35400, lifebar_vis, [], this);
+    timedEvent = this.time.delayedCall(35500, lifebar_nvis, [], this);
     timedEvent = this.time.delayedCall(43000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(43000, createSpeechBubbleVisible, [bubble, 0], this);
 
