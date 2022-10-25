@@ -217,7 +217,7 @@ function create() {
     content2.setScrollFactor(0);
     timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(5500, createSpeechInBubble2, [quote2], this);
-    timedEvent = this.time.delayedCall(7000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(12000, createSpeechInBubbleDestroy, [], this);
 
 
     // gr
