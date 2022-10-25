@@ -196,8 +196,9 @@ function create() {
     var bubbleWidth = 320;
     var bubbleHeight = 160;
     var bubblePadding = 10;
+    var quote="The sky above the port was the color of television, tuned to a dead channel."
     var bubble = this.add.graphics({ x: 20, y: 100 });
-    timedEvent = this.time.delayedCall(5000, createSpeechBubble(bubble, bubbleWidth, bubbleHeight, bubblePadding, "The sky above the port was the color of television, tuned to a dead channel."), [], this);
+    timedEvent = this.time.delayedCall(5000, createSpeechBubble(bubble, bubbleWidth, bubbleHeight, bubblePadding, quote), [], this);
 
     var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
 
