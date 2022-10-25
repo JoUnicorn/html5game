@@ -98,14 +98,6 @@ class Button {
 }
 
 function create() {
-    this.scene.pause();
-    //background = this.add.tileSprite(0, 0, 800, 600, 'bg');
-
-    // And a label to illustrate which menu item was chosen. (This is not necessary)
-    const button = new Button(50, 50, 'Start Game', this, () => console.log('game is started'));
-
-
-
     // load the map
     map = this.make.tilemap({key: 'map'});
 
@@ -366,9 +358,17 @@ function create() {
     timedEvent = this.time.delayedCall(62500, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(68000, stopWalking_jo, [], this);
 
-    //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
-    //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
-    //timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
+
+
+
+
+    //start
+    this.scene.pause();
+    //background = this.add.tileSprite(0, 0, 800, 600, 'bg');
+
+    // And a label to illustrate which menu item was chosen. (This is not necessary)
+    const button = new Button(50, 50, 'Start Game', this, () => console.log('game is started'));
+
 }
 
 function reverseWalking_jo()
