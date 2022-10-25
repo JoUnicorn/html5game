@@ -190,7 +190,7 @@ function create() {
     zombie = this.physics.add.sprite(600, 200, 'zombie');
     zombie.setBounce(0.2); // our player will bounce from items
     zombie.setCollideWorldBounds(true); // don't go out of the map
-    this.physics.add.collider(groundLayer, robot);
+    this.physics.add.collider(groundLayer, zombie);
     this.anims.create({
         key: 'walk_z',
         frames: this.anims.generateFrameNames('zombie', {prefix: 'character_zombie_walk', end: 7, zeroPad: 1}),
@@ -204,8 +204,8 @@ function create() {
     });
     zombie.body.setSize(zombie.width, zombie.height-40);
     zombie.body.setOffset(0, 40);
-    //zombie.scaleX=3;
-    //zombie.scaleY=3;
+    zombie.scaleX=3;
+    zombie.scaleY=3;
     zombie.anims.play('idle_z', true);
     //////
 
