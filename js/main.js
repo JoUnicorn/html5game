@@ -356,6 +356,9 @@ function create() {
         .setStyle({ backgroundColor: '#111' })
     this.scene.pause();
     this.input.on('pointerdown', () => console.log('click'));
+    setTimeout(() => {
+      this.scene.restart();
+    }, 3000);
 
 }
 
