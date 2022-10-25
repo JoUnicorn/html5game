@@ -417,7 +417,6 @@ function createSpeechInBubble (quote)
 
 }
 
-
 function nextWord() {
 
     //  Add the next word onto the text string, followed by a space
@@ -431,11 +430,50 @@ function nextWord() {
     if (wordIndex === line.length)
     {
         //  Add a carriage return
-        content.text = content.text.concat("\n");
+        content.text = content.text.concat("");
     }
 
 }
 
+function createSpeechInBubble2 (quote)
+{
+
+  //console.log(quote)
+
+  line = quote.split(' ');
+  //console.log(line)
+  wordIndex = 0;
+
+  //console.log(line.length)
+  //console.log(this.time)
+  this.time.addEvent({
+      delay: wordDelay,                // ms
+      callback: nextWord2,
+      //args: [],
+      callbackScope: this,
+      repeat: line.length
+  });
+  //this.time.events.repeat(wordDelay, line.length, nextWord, this);
+
+}
+
+function nextWord2() {
+
+    //  Add the next word onto the text string, followed by a space
+    //console.log(content)
+    content2.text = content2.text.concat(line[wordIndex] + " ");
+
+    //  Advance the word index to the next word in the line
+    wordIndex++;
+
+    //  Last word?
+    if (wordIndex === line.length)
+    {
+        //  Add a carriage return
+        content2.text = content2.text.concat("");
+    }
+
+}
 
 function update(time, delta) {
     // anim
