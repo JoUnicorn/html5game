@@ -404,7 +404,7 @@ function createSpeechInBubble (quote)
   //console.log(line)
   wordIndex = 0;
 
-  //console.log(line.length)
+  console.log(line.length)
   //console.log(this.time)
   this.time.addEvent({
       delay: wordDelay,                // ms
@@ -461,6 +461,7 @@ function nextWord2() {
 
     //  Add the next word onto the text string, followed by a space
     //console.log(content)
+    console.log(line2[wordIndex2])
     content2.text = content2.text.concat(line2[wordIndex2] + " ");
 
     //  Advance the word index to the next word in the line
