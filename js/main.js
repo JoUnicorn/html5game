@@ -365,28 +365,34 @@ function create() {
     bubble.setScrollFactor(0);
     var bubble2 = this.add.graphics({ x: 460, y: 100 });
     bubble2.setScrollFactor(0);
-    timedEvent = this.time.delayedCall(5000, createSpeechBubble, [bubble, bubbleWidth, bubbleHeight, bubblePadding], this);
-    timedEvent = this.time.delayedCall(5000, createSpeechBubble2, [bubble2, bubbleWidth, bubbleHeight, bubblePadding], this);
-    timedEvent = this.time.delayedCall(7000, createSpeechBubbleVisible, [bubble, 0], this);
-    timedEvent = this.time.delayedCall(7000, createSpeechBubbleVisible, [bubble2, 0], this);
-    //timedEvent = this.time.delayedCall(13000, createSpeechBubbleVisible, [bubble, 1], this);
 
-    var quote="The sky above the port was the color of television, tuned to a dead channel."
     content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
     content.setPosition(bubble.x + 10, bubble.y + 10);
     content.setScrollFactor(0);
-    var quote2="Get the source and assets for every Phaser example from"
     content2 = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
     content2.setPosition(bubble2.x + 10, bubble2.y + 10);
     content2.setScrollFactor(0);
-    timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(5500, createSpeechInBubble2, [quote2], this);
-    timedEvent = this.time.delayedCall(12000, createSpeechInBubbleDestroy, [], this);
 
+    // dialog
+    timedEvent = this.time.delayedCall(1000, createSpeechBubble, [bubble, bubbleWidth, bubbleHeight, bubblePadding], this);
+    timedEvent = this.time.delayedCall(1000, createSpeechBubble2, [bubble2, bubbleWidth, bubbleHeight, bubblePadding], this);
+    timedEvent = this.time.delayedCall(7000, createSpeechBubbleVisible, [bubble, 0], this);
+    timedEvent = this.time.delayedCall(7000, createSpeechBubbleVisible, [bubble2, 0], this);
+    //timedEvent = this.time.delayedCall(13000, createSpeechBubbleVisible, [bubble, 1], this);
+    var quote="Who are you? and what are you doing with my Vivi???????"
+    timedEvent = this.time.delayedCall(1200, createSpeechInBubble, [quote], this);
+    var quote2="My name is Vetrox and i just kidnapped your Vivi, you will never see again"
+    timedEvent = this.time.delayedCall(2200, createSpeechInBubble2, [quote2], this);
+    timedEvent = this.time.delayedCall(2600, createSpeechInBubbleDestroy, [], this);
+    var quote="What???? You will never be able to escape!"
+    timedEvent = this.time.delayedCall(2800, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(4000, createSpeechInBubbleDestroy, [], this);
+    var quote="If you let my Vivi go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you. "
+    timedEvent = this.time.delayedCall(4400, createSpeechInBubble, [quote], this);
 
     // gr
-    timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
-    timedEvent = this.time.delayedCall(10300, stopWalking_gr, [], this);
+    timedEvent = this.time.delayedCall(5000, startWalking_gr, [], this);
+    timedEvent = this.time.delayedCall(12300, stopWalking_gr, [], this);
 
     //jo
     timedEvent = this.time.delayedCall(6000, startWalking_jo, [], this);
