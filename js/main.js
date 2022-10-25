@@ -151,7 +151,7 @@ function create() {
 
     //////////
     //gitl
-    girlv = this.physics.add.sprite(5500, 200, 'girl');
+    girlv = this.physics.add.sprite(6500, 200, 'girl');
     girlv.setBounce(0.2); // our player will bounce from items
     girlv.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, girlv);
@@ -198,7 +198,7 @@ function create() {
     //////
     //////////
     //robot2
-    robot2 = this.physics.add.sprite(5200, 200, 'robot');
+    robot2 = this.physics.add.sprite(6200, 200, 'robot');
     robot2.setBounce(0.2); // our player will bounce from items
     robot2.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, robot2);
@@ -215,7 +215,7 @@ function create() {
     });
     robot2.body.setSize(robot2.width, robot2.height-40);
     robot2.body.setOffset(0, 40);
-    robot2.anims.play('idle_r', true);
+    robot2.anims.play('idle_r2', true);
     //////
     //robot
     robot = this.physics.add.sprite(600, 200, 'robot');
