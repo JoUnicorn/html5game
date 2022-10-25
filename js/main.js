@@ -324,7 +324,6 @@ function createSpeechBubble (x, y, width, height, quote)
 
     content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
 
-    console.log(content)
     console.log(quote)
 
     //  Split the current line on spaces, so one word per array element
@@ -335,6 +334,7 @@ function createSpeechBubble (x, y, width, height, quote)
     wordIndex = 0;
 
     //  Call the 'nextWord' function once for each word in the line (line.length)
+    console.log(line.length)
     console.log(this.time)
     this.time.addEvent({
         delay: wordDelay,                // ms
