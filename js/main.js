@@ -103,7 +103,7 @@ function create() {
 
     // And a label to illustrate which menu item was chosen. (This is not necessary)
     choiseLabel = this.add.text(20, 20, 'Click outside menu to continue', { font: '30px Arial', fill: '#fff' });
-    const button = new Button(0, 0, 'Start Game', this, () => console.log('game is started'));
+    const button = new Button(50, 50, 'Start Game', this, () => console.log('game is started'));
 
 
 
