@@ -254,7 +254,7 @@ function create() {
     this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
     // make the camera follow the player
     this.cameras.main.startFollow(player);
-    this.cameras.main.setFollowOffset(-200, 200);
+    this.cameras.main.setFollowOffset(-250, 150);
 
     // set background color, so the sky is not black
     this.cameras.main.setBackgroundColor('#ccccff');
@@ -344,7 +344,7 @@ function generate(x, y)
     });
 
 }
-function boom_disa()
+function burn()
 {
     zombie.anims.play('idle_z', true);
     fireball.visible=false;
