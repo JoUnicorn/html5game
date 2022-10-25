@@ -74,7 +74,7 @@ function preload() {
     this.load.image('mushroom', 'assets/mushroom.png');
     this.load.image('fire', 'assets/muzzleflash3.png');
     this.load.image('boom', 'assets/muzzleflash2.png');
-    this.load.image('bg', 'assets/starfield.png');
+    this.load.image('bg', 'assets/bg.png');
     // player animations
     this.load.atlas('player', 'assets/jo.png', 'assets/jo.json');
     this.load.atlas('girl', 'assets/girl.png', 'assets/girl.json');
@@ -369,7 +369,7 @@ function create() {
     // And a label to illustrate which menu item was chosen. (This is not necessary)
     choiseLabel = this.add.text(20, 20, 'Click outside menu to continue', { font: '30px Arial', fill: '#fff' });
     const button = new Button(50, 50, 'Start Game', this, () => console.log('game is started'));
-    
+
 }
 
 function reverseWalking_jo()
