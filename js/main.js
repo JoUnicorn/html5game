@@ -202,7 +202,7 @@ function create() {
         frames: [{key: 'zombie', frame: 'character_zombie_idle'}],
         frameRate: 10,
     });
-    zombie.body.setSize(robot.width, robot.height-40);
+    zombie.body.setSize(zombie.width, zombie.height-40);
     zombie.body.setOffset(0, 40);
     //zombie.scaleX=3;
     //zombie.scaleY=3;
