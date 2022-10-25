@@ -380,18 +380,18 @@ function create() {
     var quote="Who are you? and what are you doing with my Vivi???????"
     timedEvent = this.time.delayedCall(1200, createSpeechInBubble, [quote], this);
     var quote2="My name is Vetrox and i just kidnapped your Vivi, you will never see again"
-    timedEvent = this.time.delayedCall(4000, createSpeechInBubble2, [quote2], this);
-    timedEvent = this.time.delayedCall(7000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(5000, createSpeechInBubble2, [quote2], this);
+    timedEvent = this.time.delayedCall(8000, createSpeechInBubbleDestroy, [], this);
 
     var quote="What???? You will never be able to escape!"
-    timedEvent = this.time.delayedCall(7500, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(10500, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(8500, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(12000, createSpeechInBubbleDestroy, [], this);
 
     var quote="If you let my Vivi go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you. "
-    timedEvent = this.time.delayedCall(11000, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(20000, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(12500, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(21500, createSpeechInBubbleDestroy2, [], this);
     var quote2="Good luck!"
-    timedEvent = this.time.delayedCall(20500, createSpeechInBubble2, [quote2], this);
+    timedEvent = this.time.delayedCall(22000, createSpeechInBubble2, [quote2], this);
     timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy2, [], this);
 
