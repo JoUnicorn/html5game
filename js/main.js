@@ -204,13 +204,13 @@ function create() {
     this.physics.add.collider(groundLayer, robot2);
     this.anims.create({
         key: 'walk_r2',
-        frames: this.anims.generateFrameNames('robot2', {prefix: 'character_robot_walk', end: 7, zeroPad: 1}),
+        frames: this.anims.generateFrameNames('robot', {prefix: 'character_robot_walk', end: 7, zeroPad: 1}),
         frameRate: 10,
         repeat: -1
     });
     this.anims.create({
         key: 'idle_r2',
-        frames: [{key: 'robot2', frame: 'character_robot_idle'}],
+        frames: [{key: 'robot', frame: 'character_robot_idle'}],
         frameRate: 10,
     });
     robot2.body.setSize(robot2.width, robot2.height-40);
