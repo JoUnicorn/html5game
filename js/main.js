@@ -350,14 +350,14 @@ function create() {
 
 
     //start
-    startButton = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, 'Start game')
+    startButton = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, "Wait 3 seconds, it's loading .....",{ fontFamily: 'Arial', fontSize: 50, color: '#000000', align: 'center'})
         .setOrigin(0.5)
         .setPadding(10)
         .setStyle({ backgroundColor: '#111' })
     this.scene.pause();
-    this.input.on('pointerdown', () => console.log('click'));
+    //this.input.on('pointerdown', () => console.log('click'));
     setTimeout(() => {
-      this.scene.resume();
+        this.scene.resume();
     }, 3000);
 
 }
