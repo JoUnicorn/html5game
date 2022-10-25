@@ -325,7 +325,7 @@ function create() {
     timedEvent = this.time.delayedCall(29500, fight, [], this);
     timedEvent = this.time.delayedCall(32000, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(32500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(36000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(34000, stopWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
     timedEvent = this.time.delayedCall(37500, generate, [zombie.x,zombie.y], this);
     timedEvent = this.time.delayedCall(40500, burn, [], this);
