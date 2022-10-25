@@ -198,8 +198,8 @@ function create() {
     infoText.setScrollFactor(0);
 
     // modal
-    var bubble = this.add.graphics({ x: x, y: y });
-    timedEvent = this.time.delayedCall(5000, createSpeechBubble(bubble,20, 100, 320, 160, "The sky above the port was the color of television, tuned to a dead channel."), [], this);
+    var bubble = this.add.graphics({ x: 20, y: 100 });
+    timedEvent = this.time.delayedCall(5000, createSpeechBubble(bubble, 320, 160, "The sky above the port was the color of television, tuned to a dead channel."), [], this);
 
     // gr
     timedEvent = this.time.delayedCall(3000, startWalking_gr, [], this);
@@ -271,7 +271,7 @@ function collectCoin(sprite, tile) {
     return false;
 }
 
-function createSpeechBubble (bubble,x, y, width, height, quote)
+function createSpeechBubble (bubble, width, height, quote)
 {
     var bubbleWidth = width;
     var bubbleHeight = height;
