@@ -43,6 +43,8 @@ var map;
 var player;
 var girl;
 var robot;
+var girl2;
+var zombie;
 var mushroom;
 var cursors;
 var groundLayer, coinLayer;
@@ -73,7 +75,7 @@ function preload() {
     this.load.atlas('ennemy1', 'assets/ennemy1.png', 'assets/ennemy1.json');
     this.load.atlas('ennemy2', 'assets/ennemy2.png', 'assets/ennemy2.json');
     this.load.atlas('robot', 'assets/ennemy3.png', 'assets/ennemy3.json');
-    this.load.atlas('ennemy4', 'assets/ennemy4.png', 'assets/ennemy4.json');
+    this.load.atlas('zombie', 'assets/ennemy4.png', 'assets/ennemy4.json');
 }
 
 function create() {
@@ -160,14 +162,12 @@ function create() {
     robot.setBounce(0.2); // our player will bounce from items
     robot.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, robot);
-    // player walk animation
     this.anims.create({
         key: 'walk_r',
         frames: this.anims.generateFrameNames('robot', {prefix: 'character_robot_walk', end: 7, zeroPad: 1}),
         frameRate: 10,
         repeat: -1
     });
-    // idle with only one frame, so repeat is not neaded
     this.anims.create({
         key: 'idle_r',
         frames: [{key: 'robot', frame: 'character_robot_idle'}],
@@ -184,6 +184,27 @@ function create() {
     mushroom.scaleX=2;
     mushroom.scaleY=2;
     mushroom.alpha = 0;
+    //////
+    //zombie
+    zombie = this.physics.add.sprite(4200, 200, 'zombie');
+    zombie.setBounce(0.2); // our player will bounce from items
+    zombie.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, robot);
+    this.anims.create({
+        key: 'walk_r',
+        frames: this.anims.generateFrameNames('zombie', {prefix: 'character_zombie_walk', end: 7, zeroPad: 1}),
+        frameRate: 10,
+        repeat: -1
+    });
+    this.anims.create({
+        key: 'idle_r',
+        frames: [{key: 'zombie', frame: 'character_zombie_idle'}],
+        frameRate: 10,
+    });
+    zombie.body.setSize(robot.width, robot.height-40);
+    zombie.body.setOffset(0, 40);
+    zombie.scaleX=3;
+    zombie.scaleY=3;
     //////
 
 
