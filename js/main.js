@@ -316,6 +316,8 @@ function create() {
     timedEvent = this.time.delayedCall(33500, generate, [zombie.x,zombie.y], this);
     timedEvent = this.time.delayedCall(36500, burn, [], this);
     timedEvent = this.time.delayedCall(38500, boom_disa, [], this);
+    timedEvent = this.time.delayedCall(40500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(43500, stopWalking_jo, [], this);
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
@@ -350,7 +352,7 @@ function burn()
     fireball.visible=false;
     this.tweens.add({
         targets: zombie,
-        scale: .1,
+        scale: 0,
         yoyo: false,
         duration: 2000,
         ease: 'Sine.easeInOut'
