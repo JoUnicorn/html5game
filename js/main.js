@@ -366,6 +366,7 @@ function create() {
 
 function startGame()
 {
+    console.log("gg");
     this.scene.resume();
 }
 
