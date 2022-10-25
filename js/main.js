@@ -217,7 +217,7 @@ function create() {
     content2.setScrollFactor(0);
     timedEvent = this.time.delayedCall(5500, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(5500, createSpeechInBubble2, [quote2], this);
-    //timedEvent = this.time.delayedCall(7000, createSpeechInBubbleDestroy, [content], this);
+    timedEvent = this.time.delayedCall(7000, createSpeechInBubbleDestroy, [], this);
 
 
     // gr
@@ -349,9 +349,14 @@ function createSpeechInBubbleVisible(content,yn)
     }
 }
 
-function createSpeechInBubbleDestroy(content)
+function createSpeechInBubbleDestroy()
 {
     content.text ="";
+}
+
+function createSpeechInBubbleDestroy2()
+{
+    content2.text ="";
 }
 
 function createSpeechBubble2 (bubble, width, height,padding)
