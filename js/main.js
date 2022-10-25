@@ -204,6 +204,7 @@ function create() {
     timedEvent = this.time.delayedCall(5000, createSpeechBubble, [bubble, bubbleWidth, bubbleHeight, bubblePadding], this);
     timedEvent = this.time.delayedCall(5000, createSpeechBubble2, [bubble2, bubbleWidth, bubbleHeight, bubblePadding], this);
     timedEvent = this.time.delayedCall(7000, createSpeechBubbleVisible, [bubble, 0], this);
+    timedEvent = this.time.delayedCall(13000, createSpeechBubbleVisible, [bubble, 1], this);
 
     var content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
     var b = content.getBounds();
@@ -355,9 +356,9 @@ function createSpeechBubble2 (bubble, width, height,padding)
     //  Calculate arrow coordinates
     var point1X = Math.floor((bubbleWidth / 7)*5);
     var point1Y = bubbleHeight;
-    var point2X = Math.floor((bubbleWidth / 7) * 2)+Math.floor((bubbleWidth / 7)*5);
+    var point2X = Math.floor((bubbleWidth / 7) )+Math.floor((bubbleWidth / 7)*5);
     var point2Y = bubbleHeight;
-    var point3X = Math.floor((bubbleWidth / 7) * 2)+Math.floor((bubbleWidth / 7)*5);
+    var point3X = Math.floor((bubbleWidth / 7) )+Math.floor((bubbleWidth / 7)*5);
     var point3Y = Math.floor(bubbleHeight + arrowHeight);
 
     //  Bubble arrow shadow
