@@ -99,7 +99,7 @@ class Button {
 
 function create() {
     console.log(this);
-    this.paused = true;
+    this.scene.pause();
     background = this.add.tileSprite(0, 0, 800, 600, 'bg');
 
     // And a label to illustrate which menu item was chosen. (This is not necessary)
