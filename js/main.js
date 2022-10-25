@@ -334,14 +334,14 @@ function create() {
     timedEvent = this.time.delayedCall(44500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(50500, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(54500, reverseWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(56500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(59500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(61500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(63500, reverseWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(65500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(67500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(69500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(72000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(55500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(57500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(58500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(59500, reverseWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(60500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(61500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(62500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(68000, stopWalking_jo, [], this);
 
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
