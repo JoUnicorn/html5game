@@ -336,7 +336,7 @@ function createSpeechBubble (x, y, width, height, quote)
     console.log(this.time)
     this.time.addEvent({
         delay: wordDelay,                // ms
-        callback: nextWord,
+        callback: nextWord(content),
         //args: [],
         callbackScope: this,
         repeat: line.length
@@ -345,7 +345,7 @@ function createSpeechBubble (x, y, width, height, quote)
 
 }
 
-function nextWord() {
+function nextWord(content) {
 
     //  Add the next word onto the text string, followed by a space
     console.log(content)
