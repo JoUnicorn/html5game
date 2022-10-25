@@ -361,12 +361,13 @@ function create() {
     this.scene.pause();
 
     this.input.onDown.add(unpause, self);
+    function unpause()
+    {
+        console.log("kkk");
+    }
+    
 }
 
-function unpause()
-{
-    console.log("kkk");
-}
 
 function reverseWalking_jo()
 {
