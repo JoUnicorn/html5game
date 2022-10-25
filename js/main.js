@@ -51,6 +51,9 @@ var groundLayer, coinLayer;
 var text;
 var score = 0;
 var timedEvent;
+var rt;
+var fireball;
+var fireFX;
 
 // modal
 var line = [];
@@ -208,7 +211,24 @@ function create() {
     zombie.scaleY=3;
     zombie.anims.play('idle_z', true);
     //////
+    //fire
+    rt = this.make.renderTexture({ x: 0, y: 0, width: 800, height: 600 });
 
+    fireball = this.add.follower(null, 50, 350, 'fire');
+
+    fireFX = this.tweens.add({
+        targets: fireball,
+        scaleX: 3,
+        scaleY: 3,
+        alpha: 0,
+        duration: 300,
+        ease: "Cubic.easeOut",
+        onComplete: function () { rt.clear(); fireball.alpha = 0 },
+        paused: true
+    });
+
+    fireFX.setCallback('onUpdate', draw, [], this);
+    /////
 
     cursors = this.input.keyboard.createCursorKeys();
 
@@ -273,9 +293,28 @@ function create() {
     timedEvent = this.time.delayedCall(19500, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(23500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(33500, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(34500, generate, [3500,1600], this);
+
     //timedEvent = this.time.delayedCall(10000, rescale_jo, [], this);
     //timedEvent = this.time.delayedCall(10500, startWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(12500, stopWalking_jo, [], this);
+}
+
+function generate(x, y)
+{
+    fireball.setPosition(player.x, player.y).setScale(0.5).setAlpha(1);
+
+    curve = new Phaser.Curves.Line(new Phaser.Math.Vector2(player.x, player.y), new Phaser.Math.Vector2(x, y));
+
+    fireball.setPath(curve);
+    fireball.startFollow(300);
+
+    fireFX.restart();
+}
+
+function draw()
+{
+    rt.draw(fireball);
 }
 
 function startWalking_gr()
