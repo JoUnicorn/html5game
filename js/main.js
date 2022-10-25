@@ -234,6 +234,9 @@ function create() {
     /////
     //boom
     boom = this.physics.add.sprite(100, 200, 'boom');
+    boom.setBounce(0.2); // our player will bounce from items
+    boom.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, boom);
     boom.scaleX=2;
     boom.scaleY=2;
     boom.alpha = 0;
@@ -636,8 +639,24 @@ function nextWord2() {
 }
 
 function update(time, delta) {
-    // anim
 
+    if (cursors.up.isDown)
+    {
+        game.camera.y -= 4;
+    }
+    else if (cursors.down.isDown)
+    {
+        game.camera.y += 4;
+    }
+
+    if (cursors.left.isDown)
+    {
+        game.camera.x -= 4;
+    }
+    else if (cursors.right.isDown)
+    {
+        game.camera.x += 4;
+    }
 
 /*
     // controller
