@@ -342,7 +342,7 @@ function createSpeechInBubble (bubble, bubbleWidth, bubbleHeight, content, quote
 function nextWord(content) {
 
     //  Add the next word onto the text string, followed by a space
-    console.log(content)
+    //console.log(content)
     content.text = content.text.concat(line[wordIndex] + " ");
 
     //  Advance the word index to the next word in the line
