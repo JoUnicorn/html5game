@@ -568,9 +568,21 @@ function create() {
     quote="Yes i am ready and you are going to die bastard"
     timedEvent = this.time.delayedCall(220000, createSpeechInBubble2, [quote], this);
 
+    boom2 = this.physics.add.sprite(robot2.x, robot2.y, 'boom2');
+    boom2.setBounce(0.2); // our player will bounce from items
+    boom2.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, boom2);
+    boom2.alpha = 1;
+
+    timedEvent = this.time.delayedCall(226000, startWalking_r, [], this);
+    timedEvent = this.time.delayedCall(227000, stopWalking_r, [], this);
+    timedEvent = this.time.delayedCall(226000, startWalking_bo, [], this);
+    timedEvent = this.time.delayedCall(227000, stopWalking_bo, [], this);
+
     timedEvent = this.time.delayedCall(225000, rescale_ro, [], this);
     timedEvent = this.time.delayedCall(226000, startWalking_r, [], this);
     timedEvent = this.time.delayedCall(227000, stopWalking_r, [], this);
+    timedEvent = this.time.delayedCall(227000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(227500, fight_r, [], this);
     quote="Aughhhhhhhhhhh! I got hurt (I lost 140 points of life)"
     timedEvent = this.time.delayedCall(228000, createSpeechInBubble, [quote], this);
@@ -594,12 +606,15 @@ function create() {
     timedEvent = this.time.delayedCall(246500, createSpeechInBubble, [quote], this);
 
     timedEvent = this.time.delayedCall(254500, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(254500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(255000, stopWalking_jo, [], this);
 
     timedEvent = this.time.delayedCall(255500, createSpeechInBubbleDestroy, [], this);
     quote="Vetrox, here is the love fireball, you won't survive after the shock"
     timedEvent = this.time.delayedCall(255500, createSpeechInBubble, [quote], this);
 
-    timedEvent = this.time.delayedCall(263500, generate2, [zombie.x,zombie.y], this);
+
+    timedEvent = this.time.delayedCall(263500, generate2, [robot2.x,robot2.y], this);
     timedEvent = this.time.delayedCall(266500, burn2, [], this);
     timedEvent = this.time.delayedCall(267500, boom_disa, [], this);
 
@@ -697,11 +712,6 @@ function generate2(x, y)
     //console.log(zombie.x)
     //console.log(zombie.y)
     //boom2
-    boom2 = this.physics.add.sprite(robot2.x, robot2.y, 'boom2');
-    boom2.setBounce(0.2); // our player will bounce from items
-    boom2.setCollideWorldBounds(true); // don't go out of the map
-    this.physics.add.collider(groundLayer, boom2);
-    boom2.alpha = 0;
     fireball.scaleX=3;
     fireball.scaleY=3;
     fireball.setPosition(player.x, player.y).setScale(0.5).setAlpha(1);
@@ -775,6 +785,17 @@ function boom_disa()
 function draw()
 {
     rt.draw(fireball);
+}
+
+function startWalking_bo()
+{
+    boom2.body.setVelocityX(-200);
+    boom2.flipX = true; // use the original sprite looking to the right
+}
+
+function stopWalking_bo()
+{
+    boom2.body.setVelocityX(0);
 }
 
 function startWalking_r()
