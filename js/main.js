@@ -621,9 +621,9 @@ function create() {
     timedEvent = this.time.delayedCall(267500, startWalking_v, [], this);
     timedEvent = this.time.delayedCall(262500, stopWalking_v, [], this);
 
-    timedEvent = this.time.delayedCall(238500, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(262500, createSpeechInBubbleDestroy2, [], this);
     quote="Vivi: thank you Jo, you are my heroe :)"
-    timedEvent = this.time.delayedCall(238500, createSpeechInBubble2, [quote], this);
+    timedEvent = this.time.delayedCall(262500, createSpeechInBubble2, [quote], this);
 
     //start
     startButton = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, "Wait 3 seconds, it's loading .....",{ fontFamily: 'Arial', fontSize: 50, align: 'center'})
