@@ -709,8 +709,9 @@ function generate(x, y)
 
 function generate2(x, y)
 {
-    //fireball.scaleX=3;
-    //fireball.scaleY=3;
+    fireball.visible=true;
+    fireball.scaleX=3;
+    fireball.scaleY=3;
     fireball.setPosition(player.x, player.y).setScale(0.5).setAlpha(1);
 
     curve = new Phaser.Curves.Line(new Phaser.Math.Vector2(player.x, player.y), new Phaser.Math.Vector2(robot2.x, robot2.y));
