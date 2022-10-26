@@ -619,7 +619,7 @@ function create() {
     timedEvent = this.time.delayedCall(267500, boom_disa2, [], this);
 
     timedEvent = this.time.delayedCall(267500, startWalking_v, [], this);
-    timedEvent = this.time.delayedCall(269500, stopWalking_v, [], this);
+    timedEvent = this.time.delayedCall(269000, stopWalking_v, [], this);
 
     timedEvent = this.time.delayedCall(269500, createSpeechInBubbleDestroy2, [], this);
     quote="Vivi: thank you Jo, you are my heroe :)"
