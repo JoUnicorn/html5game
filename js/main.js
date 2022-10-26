@@ -484,6 +484,45 @@ function create() {
 
     //the queen
     timedEvent = this.time.delayedCall(110500, stopWalking_jo, [], this);
+    quote="A new ennemy? Who are you?"
+    timedEvent = this.time.delayedCall(110500, createSpeechBubbleVisible, [bubble, 1], this);
+    timedEvent = this.time.delayedCall(111000, createSpeechInBubble, [quote], this);
+    quote="I am the queen of love and candies. I am here to push you to forget Vivi"
+    timedEvent = this.time.delayedCall(110500, createSpeechBubbleVisible, [bubble2, 1], this);
+    timedEvent = this.time.delayedCall(113000, createSpeechInBubble2, [quote], this);
+
+    timedEvent = this.time.delayedCall(113000, createSpeechInBubbleDestroy, [], this);
+    quote="What?? What are you talking about? I will never forget Vivi, Vivi is my soulmate, our connection/love is stronger that anything in this world."
+    timedEvent = this.time.delayedCall(116000, createSpeechInBubble, [quote], this);
+
+    timedEvent = this.time.delayedCall(116000, createSpeechInBubbleDestroy2, [], this);
+    quote="Look at me, I am the queen of love, I am beautiful and I can make you happy Jo. Please forget Vivi and come with me, you won't regret it."
+    timedEvent = this.time.delayedCall(121000, createSpeechInBubble2, [quote], this);
+
+    timedEvent = this.time.delayedCall(121000, createSpeechInBubbleDestroy, [], this);
+    quote="Get out of my way and look for someone else. In Vivi's eyes i see a the reflection of my soul, she's the one I have been waiting for all my life. "
+    timedEvent = this.time.delayedCall(126000, createSpeechInBubble, [quote], this);
+
+    timedEvent = this.time.delayedCall(126000, createSpeechInBubbleDestroy, [], this);
+    quote="Spending time with Vivi is soooo precious for me, I love evey seconds we are together and no one in this world can prevent me to spend the rest of my life with her"
+    timedEvent = this.time.delayedCall(131000, createSpeechInBubble, [quote], this);
+
+    timedEvent = this.time.delayedCall(131000, createSpeechInBubbleDestroy, [], this);
+    quote="So, once again, get out my way and find someone else: you will never be able to be between Vivi and i so forget this idea!"
+    timedEvent = this.time.delayedCall(136000, createSpeechInBubble, [quote], this);
+
+    timedEvent = this.time.delayedCall(136000, createSpeechInBubbleDestroy2, [], this);
+    quote="Oh my god, are you rekecting me right now. I have never been so humiliated. Go away bastard."
+    timedEvent = this.time.delayedCall(141000, createSpeechInBubble2, [quote], this);
+
+    timedEvent = this.time.delayedCall(141000, createSpeechInBubbleDestroy, [], this);
+    quote="Bye, and please eat a lot of candies and become the queen of fat people (and no more the queen of love) haha."
+    timedEvent = this.time.delayedCall(146000, createSpeechInBubble, [quote], this);
+
+    timedEvent = this.time.delayedCall(76000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(76000, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(76000, createSpeechBubbleVisible, [bubble, 0], this);
+    timedEvent = this.time.delayedCall(76000, createSpeechBubbleVisible, [bubble2, 0], this);
 
     // the ladder
     timedEvent = this.time.delayedCall(119000, startWalking_jo, [], this);
