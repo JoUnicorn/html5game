@@ -685,7 +685,7 @@ function draw()
 
 function startWalking_r()
 {
-    robot2.body.setVelocityX(200);
+    robot2.body.setVelocityX(-200);
     robot2.anims.play('walk_r', true);
     robot2.flipX = true; // use the original sprite looking to the right
 }
@@ -694,7 +694,6 @@ function stopWalking_r()
 {
     robot2.body.setVelocityX(0);
     robot2.anims.play('idle_r', true);
-    robot2.visible=true;
 }
 
 function startWalking_gr()
