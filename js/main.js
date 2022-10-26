@@ -346,7 +346,7 @@ function create() {
     });
     this.anims.create({
         key: 'down',
-        frames: [{key: 'player', frame: 'character_robot_down'}],
+        frames: [{key: 'player', frame: 'character_maleAdventurer_down'}],
         frameRate: 10,
     });
 
