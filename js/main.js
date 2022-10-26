@@ -585,6 +585,11 @@ function create() {
 
 }
 
+function idlezom2()
+{
+    robot2.anims.play('idle_r', true);
+}
+
 function fight_r()
 {
     robot2.anims.play('attack_r', true);
