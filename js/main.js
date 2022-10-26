@@ -519,10 +519,10 @@ function create() {
     quote="Bye, and please eat a lot of candies and become the queen of fat people (and no more the queen of love) haha."
     timedEvent = this.time.delayedCall(146000, createSpeechInBubble, [quote], this);
 
-    timedEvent = this.time.delayedCall(76000, createSpeechInBubbleDestroy, [], this);
-    timedEvent = this.time.delayedCall(76000, createSpeechInBubbleDestroy2, [], this);
-    timedEvent = this.time.delayedCall(76000, createSpeechBubbleVisible, [bubble, 0], this);
-    timedEvent = this.time.delayedCall(76000, createSpeechBubbleVisible, [bubble2, 0], this);
+    timedEvent = this.time.delayedCall(151000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(151000, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(151000, createSpeechBubbleVisible, [bubble, 0], this);
+    timedEvent = this.time.delayedCall(151000, createSpeechBubbleVisible, [bubble2, 0], this);
 
     // the ladder
     timedEvent = this.time.delayedCall(119000, startWalking_jo, [], this);
