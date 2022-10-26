@@ -219,7 +219,7 @@ function create() {
     robot2.body.setOffset(0, 40);
     robot2.anims.play('idle_r', true);
     this.anims.create({
-        key: 'hit_z',
+        key: 'hit_r',
         frames: [{key: 'robot', frame: 'character_robot_hit'}],
         frameRate: 10,
     });
@@ -447,7 +447,7 @@ function create() {
         timedEvent = this.time.delayedCall(32100+i*200, lifebar_nvis, [], this);
     }
     timedEvent = this.time.delayedCall(41000, createSpeechInBubbleDestroy, [], this);
-    quote="I ate also vitamies B, Vivi :)"
+    quote="I also ate vitamies B, Vivi :)"
     timedEvent = this.time.delayedCall(41000, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(45000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(45000, createSpeechBubbleVisible, [bubble, 0], this);
@@ -712,7 +712,7 @@ function generate2(x, y)
     fireball.startFollow(300);
 
     fireFX.restart();
-    robot2.anims.play('hit_z', true);
+    robot2.anims.play('hit_r', true);
     robot2.flipX = false; // use the original sprite looking to the right
     this.tweens.add({
         targets: boom2,
