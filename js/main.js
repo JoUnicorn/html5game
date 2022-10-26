@@ -428,9 +428,9 @@ function create() {
         timedEvent = this.time.delayedCall(32000+i*200, lifebar_vis, [], this);
         timedEvent = this.time.delayedCall(32100+i*200, lifebar_nvis, [], this);
     }
-    timedEvent = this.time.delayedCall(42000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(41500, createSpeechInBubbleDestroy, [], this);
     quote="I ate also vitamies B, Vivi :)"
-    timedEvent = this.time.delayedCall(42500, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(42000, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(45000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(45000, createSpeechBubbleVisible, [bubble, 0], this);
 
@@ -467,6 +467,8 @@ function create() {
     timedEvent = this.time.delayedCall(81000, createSpeechInBubbleDestroy, [], this);
     quote="I am going to kill you with the power of LOVE => be ready for my fireball, ugly green monster"
     timedEvent = this.time.delayedCall(81500, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(86500, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(87000, createSpeechBubbleVisible, [bubble, 0], this);
     timedEvent = this.time.delayedCall(87500, generate, [zombie.x,zombie.y], this);
     timedEvent = this.time.delayedCall(90500, burn, [], this);
     timedEvent = this.time.delayedCall(92500, boom_disa, [], this);
