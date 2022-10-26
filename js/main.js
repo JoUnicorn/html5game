@@ -396,16 +396,19 @@ function create() {
     quote="If you let my Vivi go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you. "
     timedEvent = this.time.delayedCall(12500, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(19500, createSpeechInBubbleDestroy2, [], this);
-    quote2="Good luck!\n\n Save me Joooooooooo"
+    quote2="Good luck!\n\n Save me Jooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
     timedEvent = this.time.delayedCall(20000, createSpeechInBubble2, [quote2], this);
     timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy2, [], this);
+    quote="I am going to save you Viviiiiiiiiiiiiiiiiiiiiiiiiii"
+    timedEvent = this.time.delayedCall(25000, createSpeechInBubble, [quote], this);
 
-    timedEvent = this.time.delayedCall(24500, createSpeechBubbleVisible, [bubble, 0], this);
+    timedEvent = this.time.delayedCall(26000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(26000, createSpeechBubbleVisible, [bubble, 0], this);
     timedEvent = this.time.delayedCall(24500, createSpeechBubbleVisible, [bubble2, 0], this);
 
     // gr
-    timedEvent = this.time.delayedCall(25000, startWalking_gr, [], this);
+    timedEvent = this.time.delayedCall(24500, startWalking_gr, [], this);
     timedEvent = this.time.delayedCall(32300, stopWalking_gr, [], this);
 
     //jo
@@ -426,8 +429,8 @@ function create() {
         timedEvent = this.time.delayedCall(32100+i*200, lifebar_nvis, [], this);
     }
     timedEvent = this.time.delayedCall(43000, createSpeechInBubbleDestroy, [], this);
-    quote="I ate also vitamies B Vivi :)"
-    timedEvent = this.time.delayedCall(43000, createSpeechBubbleVisible, [bubble, 1], this);
+    quote="I ate also vitamies B, Vivi :)"
+    timedEvent = this.time.delayedCall(43500, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(45000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(45000, createSpeechBubbleVisible, [bubble, 0], this);
 
