@@ -400,7 +400,7 @@ function create() {
     timedEvent = this.time.delayedCall(20000, createSpeechInBubble2, [quote2], this);
     timedEvent = this.time.delayedCall(23500, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy2, [], this);
-    quote="I am going to save you Viviiiiiiiiiiiiiiiiiiiiiiiiii"
+    quote="I am going to save you Viviiiiiiiiiiiii"
     timedEvent = this.time.delayedCall(24000, createSpeechInBubble, [quote], this);
 
     timedEvent = this.time.delayedCall(26000, createSpeechInBubbleDestroy, [], this);
