@@ -55,6 +55,7 @@ var rt;
 var fireball;
 var fireFX;
 var arrow;
+var boom2;
 
 // modal
 var line = [];
@@ -217,6 +218,11 @@ function create() {
     robot2.body.setSize(robot2.width, robot2.height-40);
     robot2.body.setOffset(0, 40);
     robot2.anims.play('idle_r', true);
+    this.anims.create({
+        key: 'hit_z',
+        frames: [{key: 'robot', frame: 'character_robot_hit'}],
+        frameRate: 10,
+    });
     //////
     //girl2
     girl2 = this.physics.add.sprite(5100, 200, 'girl2');
@@ -298,12 +304,6 @@ function create() {
 
     fireFX.setCallback('onUpdate', draw, [], this);
     /////
-    //boom
-    boom2 = this.physics.add.sprite(zombie.x, zombie.y, 'boom2');
-    boom2.setBounce(0.2); // our player will bounce from items
-    boom2.setCollideWorldBounds(true); // don't go out of the map
-    this.physics.add.collider(groundLayer, boom2);
-    boom2.alpha = 0;
     //boom
     boom = this.physics.add.sprite(zombie.x, zombie.y, 'boom');
     boom.setBounce(0.2); // our player will bounce from items
@@ -581,27 +581,27 @@ function create() {
     timedEvent = this.time.delayedCall(228500, idlezom2, [], this);
     timedEvent = this.time.delayedCall(230000, down_jo, [], this);
 
-    timedEvent = this.time.delayedCall(215000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(230500, createSpeechInBubbleDestroy, [], this);
     quote="Vivi, I got badly hit and i m about to die TT. (only 10 remining points of life). But before dying, please let me ask you something: 사귀자?"
-    timedEvent = this.time.delayedCall(215000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(230500, createSpeechInBubble, [quote], this);
 
-    timedEvent = this.time.delayedCall(220000, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(238500, createSpeechInBubbleDestroy2, [], this);
     quote="Vivi: no, Jo, please don't die, i want to be with you and yes we can start a reationship :)"
-    timedEvent = this.time.delayedCall(220000, createSpeechInBubble2, [quote], this);
+    timedEvent = this.time.delayedCall(238500, createSpeechInBubble2, [quote], this);
 
-    timedEvent = this.time.delayedCall(215000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(246500, createSpeechInBubbleDestroy, [], this);
     quote="Yeeeeeeees, so then let me stand up and kill this fucking robot."
-    timedEvent = this.time.delayedCall(215000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(246500, createSpeechInBubble, [quote], this);
 
-    timedEvent = this.time.delayedCall(235000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(254500, stopWalking_jo, [], this);
 
-    timedEvent = this.time.delayedCall(215000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(255500, createSpeechInBubbleDestroy, [], this);
     quote="Vetrox, here is the love fireball, you won't survive after the shock"
-    timedEvent = this.time.delayedCall(215000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(255500, createSpeechInBubble, [quote], this);
 
-    timedEvent = this.time.delayedCall(90500, generate, [zombie.x,zombie.y], this);
-    timedEvent = this.time.delayedCall(93500, burn, [], this);
-    timedEvent = this.time.delayedCall(94500, boom_disa, [], this);
+    timedEvent = this.time.delayedCall(263500, generate2, [zombie.x,zombie.y], this);
+    timedEvent = this.time.delayedCall(266500, burn2, [], this);
+    timedEvent = this.time.delayedCall(267500, boom_disa, [], this);
 
     //start
     startButton = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, "Wait 3 seconds, it's loading .....",{ fontFamily: 'Arial', fontSize: 50, align: 'center'})
@@ -696,26 +696,45 @@ function generate2(x, y)
 {
     //console.log(zombie.x)
     //console.log(zombie.y)
+    //boom2
+    boom2 = this.physics.add.sprite(robot2.x, robot2.y, 'boom2');
+    boom2.setBounce(0.2); // our player will bounce from items
+    boom2.setCollideWorldBounds(true); // don't go out of the map
+    this.physics.add.collider(groundLayer, boom2);
+    boom2.alpha = 0;
     fireball.scaleX=3;
     fireball.scaleY=3;
     fireball.setPosition(player.x, player.y).setScale(0.5).setAlpha(1);
 
-    curve = new Phaser.Curves.Line(new Phaser.Math.Vector2(player.x, player.y), new Phaser.Math.Vector2(zombie.x, zombie.y));
+    curve = new Phaser.Curves.Line(new Phaser.Math.Vector2(player.x, player.y), new Phaser.Math.Vector2(robot2.x, robot2.y));
 
     fireball.setPath(curve);
     fireball.startFollow(300);
 
     fireFX.restart();
-    zombie.anims.play('hit_z', true);
-    zombie.flipX = false; // use the original sprite looking to the right
+    robot2.anims.play('hit_z', true);
+    robot2.flipX = false; // use the original sprite looking to the right
     this.tweens.add({
-        targets: boom,
+        targets: boom2,
         alpha: 1,
         yoyo: false,
         duration: 500,
         ease: 'Sine.easeInOut'
     });
 
+}
+
+function burn2()
+{
+    robot2.anims.play('idle_z', true);
+    fireball.visible=false;
+    this.tweens.add({
+        targets: robot2,
+        scale: 0,
+        yoyo: false,
+        duration: 2000,
+        ease: 'Sine.easeInOut'
+    });
 }
 
 function burn()
@@ -725,6 +744,17 @@ function burn()
     this.tweens.add({
         targets: zombie,
         scale: 0,
+        yoyo: false,
+        duration: 2000,
+        ease: 'Sine.easeInOut'
+    });
+}
+
+function boom_disa()
+{
+    this.tweens.add({
+        targets: boom2,
+        alpha: 0,
         yoyo: false,
         duration: 2000,
         ease: 'Sine.easeInOut'
