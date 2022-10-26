@@ -641,14 +641,14 @@ function create() {
 
 function startWalking_v()
 {
-    girl2.body.setVelocityX(-200);
-    girl2.anims.play('walk_g', true);
-    girl2.flipX = true; // use the original sprite looking to the right
+    girlv.body.setVelocityX(-200);
+    girlv.anims.play('walk_g', true);
+    girlv.flipX = true; // use the original sprite looking to the right
 }
 function stopWalking_v()
 {
-    girl2.body.setVelocityX(0);
-    girl2.anims.play('idle_g', true);
+    girlv.body.setVelocityX(0);
+    girlv.anims.play('idle_g', true);
 }
 
 
