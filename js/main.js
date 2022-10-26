@@ -557,17 +557,17 @@ function create() {
     timedEvent = this.time.delayedCall(220000, createSpeechInBubble2, [quote], this);
 
     timedEvent = this.time.delayedCall(225000, rescale_ro, [], this);
-    timedEvent = this.time.delayedCall(221000, startWalking_r, [], this);
-    timedEvent = this.time.delayedCall(222000, stopWalking_r, [], this);
-    timedEvent = this.time.delayedCall(222500, fight_r, [], this);
+    timedEvent = this.time.delayedCall(226000, startWalking_r, [], this);
+    timedEvent = this.time.delayedCall(227000, stopWalking_r, [], this);
+    timedEvent = this.time.delayedCall(227500, fight_r, [], this);
     quote="Aughhhhhhhhhhh! I got hurt (I lost 140 points of life)"
-    timedEvent = this.time.delayedCall(223000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(228000, createSpeechInBubble, [quote], this);
     for (let i = 0; i < 20; i++) {
-        timedEvent = this.time.delayedCall(222000+i*200, lifebar_vis, [], this);
-        timedEvent = this.time.delayedCall(222000+i*200, lifebar_nvis, [], this);
+        timedEvent = this.time.delayedCall(227000+i*200, lifebar_vis, [], this);
+        timedEvent = this.time.delayedCall(227000+i*200, lifebar_nvis, [], this);
     }
-    //timedEvent = this.time.delayedCall(84500, idlezom, [], this);
-    timedEvent = this.time.delayedCall(225000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(228500, idlezom2, [], this);
+    timedEvent = this.time.delayedCall(230000, stopWalking_jo, [], this);
 
 
 
