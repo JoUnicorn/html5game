@@ -461,6 +461,9 @@ function create() {
     timedEvent = this.time.delayedCall(72500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(74000, stopWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
+    timedEvent = this.time.delayedCall(74000, createSpeechInBubbleDestroy, [], this);
+    quote="I am going to kill you with the power of LOVE => please be ready for my fireball"
+    timedEvent = this.time.delayedCall(74500, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(77500, generate, [zombie.x,zombie.y], this);
     timedEvent = this.time.delayedCall(80500, burn, [], this);
     timedEvent = this.time.delayedCall(82500, boom_disa, [], this);
