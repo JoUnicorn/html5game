@@ -473,6 +473,7 @@ function create() {
     timedEvent = this.time.delayedCall(90500, burn, [], this);
     timedEvent = this.time.delayedCall(92500, boom_disa, [], this);
 
+    // the ladder
     timedEvent = this.time.delayedCall(94500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(100300, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(103100, reverseWalking_jo, [], this);
@@ -481,10 +482,15 @@ function create() {
     timedEvent = this.time.delayedCall(106600, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(108500, startJumping_jo, [], this);
 
+    //the queen
     timedEvent = this.time.delayedCall(110500, stopWalking_jo, [], this);
+
+    // the ladder
     timedEvent = this.time.delayedCall(119000, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(124000, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(125500, startJumping_jo, [], this);
+
+    //the boss
     timedEvent = this.time.delayedCall(130000, stopWalking_jo, [], this);
 
 
