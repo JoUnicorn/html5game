@@ -418,7 +418,7 @@ function create() {
     timedEvent = this.time.delayedCall(30500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(32500, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(32500, eat_mus, [], this);
-    var quote="It's my first meal of the day, I'm feeling much better now, and I have much more energy, I am going to save you Vivi! (my life is now equal to 200)"
+    var quote="mmmmmmmmm a good salad with a lot of vegetables and avocado, I'm feeling much better now, and I have much more energy, I am going to save you Vivi! (my life is now equal to 200)"
     timedEvent = this.time.delayedCall(33000, createSpeechBubbleVisible, [bubble, 1], this);
     timedEvent = this.time.delayedCall(35000, createSpeechInBubble, [quote], this);
     for (let i = 0; i < 20; i++) {
