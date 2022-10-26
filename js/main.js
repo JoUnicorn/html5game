@@ -26,7 +26,7 @@ var config = {
         default: 'arcade',
         arcade: {
             gravity: {y: 500},
-            debug: true
+            debug: false
         }
     },
     scene: {
@@ -726,7 +726,7 @@ function generate2(x, y)
 
 function burn2()
 {
-    robot2.anims.play('idle_z', true);
+    robot2.anims.play('idle_r', true);
     fireball.visible=false;
     this.tweens.add({
         targets: robot2,
