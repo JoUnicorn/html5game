@@ -441,7 +441,7 @@ function create() {
     }
     timedEvent = this.time.delayedCall(41000, createSpeechInBubbleDestroy, [], this);
     quote="I ate also vitamies B, Vivi :)"
-    timedEvent = this.time.delayedCall(42000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(41000, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(45000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(45000, createSpeechBubbleVisible, [bubble, 0], this);
 
@@ -472,7 +472,7 @@ function create() {
     timedEvent = this.time.delayedCall(83000, createSpeechInBubble, [quote], this);
     for (let i = 0; i < 20; i++) {
         timedEvent = this.time.delayedCall(82000+i*200, lifebar_vis, [], this);
-        timedEvent = this.time.delayedCall(82000+i*200, lifebar_nvis, [], this);
+        timedEvent = this.time.delayedCall(82100+i*200, lifebar_nvis, [], this);
     }
     timedEvent = this.time.delayedCall(84500, idlezom, [], this);
     timedEvent = this.time.delayedCall(85000, stopWalking_jo, [], this);
