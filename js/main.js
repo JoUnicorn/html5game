@@ -439,7 +439,17 @@ function create() {
     timedEvent = this.time.delayedCall(59500, createSpeechBubbleVisible, [bubble2, 1], this);
     timedEvent = this.time.delayedCall(63000, createSpeechInBubble2, [quote], this);
 
+    timedEvent = this.time.delayedCall(63500, createSpeechInBubbleDestroy, [], this);
+    quote="I m not afraid of you and i will kick you ass too. You are soooo ugly, your skin is green and ugly. You should use a moisturizing cream as Vivi taught me to do :)"
+    timedEvent = this.time.delayedCall(64000, createSpeechInBubble, [quote], this);
 
+    timedEvent = this.time.delayedCall(67000, createSpeechInBubbleDestroy2, [], this);
+    quote="Grrrrrrr, I am going to kill you, you filthy vermin."
+    timedEvent = this.time.delayedCall(64000, createSpeechInBubble, [quote], this);
+
+    timedEvent = this.time.delayedCall(69000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(69000, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(69000, createSpeechBubbleVisible, [bubble2, 0], this);
     timedEvent = this.time.delayedCall(69500, fight, [], this);
     timedEvent = this.time.delayedCall(71500, idlezom, [], this);
     timedEvent = this.time.delayedCall(72000, stopWalking_jo, [], this);
