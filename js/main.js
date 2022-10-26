@@ -572,7 +572,7 @@ function create() {
     boom2.setBounce(0.2); // our player will bounce from items
     boom2.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, boom2);
-    boom2.alpha = 1;
+    boom2.alpha = 0;
 
     timedEvent = this.time.delayedCall(226000, startWalking_r, [], this);
     timedEvent = this.time.delayedCall(227000, stopWalking_r, [], this);
@@ -606,7 +606,7 @@ function create() {
     timedEvent = this.time.delayedCall(246500, createSpeechInBubble, [quote], this);
 
     timedEvent = this.time.delayedCall(254500, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(254500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(255000, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(255000, stopWalking_jo, [], this);
 
     timedEvent = this.time.delayedCall(255500, createSpeechInBubbleDestroy, [], this);
@@ -616,7 +616,7 @@ function create() {
 
     timedEvent = this.time.delayedCall(263500, generate2, [robot2.x,robot2.y], this);
     timedEvent = this.time.delayedCall(266500, burn2, [], this);
-    timedEvent = this.time.delayedCall(267500, boom_disa, [], this);
+    timedEvent = this.time.delayedCall(267500, boom_disa2, [], this);
 
     //start
     startButton = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, "Wait 3 seconds, it's loading .....",{ fontFamily: 'Arial', fontSize: 50, align: 'center'})
@@ -758,7 +758,7 @@ function burn()
     });
 }
 
-function boom_disa()
+function boom_disa2()
 {
     this.tweens.add({
         targets: boom2,
