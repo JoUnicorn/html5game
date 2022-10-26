@@ -389,14 +389,14 @@ function create() {
     timedEvent = this.time.delayedCall(5000, createSpeechInBubble2, [quote2], this);
     timedEvent = this.time.delayedCall(8000, createSpeechInBubbleDestroy, [], this);
 
-    var quote="What???? You will never be able to escape!"
+    quote="What???? You will never be able to escape!"
     timedEvent = this.time.delayedCall(8500, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(12000, createSpeechInBubbleDestroy, [], this);
 
-    var quote="If you let my Vivi go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you. "
+    quote="If you let my Vivi go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you. "
     timedEvent = this.time.delayedCall(12500, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(19500, createSpeechInBubbleDestroy2, [], this);
-    var quote2="Good luck!\n\n Save me Joooooooooo"
+    quote2="Good luck!\n\n Save me Joooooooooo"
     timedEvent = this.time.delayedCall(20000, createSpeechInBubble2, [quote2], this);
     timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy2, [], this);
@@ -418,7 +418,7 @@ function create() {
     timedEvent = this.time.delayedCall(30500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(32500, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(32500, eat_mus, [], this);
-    var quote="mmmmmmmmm a good salad with a lot of vegetables and avocado, I'm feeling much better now, and I have much more energy, I am going to save you Vivi! (my life is now equal to 200)"
+    quote="mmmmmmmmm a good salad with a lot of vegetables and avocado, I'm feeling much better now, and I have much more energy, I am going to save you Vivi! (my life is now equal to 200)"
     timedEvent = this.time.delayedCall(33000, createSpeechBubbleVisible, [bubble, 1], this);
     timedEvent = this.time.delayedCall(35000, createSpeechInBubble, [quote], this);
     for (let i = 0; i < 20; i++) {
@@ -432,29 +432,37 @@ function create() {
     timedEvent = this.time.delayedCall(49800, stopWalking_jo, [], this);
     timedEvent = this.time.delayedCall(53500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(59000, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(59500, fight, [], this);
-    timedEvent = this.time.delayedCall(61500, idlezom, [], this);
-    timedEvent = this.time.delayedCall(62000, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(62500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(64000, stopWalking_jo, [], this);
+    quote="Who are you? What do you want?"
+    timedEvent = this.time.delayedCall(59500, createSpeechBubbleVisible, [bubble, 1], this);
+    timedEvent = this.time.delayedCall(61000, createSpeechInBubble, [quote], this);
+    quote="My name is Zombia and I work for Vetrox. I am here to prevent you to catch Vetrox. Sorry but you have to die. I am going to kick your ass."
+    timedEvent = this.time.delayedCall(59500, createSpeechBubbleVisible, [bubble2, 1], this);
+    timedEvent = this.time.delayedCall(63000, createSpeechInBubble2, [quote], this);
+
+
+    timedEvent = this.time.delayedCall(69500, fight, [], this);
+    timedEvent = this.time.delayedCall(71500, idlezom, [], this);
+    timedEvent = this.time.delayedCall(72000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(72500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(74000, stopWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
-    timedEvent = this.time.delayedCall(67500, generate, [zombie.x,zombie.y], this);
-    timedEvent = this.time.delayedCall(70500, burn, [], this);
-    timedEvent = this.time.delayedCall(72500, boom_disa, [], this);
+    timedEvent = this.time.delayedCall(77500, generate, [zombie.x,zombie.y], this);
+    timedEvent = this.time.delayedCall(80500, burn, [], this);
+    timedEvent = this.time.delayedCall(82500, boom_disa, [], this);
 
-    timedEvent = this.time.delayedCall(74500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(80300, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(83100, reverseWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(83600, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(86100, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(86600, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(88500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(84500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(90300, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(93100, reverseWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(93600, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(96100, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(96600, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(98500, startJumping_jo, [], this);
 
-    timedEvent = this.time.delayedCall(90500, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(99000, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(104000, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(105500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(110000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(100500, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(109000, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(114000, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(115500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(120000, stopWalking_jo, [], this);
 
 
 
