@@ -443,47 +443,47 @@ function create() {
     timedEvent = this.time.delayedCall(61000, createSpeechInBubble, [quote], this);
     quote="My name is Zombia and I work for Vetrox. I am here to prevent you to catch Vetrox. Sorry but you have to die. I am going to kick your ass."
     timedEvent = this.time.delayedCall(59500, createSpeechBubbleVisible, [bubble2, 1], this);
-    timedEvent = this.time.delayedCall(63000, createSpeechInBubble2, [quote], this);
+    timedEvent = this.time.delayedCall(64000, createSpeechInBubble2, [quote], this);
 
-    timedEvent = this.time.delayedCall(63500, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(64500, createSpeechInBubbleDestroy, [], this);
     quote="I m not afraid of you and i will kick you ass too. You are soooo ugly, your skin is green and ugly. You should use a moisturizing cream as Vivi taught me to do :)"
-    timedEvent = this.time.delayedCall(64000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(68000, createSpeechInBubble, [quote], this);
 
-    timedEvent = this.time.delayedCall(67000, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(72000, createSpeechInBubbleDestroy2, [], this);
     quote="Grrrrrrr, I am going to kill you, you filthy vermin."
-    timedEvent = this.time.delayedCall(67000, createSpeechInBubble2, [quote], this);
+    timedEvent = this.time.delayedCall(72000, createSpeechInBubble2, [quote], this);
 
-    timedEvent = this.time.delayedCall(69000, createSpeechInBubbleDestroy, [], this);
-    timedEvent = this.time.delayedCall(69000, createSpeechInBubbleDestroy2, [], this);
-    timedEvent = this.time.delayedCall(69000, createSpeechBubbleVisible, [bubble2, 0], this);
-    timedEvent = this.time.delayedCall(69500, fight, [], this);
+    timedEvent = this.time.delayedCall(76000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(76000, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(76000, createSpeechBubbleVisible, [bubble2, 0], this);
+    timedEvent = this.time.delayedCall(76500, fight, [], this);
     quote="Aughhhhhhhhhhh! I got hurt"
-    timedEvent = this.time.delayedCall(70000, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(71500, idlezom, [], this);
-    timedEvent = this.time.delayedCall(72000, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(72500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(74000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(77000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(78500, idlezom, [], this);
+    timedEvent = this.time.delayedCall(79000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(79500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(81000, stopWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
-    timedEvent = this.time.delayedCall(74000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(81000, createSpeechInBubbleDestroy, [], this);
     quote="I am going to kill you with the power of LOVE => please be ready for my fireball"
-    timedEvent = this.time.delayedCall(74500, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(77500, generate, [zombie.x,zombie.y], this);
-    timedEvent = this.time.delayedCall(80500, burn, [], this);
-    timedEvent = this.time.delayedCall(82500, boom_disa, [], this);
+    timedEvent = this.time.delayedCall(81500, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(87500, generate, [zombie.x,zombie.y], this);
+    timedEvent = this.time.delayedCall(90500, burn, [], this);
+    timedEvent = this.time.delayedCall(92500, boom_disa, [], this);
 
-    timedEvent = this.time.delayedCall(84500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(90300, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(93100, reverseWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(93600, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(96100, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(96600, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(98500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(94500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(100300, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(103100, reverseWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(103600, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(106100, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(106600, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(108500, startJumping_jo, [], this);
 
-    timedEvent = this.time.delayedCall(100500, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(109000, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(114000, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(115500, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(120000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(110500, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(119000, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(124000, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(125500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(130000, stopWalking_jo, [], this);
 
 
 
