@@ -525,12 +525,12 @@ function create() {
     timedEvent = this.time.delayedCall(151000, createSpeechBubbleVisible, [bubble2, 0], this);
 
     // the ladder
-    timedEvent = this.time.delayedCall(119000, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(124000, startJumping_jo, [], this);
-    timedEvent = this.time.delayedCall(125500, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(152000, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(157000, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(158500, startJumping_jo, [], this);
 
     //the boss
-    timedEvent = this.time.delayedCall(130000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(163000, stopWalking_jo, [], this);
 
 
 
