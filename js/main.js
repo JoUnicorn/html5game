@@ -523,7 +523,7 @@ function create() {
     timedEvent = this.time.delayedCall(155000, createSpeechInBubble, [quote], this);
 
     timedEvent = this.time.delayedCall(165000, createSpeechInBubbleDestroy, [], this);
-    quote="So, once again, get out my way and find someone else: you will never be able to be between Vivi and i so forget this idea!"
+    quote="So, once again, get out my way and find someone else: you will never be able to be between Vivi and i, so forget this idea!"
     timedEvent = this.time.delayedCall(165000, createSpeechInBubble, [quote], this);
 
     timedEvent = this.time.delayedCall(175000, createSpeechInBubbleDestroy2, [], this);
