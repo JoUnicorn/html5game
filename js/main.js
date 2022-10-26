@@ -396,7 +396,7 @@ function create() {
     //timedEvent = this.time.delayedCall(13000, createSpeechBubbleVisible, [bubble, 1], this);
     var quote="Who are you? and what are you doing with my Vivi???????"
     timedEvent = this.time.delayedCall(1200, createSpeechInBubble, [quote], this);
-    var quote2="My name is Vetrox and i just kidnapped your Vivi, you will never see again"
+    var quote2="My name is Vetrox and i just kidnapped your Vivi, you will never see her again"
     timedEvent = this.time.delayedCall(5000, createSpeechInBubble2, [quote2], this);
     timedEvent = this.time.delayedCall(8000, createSpeechInBubbleDestroy, [], this);
 
