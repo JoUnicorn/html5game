@@ -443,7 +443,7 @@ function create() {
     timedEvent = this.time.delayedCall(72500, boom_disa, [], this);
 
     timedEvent = this.time.delayedCall(74500, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(80000, startJumping_jo, [], this);
+    timedEvent = this.time.delayedCall(80300, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(83500, reverseWalking_jo, [], this);
     timedEvent = this.time.delayedCall(84000, startJumping_jo, [], this);
     timedEvent = this.time.delayedCall(86500, startWalking_jo, [], this);
