@@ -535,8 +535,24 @@ function create() {
 
     //the boss
     timedEvent = this.time.delayedCall(207000, stopWalking_jo, [], this);
+    quote="I tracked you down Vetrox. You can't escape anymore. Are you ok Vivi?"
+    timedEvent = this.time.delayedCall(207000, createSpeechBubbleVisible, [bubble, 1], this);
+    timedEvent = this.time.delayedCall(207000, createSpeechInBubble, [quote], this);
+    quote="Vivi: yes i am ok but please deliver me Jo"
+    timedEvent = this.time.delayedCall(207000, createSpeechBubbleVisible, [bubble2, 1], this);
+    timedEvent = this.time.delayedCall(210000, createSpeechInBubble2, [quote], this);
 
+    timedEvent = this.time.delayedCall(215000, createSpeechInBubbleDestroy, [], this);
+    quote="I am going to deliver you Vivi, no worries. Ready to fight Vetrox?"
+    timedEvent = this.time.delayedCall(215000, createSpeechInBubble, [quote], this);
 
+    timedEvent = this.time.delayedCall(220000, createSpeechInBubbleDestroy2, [], this);
+    quote="Yes i am ready and you are going to die bastard"
+    timedEvent = this.time.delayedCall(220000, createSpeechInBubble2, [quote], this);
+
+    timedEvent = this.time.delayedCall(225000, rescale_ro, [], this);
+    timedEvent = this.time.delayedCall(221000, startWalking_r, [], this);
+    timedEvent = this.time.delayedCall(222000, stopWalking_r, [], this);
 
 
 
@@ -638,6 +654,20 @@ function draw()
     rt.draw(fireball);
 }
 
+function startWalking_r()
+{
+    robot2.body.setVelocityX(200);
+    robot2.anims.play('walk_r', true);
+    robot2.flipX = true; // use the original sprite looking to the right
+}
+
+function stopWalking_r()
+{
+    robot2.body.setVelocityX(0);
+    robot2.anims.play('idle_r', true);
+    robot2.visible=true;
+}
+
 function startWalking_gr()
 {
     girl.body.setVelocityX(200);
@@ -696,11 +726,11 @@ function mushroom_ease()
     });
 }
 
-function rescale_jo()
+function rescale_ro()
 {
     this.tweens.add({
-        targets: player,
-        scale: 1,
+        targets: robot2,
+        scale: 3,
         yoyo: false,
         duration: 2000,
         ease: 'Sine.easeInOut'
