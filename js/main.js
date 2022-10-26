@@ -428,7 +428,7 @@ function create() {
         timedEvent = this.time.delayedCall(32000+i*200, lifebar_vis, [], this);
         timedEvent = this.time.delayedCall(32100+i*200, lifebar_nvis, [], this);
     }
-    timedEvent = this.time.delayedCall(41500, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(40500, createSpeechInBubbleDestroy, [], this);
     quote="I ate also vitamies B, Vivi :)"
     timedEvent = this.time.delayedCall(42000, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(45000, createSpeechInBubbleDestroy, [], this);
@@ -449,29 +449,29 @@ function create() {
     quote="I m not afraid of you and i will kick you ass too. You are soooo ugly, your skin is green and ugly. You should use a moisturizing cream as Vivi taught me to do :)"
     timedEvent = this.time.delayedCall(67000, createSpeechInBubble, [quote], this);
 
-    timedEvent = this.time.delayedCall(73500, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(75500, createSpeechInBubbleDestroy2, [], this);
     quote="Grrrrrrr, I am going to kill you, you filthy vermin."
-    timedEvent = this.time.delayedCall(73500, createSpeechInBubble2, [quote], this);
+    timedEvent = this.time.delayedCall(75500, createSpeechInBubble2, [quote], this);
 
-    timedEvent = this.time.delayedCall(76000, createSpeechInBubbleDestroy, [], this);
-    timedEvent = this.time.delayedCall(76000, createSpeechInBubbleDestroy2, [], this);
-    timedEvent = this.time.delayedCall(76000, createSpeechBubbleVisible, [bubble2, 0], this);
-    timedEvent = this.time.delayedCall(76500, fight, [], this);
+    timedEvent = this.time.delayedCall(78000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(78000, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(78000, createSpeechBubbleVisible, [bubble2, 0], this);
+    timedEvent = this.time.delayedCall(78500, fight, [], this);
     quote="Aughhhhhhhhhhh! I got hurt"
-    timedEvent = this.time.delayedCall(77000, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(78500, idlezom, [], this);
-    timedEvent = this.time.delayedCall(79000, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(79500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(79000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(80500, idlezom, [], this);
     timedEvent = this.time.delayedCall(81000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(81500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(83000, stopWalking_jo, [], this);
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
-    timedEvent = this.time.delayedCall(81000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(83000, createSpeechInBubbleDestroy, [], this);
     quote="I am going to kill you with the power of LOVE => be ready for my fireball, ugly green monster"
-    timedEvent = this.time.delayedCall(81500, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(86500, createSpeechInBubbleDestroy, [], this);
-    timedEvent = this.time.delayedCall(87000, createSpeechBubbleVisible, [bubble, 0], this);
-    timedEvent = this.time.delayedCall(87500, generate, [zombie.x,zombie.y], this);
-    timedEvent = this.time.delayedCall(90500, burn, [], this);
-    timedEvent = this.time.delayedCall(92500, boom_disa, [], this);
+    timedEvent = this.time.delayedCall(83500, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(88500, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(89000, createSpeechBubbleVisible, [bubble, 0], this);
+    timedEvent = this.time.delayedCall(89500, generate, [zombie.x,zombie.y], this);
+    timedEvent = this.time.delayedCall(92500, burn, [], this);
+    timedEvent = this.time.delayedCall(94500, boom_disa, [], this);
 
     // the ladder
     timedEvent = this.time.delayedCall(94500, startWalking_jo, [], this);
