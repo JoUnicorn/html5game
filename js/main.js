@@ -457,7 +457,7 @@ function create() {
     timedEvent = this.time.delayedCall(82000, createSpeechInBubbleDestroy2, [], this);
     timedEvent = this.time.delayedCall(82000, createSpeechBubbleVisible, [bubble2, 0], this);
     timedEvent = this.time.delayedCall(82500, fight, [], this);
-    quote="Aughhhhhhhhhhh! I got hurt"
+    quote="Aughhhhhhhhhhh! I got hurt (I lost 50 points of life)"
     timedEvent = this.time.delayedCall(83000, createSpeechInBubble, [quote], this);
     for (let i = 0; i < 20; i++) {
         timedEvent = this.time.delayedCall(82000+i*200, lifebar_vis, [], this);
