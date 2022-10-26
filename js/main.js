@@ -428,9 +428,9 @@ function create() {
         timedEvent = this.time.delayedCall(32000+i*200, lifebar_vis, [], this);
         timedEvent = this.time.delayedCall(32100+i*200, lifebar_nvis, [], this);
     }
-    timedEvent = this.time.delayedCall(43000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(42000, createSpeechInBubbleDestroy, [], this);
     quote="I ate also vitamies B, Vivi :)"
-    timedEvent = this.time.delayedCall(43500, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(42500, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(45000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(45000, createSpeechBubbleVisible, [bubble, 0], this);
 
@@ -439,19 +439,19 @@ function create() {
     timedEvent = this.time.delayedCall(53500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(59000, stopWalking_jo, [], this);
     quote="Who are you? What do you want?"
-    timedEvent = this.time.delayedCall(59500, createSpeechBubbleVisible, [bubble, 1], this);
-    timedEvent = this.time.delayedCall(61000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(59000, createSpeechBubbleVisible, [bubble, 1], this);
+    timedEvent = this.time.delayedCall(59500, createSpeechInBubble, [quote], this);
     quote="My name is Zombia and I work for Vetrox. I am here to prevent you to catch Vetrox. Sorry but you have to die. I am going to kick your ass."
-    timedEvent = this.time.delayedCall(59500, createSpeechBubbleVisible, [bubble2, 1], this);
-    timedEvent = this.time.delayedCall(64000, createSpeechInBubble2, [quote], this);
+    timedEvent = this.time.delayedCall(59000, createSpeechBubbleVisible, [bubble2, 1], this);
+    timedEvent = this.time.delayedCall(62000, createSpeechInBubble2, [quote], this);
 
-    timedEvent = this.time.delayedCall(64500, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(66500, createSpeechInBubbleDestroy, [], this);
     quote="I m not afraid of you and i will kick you ass too. You are soooo ugly, your skin is green and ugly. You should use a moisturizing cream as Vivi taught me to do :)"
-    timedEvent = this.time.delayedCall(68000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(67000, createSpeechInBubble, [quote], this);
 
-    timedEvent = this.time.delayedCall(72000, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(73500, createSpeechInBubbleDestroy2, [], this);
     quote="Grrrrrrr, I am going to kill you, you filthy vermin."
-    timedEvent = this.time.delayedCall(72000, createSpeechInBubble2, [quote], this);
+    timedEvent = this.time.delayedCall(73500, createSpeechInBubble2, [quote], this);
 
     timedEvent = this.time.delayedCall(76000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(76000, createSpeechInBubbleDestroy2, [], this);
