@@ -188,6 +188,12 @@ function create() {
     robot.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, robot);
     this.anims.create({
+        key: 'attack_r',
+        frames: this.anims.generateFrameNames('robot', {prefix: 'character_robot_attack', end: 3, zeroPad: 1}),
+        frameRate: 10,
+        repeat: -1
+    });
+    this.anims.create({
         key: 'walk_r',
         frames: this.anims.generateFrameNames('robot', {prefix: 'character_robot_walk', end: 7, zeroPad: 1}),
         frameRate: 10,
@@ -553,6 +559,15 @@ function create() {
     timedEvent = this.time.delayedCall(225000, rescale_ro, [], this);
     timedEvent = this.time.delayedCall(221000, startWalking_r, [], this);
     timedEvent = this.time.delayedCall(222000, stopWalking_r, [], this);
+    timedEvent = this.time.delayedCall(222500, fight_r, [], this);
+    quote="Aughhhhhhhhhhh! I got hurt (I lost 140 points of life)"
+    timedEvent = this.time.delayedCall(223000, createSpeechInBubble, [quote], this);
+    for (let i = 0; i < 20; i++) {
+        timedEvent = this.time.delayedCall(222000+i*200, lifebar_vis, [], this);
+        timedEvent = this.time.delayedCall(222000+i*200, lifebar_nvis, [], this);
+    }
+    //timedEvent = this.time.delayedCall(84500, idlezom, [], this);
+    timedEvent = this.time.delayedCall(225000, stopWalking_jo, [], this);
 
 
 
@@ -568,6 +583,15 @@ function create() {
         startButton.visible=false;
     }, 5000);
 
+}
+
+function fight_r()
+{
+    robot2.anims.play('attack_r', true);
+    robot2.flipX = true; // use the original sprite looking to the right
+    player.anims.play('shoveBack', true);
+    player.body.setVelocityX(-200);
+    text.text=10;
 }
 
 function lifebar_vis()
