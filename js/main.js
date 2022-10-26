@@ -426,7 +426,10 @@ function create() {
         timedEvent = this.time.delayedCall(32100+i*200, lifebar_nvis, [], this);
     }
     timedEvent = this.time.delayedCall(43000, createSpeechInBubbleDestroy, [], this);
-    timedEvent = this.time.delayedCall(43000, createSpeechBubbleVisible, [bubble, 0], this);
+    quote="I ate also vitamies B Vivi :)"
+    timedEvent = this.time.delayedCall(43000, createSpeechBubbleVisible, [bubble, 1], this);
+    timedEvent = this.time.delayedCall(45000, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(45000, createSpeechBubbleVisible, [bubble, 0], this);
 
     timedEvent = this.time.delayedCall(45500, startWalking_jo, [], this);
     timedEvent = this.time.delayedCall(49800, stopWalking_jo, [], this);
@@ -445,7 +448,7 @@ function create() {
 
     timedEvent = this.time.delayedCall(67000, createSpeechInBubbleDestroy2, [], this);
     quote="Grrrrrrr, I am going to kill you, you filthy vermin."
-    timedEvent = this.time.delayedCall(64000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(67000, createSpeechInBubble2, [quote], this);
 
     timedEvent = this.time.delayedCall(69000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(69000, createSpeechInBubbleDestroy2, [], this);
