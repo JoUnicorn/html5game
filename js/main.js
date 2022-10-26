@@ -421,22 +421,10 @@ function create() {
     var quote="It's my first meal of the day, I'm feeling much better now, and I have much more energy, I am going to save you Vivi! (my life is now equal to 200)"
     timedEvent = this.time.delayedCall(33000, createSpeechBubbleVisible, [bubble, 1], this);
     timedEvent = this.time.delayedCall(35000, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(35000, lifebar_vis, [], this);
-    timedEvent = this.time.delayedCall(35100, lifebar_nvis, [], this);
-    timedEvent = this.time.delayedCall(35200, lifebar_vis, [], this);
-    timedEvent = this.time.delayedCall(35300, lifebar_nvis, [], this);
-    timedEvent = this.time.delayedCall(35400, lifebar_vis, [], this);
-    timedEvent = this.time.delayedCall(35500, lifebar_nvis, [], this);
-    timedEvent = this.time.delayedCall(35600, lifebar_vis, [], this);
-    timedEvent = this.time.delayedCall(35700, lifebar_nvis, [], this);
-    timedEvent = this.time.delayedCall(35800, lifebar_vis, [], this);
-    timedEvent = this.time.delayedCall(35900, lifebar_nvis, [], this);
-    timedEvent = this.time.delayedCall(36000, lifebar_vis, [], this);
-    timedEvent = this.time.delayedCall(36100, lifebar_nvis, [], this);
-    timedEvent = this.time.delayedCall(36200, lifebar_vis, [], this);
-    timedEvent = this.time.delayedCall(36300, lifebar_nvis, [], this);
-    timedEvent = this.time.delayedCall(36400, lifebar_vis, [], this);
-    timedEvent = this.time.delayedCall(36500, lifebar_nvis, [], this);
+    for (let i = 0; i < 20; i++) {
+        timedEvent = this.time.delayedCall(32000+i*200, lifebar_vis, [], this);
+        timedEvent = this.time.delayedCall(32100+i*200, lifebar_nvis, [], this);
+    }
     timedEvent = this.time.delayedCall(43000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(43000, createSpeechBubbleVisible, [bubble, 0], this);
 
