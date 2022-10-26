@@ -172,7 +172,7 @@ function create() {
     girl.scaleY=.9;
     //////
     //gitl
-    girlv = this.physics.add.sprite(7500, 200, 'girl');
+    girlv = this.physics.add.sprite(7350, 200, 'girl');
     girlv.setBounce(0.2); // our player will bounce from items
     girlv.setCollideWorldBounds(true); // don't go out of the map
     this.physics.add.collider(groundLayer, girlv);
