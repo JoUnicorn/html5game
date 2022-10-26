@@ -375,7 +375,7 @@ function create() {
     content = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
     content.setPosition(bubble.x + 10, bubble.y + 10);
     content.setScrollFactor(0);
-    content2 = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+    content2 = this.add.text(0, 0, "", { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding ) } });
     content2.setPosition(bubble2.x + 10, bubble2.y + 10);
     content2.setScrollFactor(0);
 
@@ -396,7 +396,7 @@ function create() {
     quote="If you let my Vivi go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you. "
     timedEvent = this.time.delayedCall(12500, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(19500, createSpeechInBubbleDestroy2, [], this);
-    quote2="Good luck!\n\n Save me Jooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+    quote2="Good luck!\n\n Save me Jooooooooooooo oooooooooooooo oooooooooooooooooo oooooooooooooooooooo"
     timedEvent = this.time.delayedCall(20000, createSpeechInBubble2, [quote2], this);
     timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy2, [], this);
