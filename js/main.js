@@ -619,11 +619,11 @@ function create() {
     timedEvent = this.time.delayedCall(267500, boom_disa2, [], this);
 
     timedEvent = this.time.delayedCall(267500, startWalking_v, [], this);
-    timedEvent = this.time.delayedCall(262500, stopWalking_v, [], this);
+    timedEvent = this.time.delayedCall(269500, stopWalking_v, [], this);
 
-    timedEvent = this.time.delayedCall(262500, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(269500, createSpeechInBubbleDestroy2, [], this);
     quote="Vivi: thank you Jo, you are my heroe :)"
-    timedEvent = this.time.delayedCall(262500, createSpeechInBubble2, [quote], this);
+    timedEvent = this.time.delayedCall(269500, createSpeechInBubble2, [quote], this);
 
     //start
     startButton = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, "Wait 3 seconds, it's loading .....",{ fontFamily: 'Arial', fontSize: 50, align: 'center'})
@@ -641,14 +641,14 @@ function create() {
 
 function startWalking_v()
 {
-    player.body.setVelocityX(-200);
-    player.anims.play('walk_g', true);
-    player.flipX = true; // use the original sprite looking to the right
+    girl2.body.setVelocityX(-200);
+    girl2.anims.play('walk_g', true);
+    girl2.flipX = true; // use the original sprite looking to the right
 }
 function stopWalking_v()
 {
-    player.body.setVelocityX(0);
-    player.anims.play('idle_g', true);
+    girl2.body.setVelocityX(0);
+    girl2.anims.play('idle_g', true);
 }
 
 
