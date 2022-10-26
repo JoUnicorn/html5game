@@ -434,7 +434,7 @@ function create() {
         timedEvent = this.time.delayedCall(32000+i*200, lifebar_vis, [], this);
         timedEvent = this.time.delayedCall(32100+i*200, lifebar_nvis, [], this);
     }
-    timedEvent = this.time.delayedCall(40500, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(41000, createSpeechInBubbleDestroy, [], this);
     quote="I ate also vitamies B, Vivi :)"
     timedEvent = this.time.delayedCall(42000, createSpeechInBubble, [quote], this);
     timedEvent = this.time.delayedCall(45000, createSpeechInBubbleDestroy, [], this);
@@ -453,11 +453,11 @@ function create() {
 
     timedEvent = this.time.delayedCall(68500, createSpeechInBubbleDestroy, [], this);
     quote="I m not afraid of you and i will kick you ass too. You are soooo ugly, your skin is green and ugly. You should use a moisturizing cream as Vivi taught me to do :)"
-    timedEvent = this.time.delayedCall(69000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(68000, createSpeechInBubble, [quote], this);
 
-    timedEvent = this.time.delayedCall(79500, createSpeechInBubbleDestroy2, [], this);
+    timedEvent = this.time.delayedCall(78500, createSpeechInBubbleDestroy2, [], this);
     quote="Grrrrrrr, I am going to kill you, you filthy vermin."
-    timedEvent = this.time.delayedCall(79500, createSpeechInBubble2, [quote], this);
+    timedEvent = this.time.delayedCall(78500, createSpeechInBubble2, [quote], this);
 
     timedEvent = this.time.delayedCall(82000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(82000, createSpeechInBubbleDestroy2, [], this);
@@ -476,11 +476,11 @@ function create() {
     //timedEvent = this.time.delayedCall(28100, move_camera, [], this);
     timedEvent = this.time.delayedCall(87000, createSpeechInBubbleDestroy, [], this);
     quote="I am going to kill you with the power of LOVE => be ready for my fireball, ugly green monster"
-    timedEvent = this.time.delayedCall(87500, createSpeechInBubble, [quote], this);
-    timedEvent = this.time.delayedCall(89000, createSpeechInBubbleDestroy, [], this);
-    timedEvent = this.time.delayedCall(89000, createSpeechBubbleVisible, [bubble, 0], this);
-    timedEvent = this.time.delayedCall(89500, generate, [zombie.x,zombie.y], this);
-    timedEvent = this.time.delayedCall(92500, burn, [], this);
+    timedEvent = this.time.delayedCall(87000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(90500, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(90500, createSpeechBubbleVisible, [bubble, 0], this);
+    timedEvent = this.time.delayedCall(90500, generate, [zombie.x,zombie.y], this);
+    timedEvent = this.time.delayedCall(93500, burn, [], this);
     timedEvent = this.time.delayedCall(94500, boom_disa, [], this);
 
     // the ladder
