@@ -606,8 +606,8 @@ function create() {
     timedEvent = this.time.delayedCall(246500, createSpeechInBubble, [quote], this);
 
     timedEvent = this.time.delayedCall(254500, stopWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(255000, startWalking_jo, [], this);
-    timedEvent = this.time.delayedCall(255000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(254500, startWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(255500, stopWalking_jo, [], this);
 
     timedEvent = this.time.delayedCall(255500, createSpeechInBubbleDestroy, [], this);
     quote="Vetrox, here is the love fireball, you won't survive after the shock"
