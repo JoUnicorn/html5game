@@ -344,6 +344,11 @@ function create() {
         frames: [{key: 'player', frame: 'character_maleAdventurer_shoveBack'}],
         frameRate: 10,
     });
+    this.anims.create({
+        key: 'down',
+        frames: [{key: 'player', frame: 'character_robot_down'}],
+        frameRate: 10,
+    });
 
     //camera
     cursors = this.input.keyboard.createCursorKeys();
@@ -567,7 +572,8 @@ function create() {
         timedEvent = this.time.delayedCall(227000+i*200, lifebar_nvis, [], this);
     }
     timedEvent = this.time.delayedCall(228500, idlezom2, [], this);
-    timedEvent = this.time.delayedCall(230000, stopWalking_jo, [], this);
+    timedEvent = this.time.delayedCall(230000, down_jo, [], this);
+    timedEvent = this.time.delayedCall(235000, stopWalking_jo, [], this);
 
 
 
@@ -583,6 +589,12 @@ function create() {
         startButton.visible=false;
     }, 5000);
 
+}
+
+function down_jo()
+{
+    player.body.setVelocityX(0);
+    player.anims.play('down', true);
 }
 
 function idlezom2()
