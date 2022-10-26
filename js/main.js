@@ -398,10 +398,10 @@ function create() {
     timedEvent = this.time.delayedCall(19500, createSpeechInBubbleDestroy2, [], this);
     quote2="Good luck!\n\n Save me Jooooooooooooo oooooooooooooo oooooooooooooooooo oooooooooooooooooooo"
     timedEvent = this.time.delayedCall(20000, createSpeechInBubble2, [quote2], this);
-    timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(23500, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(24500, createSpeechInBubbleDestroy2, [], this);
     quote="I am going to save you Viviiiiiiiiiiiiiiiiiiiiiiiiii"
-    timedEvent = this.time.delayedCall(25000, createSpeechInBubble, [quote], this);
+    timedEvent = this.time.delayedCall(24000, createSpeechInBubble, [quote], this);
 
     timedEvent = this.time.delayedCall(26000, createSpeechInBubbleDestroy, [], this);
     timedEvent = this.time.delayedCall(26000, createSpeechBubbleVisible, [bubble, 0], this);
