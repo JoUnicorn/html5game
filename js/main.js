@@ -456,7 +456,7 @@ function create() {
     timedEvent = this.time.delayedCall(59000, createSpeechBubbleVisible, [bubble2, 1], this);
     timedEvent = this.time.delayedCall(62000, createSpeechInBubble2, [quote], this);
 
-    timedEvent = this.time.delayedCall(68500, createSpeechInBubbleDestroy, [], this);
+    timedEvent = this.time.delayedCall(68000, createSpeechInBubbleDestroy, [], this);
     quote="I m not afraid of you and i will kick you ass too. You are soooo ugly, your skin is green and ugly. You should use a moisturizing cream as Vivi taught me to do :)"
     timedEvent = this.time.delayedCall(68000, createSpeechInBubble, [quote], this);
 
